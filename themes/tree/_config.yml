@@ -15,7 +15,7 @@ valine:
     # 评论
     enableComment: true 
     # 阅读量
-    enableCounter: false
+    enableCounter: true
     # valine appID
     appID: D9raxjOhsifiaJHt7xQLnpTb-gzGzoHsz
     # valine appKey
@@ -23,7 +23,7 @@ valine:
     placeholder: 请输入评论
     avatar: retro
 
-# 是否开启“不蒜子”统计访问量
+# 是否开启“不蒜子”来统计访问量
 busuanzi: true
 
 # 底部版权开始年份
