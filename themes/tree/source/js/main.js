@@ -3,11 +3,50 @@ $(document).ready(function () {
 	clickTreeDirectory();
 	serachTree();
 	pjaxLoad();
+	wrapImageWithFancyBox();
 	showArticleIndex();
 	switchTreeOrIndex();
 	scrollToTop();
 	pageScroll();
+	initCopyCode();
 });
+
+function initCopyCode(){
+    var copyHtml = '';
+    copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+    copyHtml += '<span>复制</span>';
+    copyHtml += '</button>';
+    $("#article-content pre code").before(copyHtml);
+    new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+            return trigger.nextElementSibling;
+        }
+    });
+}
+
+// 图片放大
+function wrapImageWithFancyBox() {
+    $('img').not('.sidebar-image img').not('#author-avatar img').not(".mdl-menuimg").not(".something-else-logo img").not('.avatar').not('.share-body img').each(function() {
+        var $image = $(this);
+        var alt = $image.attr('alt');
+        var src = $image.attr('src');
+        $imageWrapLink = $image.wrap('<a data-fancybox=images data-caption="'+ alt +'" href="' + src + '"></a>');
+    });
+
+    // fix微信分享二维码需要开新页面查看问题
+    $('.qrcode').attr('data-fancybox', 'images');
+
+    $().fancybox({
+        selector: '[data-fancybox="images"]',
+        thumbs: false,
+        hash: true,
+        loop: false,
+        fullScreen: false,
+        slideShow: false,
+        protect: true,
+    });
+}
+
 // 页面滚动
 function pageScroll(){
     var start_hight = 0;
@@ -165,6 +204,8 @@ function pjaxLoad(){
 				}
 				showArticleIndex();
 			}
+			// 图片放大
+			wrapImageWithFancyBox();
 		}
 	});
 }

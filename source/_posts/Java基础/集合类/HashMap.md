@@ -9,7 +9,7 @@ categories:
 
 HashMap 底层的数据结构主要是：数组 + 链表 + 红黑树。其中当链表的长度大于等于 8 时，链表会转化成红黑树，当红黑树的大小小于等于 6 时，红黑树会转化成链表，整体的数据结构如下：
 
-![](https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20201127095949.png)
+<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20201127095949.png" style="zoom:30%;" />
 
 # 新增
 
@@ -23,7 +23,7 @@ HashMap 底层的数据结构主要是：数组 + 链表 + 红黑树。其中当
 6. 通过 2、4、5 将新元素追加成功，再根据 onlyIfAbsent 判断是否需要覆盖；
 7. 判断是否需要扩容，需要扩容进行扩容，结束。
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/053f9916a958437880f1abeff91b1205~tplv-k3u1fbpfcp-watermark.image)
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/053f9916a958437880f1abeff91b1205~tplv-k3u1fbpfcp-watermark.image" style="zoom:33%;" />
 
 **为什么是 8，这个答案在源码中注释有说，中文翻译过来大概的意思是：**
 
@@ -57,28 +57,23 @@ HashMap 的查找主要分为以下三步：
 
 **hashmap什么时候进行扩容呢？**
 
-当hashmap中的元素个数超过数组大小*loadFactor时，就会进行数组扩容，loadFactor的默认值为0.75，也就是说，默认情况下，数组大小为16，那么当hashmap中元素个数超过16*0.75=12的时候，就把数组的大小扩展为2*16=32，即扩大一倍，然后重新计算每个元素在数组中的位置，而这是一个非常消耗性能的操作，所以如果我们已经预知hashmap中元素的个数，那么预设元素的个数能够有效的提高hashmap的性能。
+当hashmap中的元素个数超过数组大小loadFactor时，就会进行数组扩容，loadFactor的默认值为0.75，也就是说，默认情况下，数组大小为16，那么当hashmap中元素个数超过`16*0.75=12`的时候，就把数组的大小扩展为`2*16=32`，即扩大一倍，然后重新计算每个元素在数组中的位置，而这是一个非常消耗性能的操作，所以如果我们已经预知hashmap中元素的个数，那么预设元素的个数能够有效的提高hashmap的性能。
 
 **为什么扩容是2的次幂?**
+
 HashMap的初始容量是2的n次幂，扩容也是2倍的形式进行扩容，是因为容量是2的n次幂，可以使得添加的元素均匀分布在HashMap中的数组上，减少hash碰撞，避免形成链表的结构，使得查询效率降低！
 
-扩容步骤
+**扩容步骤**
 
 当这个数组满了以后，就会自动扩容，变成一个更大的数组，可以在里面放更多的元素。
 
-1，在resize()方法中，定义了oldCap参数，记录了原table的长度，定义了newCap参数，记录新table长度，newCap是oldCap长度的2倍。
+1.在resize()方法中，定义了oldCap参数，记录了原table的长度，定义了newCap参数，记录新table长度，newCap是oldCap长度的2倍。
 
-2，循环原table，把原table中的每个链表中的每个元素放入新table。
+2.循环原table，把原table中的每个链表中的每个元素放入新table。
 
-举个例子，假设table原长度是16，扩容后长度32，那么一个hash值在扩容前后的table下标是这么计算的：
+假设table原长度是16，扩容后长度32，那么一个hash值在扩容前后的table下标是这么计算的：
 
-![](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/39c1fed8e5174ba7bff1adc61ab3d796~tplv-k3u1fbpfcp-watermark.image)
-
-hash值的每个二进制位用abcde来表示，那么，hash和新旧table按位与的结果，最后4位显然是相同的，唯一可能出现的区别就在第5位，也就是hash值的b所在的那一位，如果b所在的那一位是0，那么新table按位与的结果和旧table的结果就相同，反之如果b所在的那一位是1，则新table按位与的结果就比旧table的结果多了10000（二进制），而这个二进制10000就是旧table的长度16。
-
-换言之，hash值的新散列下标是不是需要加上旧table长度，只需要看看hash值第5位是不是1就行了，位运算的方法就是hash值和10000（也就是旧table长度）来按位与，其结果只可能是10000或者00000。
-
-所以，`e.hash & oldCap`，就是用于计算位置b到底是0还是1用的，只要其结果是0，则新散列下标就等于原散列下标，否则新散列坐标要在原散列坐标的基础上加上原table长度
+判断条件`(e.hash & oldCap) == 0` 计算出来的值，如果等于0，就放入低位节点，低位节点在新数组的位置跟原数组一样。 等于1，就放入高位节点，高位放在新数组的位置等于原来位置在加上原数组的长度
 
 # 其他问题
 
@@ -118,15 +113,17 @@ static final int hash(Object key){
 HashMap 在并发时可能出现的问题主要是两方面：
 
 - 如果多个线程同时使用 put 方法添加元素，而且假设正好存在两个 put 的 key 发生了碰撞（根据 hash 值计算的 bucket 一样），那么根据 HashMap 的实现，这两个 key 会添加到数组的同一个位置，这样最终就会发生其中一个线程 put 的数据被覆盖
-- 如果多个线程同时检测到元素个数超过数组大小 * loadFactor，这样就会发生多个线程同时对 Node 数组进行扩容，都在重新计算元素位置以及复制数据，但是最终只有一个线程扩容后的数组会赋给 table，也就是说其他线程的都会丢失，并且各自线程 put 的数据也丢失
+- 如果多个线程同时检测到元素个数超过`数组大小 * loadFactor`，这样就会发生多个线程同时对 Node 数组进行扩容，都在重新计算元素位置以及复制数据，但是最终只有一个线程扩容后的数组会赋给 table，也就是说其他线程的都会丢失，并且各自线程 put 的数据也丢失
 
 **一般用什么作为HashMap的key?**
+
 一般用Integer、String这种不可变类当HashMap当key，而且String最为常用。
 
-- (1)因为字符串是不可变的，所以在它创建的时候hashcode就被缓存了，不需要重新计算。这就使得字符串很适合作为Map中的键，字符串的处理速度要快过其它的键对象。这就是HashMap中的键往往都使用字符串。
-- (2)因为获取对象的时候要用到equals()和hashCode()方法，那么键对象正确的重写这两个方法是非常重要的,这些类已经很规范的覆写了hashCode()以及equals()方法。
+- 因为字符串是不可变的，所以在它创建的时候hashcode就被缓存了，不需要重新计算。这就使得字符串很适合作为Map中的键，字符串的处理速度要快过其它的键对象。这就是HashMap中的键往往都使用字符串。
+- 因为获取对象的时候要用到equals()和hashCode()方法，那么键对象正确的重写这两个方法是非常重要的,这些类已经很规范的覆写了hashCode()以及equals()方法。
 
 **用可变类当HashMap的key有什么问题?**
+
 hashcode可能发生改变，导致put进去的值，无法get出，如下所示
 
 ```java
@@ -150,49 +147,41 @@ null
 **实现一个自定义的class作为HashMap的key该如何实现？**
 
 记住下面四个原则
-(1)两个对象相等，hashcode一定相等
-(2)两个对象不等，hashcode不一定不等
-(3)hashcode相等，两个对象不一定相等
-(4)hashcode不等，两个对象一定不等
+
+* 两个对象相等，hashcode一定相等
+* 两个对象不等，hashcode不一定不等
+* hashcode相等，两个对象不一定相等
+* hashcode不等，两个对象一定不等
 
 记住如何写一个不可变类
-(1)类添加final修饰符，保证类不被继承。
-如果类可以被继承会破坏类的不可变性机制，只要继承类覆盖父类的方法并且继承类可以改变成员变量值，那么一旦子类以父类的形式出现时，不能保证当前类是否可变。
 
-(2)保证所有成员变量必须私有，并且加上final修饰
-通过这种方式保证成员变量不可改变。但只做到这一步还不够，因为如果是对象成员变量有可能再外部改变其值。所以第4点弥补这个不足。
+* 类添加final修饰符，保证类不被继承。
+  如果类可以被继承会破坏类的不可变性机制，只要继承类覆盖父类的方法并且继承类可以改变成员变量值，那么一旦子类以父类的形式出现时，不能保证当前类是否可变。
 
-(3)不提供改变成员变量的方法，包括setter
-避免通过其他接口改变成员变量的值，破坏不可变特性。
+* 保证所有成员变量必须私有，并且加上final修饰
+  通过这种方式保证成员变量不可改变。但只做到这一步还不够，因为如果是对象成员变量有可能再外部改变其值。
 
-(4)通过构造器初始化所有成员，进行深拷贝(deep copy)
+* 不提供改变成员变量的方法，包括setter
+  避免通过其他接口改变成员变量的值，破坏不可变特性。
 
-(5)在getter方法中，不要直接返回对象本身，而是克隆对象，并返回对象的拷贝
-这种做法也是防止对象外泄，防止通过getter获得内部可变成员对象后对成员变量直接操作，导致成员变量发生改变。
+* 通过构造器初始化所有成员，进行深拷贝
+
+* 在getter方法中，不要直接返回对象本身，而是克隆对象，并返回对象的拷贝
+  这种做法也是防止对象外泄，防止通过getter获得内部可变成员对象后对成员变量直接操作，导致成员变量发生改变。
 
 **和HashTable的区别**
 
-Hashtable 是不允许键或值为 null 的，HashMap 的键值则都可以为 null
+1.Hashtable 是不允许键或值为 null 的，HashMap 的键值则都可以为 null，在HashMap 中不能用get()方法来判断HashMap中是否存在某个键，而应该用containsKey()方法来判断
 
-因为Hashtable在我们put 空值的时候会直接抛空指针异常，但是HashMap却做了特殊处理
+2.Hashtable 继承了 Dictionary类，而 HashMap 继承的是 AbstractMap 类，`Dictionary`的子类同时也实现了`Map`接口
 
-HashMap如果你使用null值，就会使得其无法判断对应的key是不存在还是为空，因为你无法再调用一次
+3.HashMap 的初始容量为：16，Hashtable 初始容量为：11，两者的负载因子默认都是：0.75，当现有容量大于`总容量 * 负载因子`时，HashMap 扩容规则为当前容量翻倍，Hashtable 扩容规则为当前容量翻倍 + 1，`int newCapacity = (oldCapacity << 1) + 1;`
 
-contain(key）来对key是否存在进行判断，ConcurrentHashMap同理
+5.`HashTable`是直接使用key的hashCode(`key.hashCode()`)作为hash值，不像`HashMap`内部使用`static final int hash(Object key)`扰动函数对key的hashCode进行扰动后作为hash值
 
-Hashtable 继承了 Dictionary类，而 HashMap 继承的是 AbstractMap 类，`Dictionary`的子类同时也实现了`Map`接口
+6.`HashTable`取哈希桶下标是直接用模运算`%`（因为其默认容量也不是2的n次方。所以也无法用位运算替代模运算）
 
-HashMap 的初始容量为：16，Hashtable 初始容量为：11，两者的负载因子默认都是：0.75
-
-当现有容量大于`总容量 * 负载因子`时，HashMap 扩容规则为当前容量翻倍，Hashtable 扩容规则为当前容量翻倍 + 1，`int newCapacity = (oldCapacity << 1) + 1;`
-
-迭代器不同：HashMap 中的 Iterator 迭代器是 fail-fast 的，而 Hashtable 的 Enumerator 不是 fail-fast 的
-
-当其他线程改变了HashMap 的结构，如：增加、删除元素，将会抛出ConcurrentModificationException 异常，而 Hashtable 则不会
-
-`HashTable`是直接使用key的hashCode(`key.hashCode()`)作为hash值，不像`HashMap`内部使用`static final int hash(Object key)`扰动函数对key的hashCode进行扰动后作为hash值
-
-`HashTable`取哈希桶下标是直接用模运算`%`（因为其默认容量也不是2的n次方。所以也无法用位运算替代模运算）
+7.Hashtable是线程安全的，方法是Synchronized的
 
 **尾插法好处**
 

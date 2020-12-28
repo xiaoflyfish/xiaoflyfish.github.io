@@ -7,9 +7,11 @@ categories:
 
 # 基本结构
 
-ConcurrentHashMap 是一个存储 key/value 对的容器，并且是线程安全的。我们先看 ConcurrentHashMap 的存储结构，如下图：
+ConcurrentHashMap 是一个存储 key/value 对的容器，并且是线程安全的
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1496206a83d44db9abbf39001338982~tplv-k3u1fbpfcp-watermark.image)
+ConcurrentHashMap 的存储结构，如下图：
+
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c1496206a83d44db9abbf39001338982~tplv-k3u1fbpfcp-watermark.image" style="zoom:50%;" />
 
 # put
 
@@ -21,7 +23,7 @@ ConcurrentHashMap 在 put 方法上的整体思路和 HashMap 相同，但在线
 4. 槽点有值的，先锁定当前槽点，保证其余线程不能操作，如果是链表，新增值到链表的尾部，如果是红黑树，使用红黑树新增的方法新增；
 5. 新增完成之后 check 需不需要扩容，需要的话去扩容。
 
-![](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4640b27832d4e2da4b521a447d082d0~tplv-k3u1fbpfcp-watermark.image)
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4640b27832d4e2da4b521a447d082d0~tplv-k3u1fbpfcp-watermark.image" style="zoom:30%;" />
 
 # 扩容
 
@@ -47,66 +49,54 @@ static final int spread(int h) {
 
 传入的参数h为 key 对象的 hashCode，spreed 方法对 hashCode 进行了加工
 
-为什么不直接用 key 的 hashCode，而是使用经 spreed 方法加工后的 hash 值？
-
 **h ^ (h >>> 16)**
 
-h >>> 16 的意思是把 h 的二进制数值向右移动 16 位。我们知道整形为 32 位，那么右移 16 位后，就是把高 16 位移到了低 16 位。而高 16 位清0了。
+`h >>> 16` 的意思是把 h 的二进制数值向右移动 16 位。我们知道整形为 32 位，那么右移 16 位后，就是把高 16 位移到了低 16 位。而高 16 位清0了。
 
-^为异或操作，二进制按位比较，如果相同则为 0，不同则为 1。这行代码的意思就是把高低16位做异或。如果两个hashCode值的低16位相同，但是高位不同，经过如此计算，低16位会变得不一样了。为什么要把低位变得不一样呢？这是由于哈希表数组长度n会是偏小的数值，那么进行 (n - 1) & hash 运算时，一直使用的是hash较低位的值。那么即使hash值不同，但如果低位相当，也会发生碰撞。而进行h ^ (h >>> 16)加工后的hash值，让hashCode高位的值也参与了哈希运算，因此减少了碰撞的概率。
+`^`为异或操作，二进制按位比较，如果相同则为 0，不同则为 1。这行代码的意思就是把高低16位做异或。如果两个hashCode值的低16位相同，但是高位不同，经过如此计算，低16位会变得不一样了。
+
+为什么要把低位变得不一样呢？
+
+这是由于哈希表数组长度n会是偏小的数值，那么进行` (n - 1) & hash` 运算时，一直使用的是hash较低位的值。那么即使hash值不同，但如果低位相当，也会发生碰撞。而进行`h ^ (h >>> 16)`加工后的hash值，让hashCode高位的值也参与了哈希运算，因此减少了碰撞的概率。
 
 **(h ^ (h >>> 16)) & HASH_BITS**
 
-HASH_BITS 这个常量的值为 0x7fffffff，转化为二进制为 0111 1111 1111 1111 1111 1111 1111 1111。这个操作后会把最高位转为 0，其实就是消除了符号位，得到的都是正数。这是因为负的 hashCode 在ConcurrentHashMap 中有特殊的含义，因此我们需要得到一个正的 hashCode。
+`HASH_BITS` 这个常量的值为 0x7fffffff，转化为二进制为 0111 1111 1111 1111 1111 1111 1111 1111。这个操作后会把最高位转为 0，其实就是消除了符号位，得到的都是正数。这是因为负的 hashCode 在ConcurrentHashMap 中有特殊的含义，因此我们需要得到一个正的 hashCode。
 
-# 1.7和1.8的不同实现
+# 1.7和1.8不同
 
-## JDK1.7
+**数据结构**
 
-jdk1.7中采用`Segment` + `HashEntry`的方式进行实现，结构如下：
+Java 7 采用 Segment 分段锁来实现，而 Java 8 中的 ConcurrentHashMap 使用数组 + 链表 + 红黑树
 
-![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1995bd377af8470bbbd5369aba83fca0~tplv-k3u1fbpfcp-watermark.image)
+**并发度**
 
-`ConcurrentHashMap`初始化时，计算出`Segment`数组的大小`ssize`和每个`Segment`中`HashEntry`数组的大小`cap`，并初始化`Segment`数组的第一个元素；其中`ssize`大小为2的幂次方，默认为16，`cap`大小也是2的幂次方，最小值为2，最终结果根据根据初始化容量`initialCapacity`进行计算
+Java 7 中，每个 Segment 独立加锁，最大并发个数就是 Segment 的个数，默认是 16。
 
-其中`Segment`在实现上继承了`ReentrantLock`，这样就自带了锁的功能。
+但是到了 Java 8 中，锁粒度更细，理想情况下 table 数组元素的个数（也就是数组长度）就是其支持并发的最大个数，并发度比之前有提高。
 
-**put实现**
+**保证并发安全的原理**
 
-当执行`put`方法插入数据时，根据key的hash值，在`Segment`数组中找到相应的位置，如果相应位置的`Segment`还未初始化，则通过CAS进行赋值，接着执行`Segment`对象的`put`方法通过加锁机制插入数据，实现如下：
+Java 7 采用 Segment 分段锁来保证安全，而 Segment 是继承自 ReentrantLock。
 
-场景：线程A和线程B同时执行相同`Segment`对象的`put`方法
+Java 8 中放弃了 Segment 的设计，采用 `Node + CAS + synchronized `保证线程安全。
 
-1、线程A执行`tryLock()`方法成功获取锁，则把`HashEntry`对象插入到相应的位置；
-2、线程B获取锁失败，则执行`scanAndLockForPut()`方法，在`scanAndLockForPut`方法中，会通过重复执行`tryLock()`方法尝试获取锁，在多处理器环境下，重复次数为64，单处理器重复次数为1，当执行`tryLock()`方法的次数超过上限时，则执行`lock()`方法挂起线程B；
-3、当线程A执行完插入操作时，会通过`unlock()`方法释放锁，接着唤醒线程B继续执行；
+**遇到 Hash 碰撞**
 
-**size实现**
+Java 7 在 Hash 冲突时，会使用拉链法，也就是链表的形式。
 
-因为`ConcurrentHashMap`是可以并发插入数据的，所以在准确计算元素时存在一定的难度，一般的思路是统计每个`Segment`对象中的元素个数，然后进行累加，但是这种方式计算出来的结果并不一样的准确的，因为在计算后面几个`Segment`的元素个数时，已经计算过的`Segment`同时可能有数据的插入或则删除
+Java 8 先使用拉链法，在链表长度超过一定阈值时，将链表转换为红黑树，来提高查找效率。
 
-在1.7的实现中，采用了如下方式：
+**查询时间复杂度**
 
-先采用不加锁的方式，连续计算元素的个数，最多计算3次：
-1、如果前后两次计算结果相同，则说明计算出来的元素个数是准确的；
-2、如果前后两次计算结果都不同，则给每个`Segment`进行加锁，再计算一次元素的个数；
+Java 7 遍历链表的时间复杂度是 `O(n)`，n 为链表长度。
 
-## JDK1.8
+Java 8 如果变成遍历红黑树，那么时间复杂度降低为 `O(log(n))`，n 为树的节点个数。
 
-1.8中放弃了`Segment`臃肿的设计，取而代之的是采用`Node` + `CAS` + `Synchronized`来保证并发安全进行实现，结构如下：
+# 线程安全
 
-![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16d31edaedf5496e84c6a706e1a695e9~tplv-k3u1fbpfcp-watermark.image)
+1.使用volatile保证当Node中的值变化时对于其他线程是可见的
 
-**size实现**
+2.使用table数组的头结点作为synchronized的锁来保证写操作的安全
 
-1.8中使用一个`volatile`类型的变量`baseCount`记录元素的个数，当插入新数据或则删除数据时，会通过`addCount()`方法更新`baseCount`，实现如下：
-
-1、初始化时`counterCells`为空，在并发量很高时，如果存在两个线程同时执行`CAS`修改`baseCount`值，则失败的线程会继续执行方法体中的逻辑，使用`CounterCell`记录元素个数的变化；
-
-2、如果`CounterCell`数组`counterCells`为空，调用`fullAddCount()`方法进行初始化，并插入对应的记录数，通过`CAS`设置cellsBusy字段，只有设置成功的线程才能初始化`CounterCell`数组
-
-3、如果通过`CAS`设置cellsBusy字段失败的话，则继续尝试通过`CAS`修改`baseCount`字段，如果修改`baseCount`字段成功的话，就退出循环，否则继续循环插入`CounterCell`对象；
-
-所以在1.8中的`size`实现比1.7简单多，因为元素个数保存`baseCount`中，部分元素的变化个数保存在`CounterCell`数组中
-
-通过累加`baseCount`和`CounterCell`数组中的数量，即可得到元素的总个数；
+3.当头结点为null时，使用CAS操作来保证数据能正确的写入

@@ -13,6 +13,10 @@ body{
 	background-color: #f5deb338;
 }
 
+strong{
+	color: hsl(216, 80%, 44%);
+}
+
 a {
     color: #069;
     text-decoration: none;
@@ -56,6 +60,9 @@ a {
     display: inline-block;
 	padding: 10px;
 	list-style: none;
+}
+#menu .menu-item-select {
+	background: transparent;
 }
 #menu .menu-item-link{
 	font-size: 20px;
@@ -208,10 +215,10 @@ a {
 }
 .index-li {
 	margin: 20px 0 20px 0;
-	border-bottom: 1px solid #c6c6c6;
+	border-bottom: 1px solid #e06c75;
 }
 .index-li a{
-	color: #404040;
+	color: #069;
 }
 
 .index-brief{
@@ -229,7 +236,7 @@ a {
 	position: relative;
 	font-style: italic;
 	font-size: 12px;
-	color: #acabab;
+	color: #00a1d6;
 	padding: 0 5px 0 0;
 }
 
@@ -285,15 +292,17 @@ a {
 	line-height: 50px;
 	margin: 20px 0 15px;
 	font-size: 32px;
+	color: #e06c75;
 	padding-bottom: 10px;
-	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid #e06c75;
 }
 #article-content h2 {
 	line-height: 45px;
 	margin: 15px 0 10px;
 	font-size: 25px;
+	color: #73b1e0;
 	padding-left: 10px;
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #73b1e0;
 }
 #article-content h3 {
 	line-height: 40px;
@@ -323,12 +332,19 @@ a {
 #article-content blockquote{
 	padding: 0 1em;
 	color:#6a737d;
-	border-left: .25em solid #dfe2e5;
+	border-left: 3px solid #9654B5;
+	border-right: 1px solid #9654B5;
+	background: #FBF9FD;
 }
 #article-content p {
 	line-height: 20px;
 	margin-bottom: 10px;
 }
+
+code {
+	color: rgb(271, 93, 108);
+}
+
 #article-content ul code,
 #article-content ol code,
 #article-content p code {
