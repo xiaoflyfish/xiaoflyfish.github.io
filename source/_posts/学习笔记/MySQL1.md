@@ -89,3 +89,41 @@ InnoDB存储引擎中有一个非常重要的放在内存里的组件，就是�
 这种模式下，你提交事务之后，redo log可能仅仅停留在os cache内存缓存里，没实际进入磁盘文件，万一此时你要 是机器宕机了，那么os cache里的redo log就会丢失，同样会让你感觉提交事务了，结果数据丢了
 
 <img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210209234102.png" style="zoom:33%;" />
+
+# binlog
+
+binlog叫做归档日志，他里面记录的是偏向于逻辑性的日志，类似于“对users表中的id=10的一行数据做了更新操 作，更新以后的值是什么”
+
+binlog不是InnoDB存储引擎特有的日志文件，是属于mysql server自己的日志文件。
+
+**提交事务的时候，同时会写入binlog** 
+
+在我们提交事务的时候，会把redo log日志写入磁盘文件中去。然后其实在提交事务的时 候，我们同时还会把这次更新对应的binlog日志写入到磁盘文件中去
+
+**binlog日志的刷盘策略分析**
+
+对于binlog日志，其实也有不同的刷盘策略，有一个`sync_binlog`参数可以控制binlog的刷盘策略，他的默认值是0， 此时你把binlog写入磁盘的时候，其实不是直接进入磁盘文件，而是进入os cache内存缓存。
+
+所以跟之前分析的一样，如果此时机器宕机，那么你在os cache里的binlog日志是会丢失的
+
+如果要是把`sync_binlog`参数设置为1的话，那么此时会强制在提交事务的时候，把binlog直接写入到磁盘文件里去， 那么这样提交事务之后，哪怕机器宕机，磁盘上的binlog是不会丢失的
+
+**基于binlog和redo log完成事务的提交**
+
+当我们把binlog写入磁盘文件之后，接着就会完成最终的事务提交，此时会把本次更新对应的binlog文件名称和这次更新的binlog日志在文件里的位置，都写入到redo log日志文件里去，同时在redo log日志文件里写入一个commit标 记。 在完成这个事情之后，才算最终完成了事务的提交
+
+**最后一步在redo日志中写入commit标记的意义是什么**
+
+说白了，他其实是用来保持redo log日志与binlog日志一致的。
+
+必须是在redo log中写入最终的事务commit标记了，然后此时事务提交成功，而且redo log里有本次更新对应的日 志，binlog里也有本次更新对应的日志 ，redo log和binlog完全是一致的。
+
+**后台IO线程随机将内存更新后的脏数据刷回磁盘**
+
+现在我们假设已经提交事务了，此时一次更新“update users set name='xxx' where id=10”，他已经把内存里的 buffer pool中的缓存数据更新了，同时磁盘里有redo日志和binlog日志，都记录了把我们指定的“id=10”这行数据 修改了“name='xxx'”。
+
+这个时候磁盘上的数据文件里的“id=10”这行数据的name字段还是等于 zhangsan这个旧的值啊
+
+所以MySQL有一个后台的IO线程，会在之后某个时间里，随机的把内存buffer pool中的修改后的脏数据给刷回到磁 盘上的数据文件里去
+
+<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210210002203.png" style="zoom:33%;" />
