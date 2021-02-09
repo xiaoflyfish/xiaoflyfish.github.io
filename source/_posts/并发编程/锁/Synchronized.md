@@ -5,11 +5,21 @@ categories:
 - 锁
 ---
 
+多线程编程中，有可能会出现多个线程同时访问同一个共享、可变资源的情况，这个资源我们称之其为临界资源；这种资源可能是：对象、变量、文件等
+
+**如何解决线程并发安全问题**
+
+实际上，所有的并发模式在解决线程安全问题时，采用的方案都是**序列化访问临界资源**。即在同一时刻，只能有一个线程访问临界资源，也称作**同步互斥访问**。
+
+Java 中，提供了两种方式来实现同步互斥访问：synchronized和**Lock**
+
+当多个线程执行一个方法时，该方法内部的局部变量并不是临界资源，因为这些局部变量是在每个线程的私有栈中，因此不具有共享性，不会导致线程安全问题。
+
 synchroniz能够保证在同一时刻最多只有一个线程执行该段代码，以达到保证并发安全的效果
 
 **synchronized和lock的区别**：
 
-synchronized属于JVM层面，底层通过 monitorenter 和 monitorexit 两个指令实现；
+synchronized属于JVM层面，底层通过 `monitorenter` 和 monitorexit 两个指令实现；
 
 lock是JUC提供的具体类，是API层面的东西；
 
@@ -23,7 +33,7 @@ lock可中断：
 
 * 设置超时方法tryLock(time, unit)；
 
-* 使用lockInterruptibly，调用iterrupt方法可中断；
+* 使用`lockInterruptibly`，调用interrupt方法可中断；
 
 synchronized是非公平锁；
 
@@ -40,16 +50,17 @@ lock默认是非公平锁，但是可以通过构造函数传入boolean类型值
 
 synchronized 锁只能同时被一个线程拥有，但是 Lock 锁没有这个限制
 
-例如在读写锁中的读锁，是可以同时被多个线程持有的，可是 synchronized 做不到
+例如在读写锁中的读锁，是可以同时被多个线程持有的，可是 `synchronized` 做不到
 
 性能区别
 
-在 Java 5 以及之前，synchronized 的性能比较低，但是到了 Java 6 以后，发生了变化，因为 JDK 对 synchronized 进行了很多优化，比如自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁等，所以后期的 Java 版本里的 synchronized 的性能并不比 Lock 差。
+在 Java 5 以及之前，`synchronized `的性能比较低，但是到了 Java 6 以后，发生了变化，因为 JDK 对 synchronized 进行了很多优化，比如自适应自旋、锁消除、锁粗化、轻量级锁、偏向锁等，所以后期的 Java 版本里的 synchronized 的性能并不比 Lock 差。
 
 # 两类用法
 
 对象锁：包括方法锁（默认锁对象为this当前实例对象）和同步代码块锁（自己指定锁对象）
-类锁：指synchronized修饰静态的方法或指定锁为Class对象。
+
+类锁：指`synchronized`修饰静态的方法或指定锁为Class对象。
 
 # 性质
 
@@ -61,7 +72,7 @@ synchronized 锁只能同时被一个线程拥有，但是 Lock 锁没有这个�
 
 **好处**
 
-避免死锁：比如说有两个方法A、B都被synchronized修饰了，线程1执行到了方法A，获取了这把锁，要想执行方法B也需要获取该锁。假设synchronized不具备可重入性质，线程1执行方法A虽然获取了该锁，但是想要访问方法B不能直接使用该锁，此时既想获取锁又不想释放锁，这就造成永远等待即死锁。
+避免死锁：比如说有两个方法A、B都被`synchronized`修饰了，线程1执行到了方法A，获取了这把锁，要想执行方法B也需要获取该锁。假设synchronized不具备可重入性质，线程1执行方法A虽然获取了该锁，但是想要访问方法B不能直接使用该锁，此时既想获取锁又不想释放锁，这就造成永远等待即死锁。
 
 **不可中断性**
 
