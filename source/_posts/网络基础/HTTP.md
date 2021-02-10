@@ -139,4 +139,34 @@ Tomcat对Session的实现是一开始同时使用Cookie和URL回写机制，如�
 5. 开发可以通过设置cookie的属性，达到使cookie长期有效的效果。session依赖于名为JSESSIONID的cookie，而cookie JSESSIONID的过期时间默认为-1，只需关闭窗口该session就会失效，因而session不能达到长期有效的效果。
 6. cookie保管在客户端，不占用服务器资源。对于并发用户十分多的网站，cookie是很好的选择。session是保管在服务器端的，每个用户都会产生一个session。假如并发访问的用户十分多，会产生十分多的session，耗费大量的内存。
 
+# HTTP3.0
+
+使用UDP协议
+
+# 请求头
+
+HTTP 请求报文由3部分组成(请求行+请求头+请求体)
+
+<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210210120236.png" style="zoom:33%;" />
+
+**常见的HTTP报文头属性**
+
+- Accpet
+  - 告诉服务端,客户端接收什么类型的响应
+- Referer
+  - 表示这是请求是从哪个URL进来的
+- Cache-Control
+  - 对缓存进行控制,如一个请求希望响应的内容在客户端缓存一年,或不被缓可以通过这个报文头设置
+- Accept-Encoding
+  - 这个属性是用来告诉服务器能接受什么编码格式,包括字符编码,压缩形式(一般都是压缩形式)
+    - 例如:Accept-Encoding:gzip, deflate(这两种都是压缩格式)
+- Host
+  - 指定要请求的资源所在的主机和端口
+- User-Agent 作用：告诉服务器，客户端使用的操作系统、浏览器版本和名称
+
+# 响应报文
+
+> 响应报文与请求报文一样,由三个部分组成(响应行,响应头,响应体)
+
+<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210210135518.png" style="zoom:33%;" />
 
