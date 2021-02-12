@@ -4,11 +4,14 @@ categories:
 - MySQL
 ---
 
+写出好的Join语句，前提你得懂这些：https://mp.weixin.qq.com/s/8XuX9Su1qvHrMLWcQzKTaQ
+
 **join连接时哪个表是驱动表，哪个表是被驱动表：**
 
 - 当使用`left join`时，左表是驱动表，右表是被驱动表
 - 当使用`right join`时，右表是驱动表，左表是被驱动表
 - 当使用`inner join`时，mysql会选择数据量比较小的表作为驱动表，大表作为被驱动表
+- 当连接查询有where条件时，带where条件的表是驱动表，否则是被驱动表
 
 **小表驱动大表优于大表驱动小表**
 
