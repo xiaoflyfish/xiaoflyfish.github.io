@@ -62,6 +62,32 @@ synchronized 锁只能同时被一个线程拥有，但是 Lock 锁没有这个�
 
 类锁：指`synchronized`修饰静态的方法或指定锁为Class对象。
 
+**多线程访问同步方法的几种情况**
+
+两个线程同时访问一个对象的同步方法。
+
+> 由于同步方法锁使用的是this对象锁，同一个对象的this锁只有一把，两个线程同一时间只能有一个线程持有该锁，所以该方法将会串行运行。
+
+两个线程访问的是两个对象的同步方法。
+
+> 由于两个对象的this锁互不影响，synchronized将不会起作用，所以该方法将会并行运行。
+
+两个线程访问的是synchronized的静态方法。
+
+> synchronized修饰的静态方法获取的是当前类模板对象的锁，该锁只有一把，无论访问多少个该类对象的方法，都将串行执行。
+
+同时访问同步方法与非同步方法
+
+> 非同步方法不受影响。
+
+访问同一个对象的不同的普通同步方法。
+
+> 由于this对象锁只有一个，不同线程访问多个普通同步方法将串行运行。
+
+同时访问静态synchronized和非静态synchronized方法
+
+> 静态synchronized方法的锁为class对象的锁，非静态synchronized方法锁为this的锁，它们不是同一个锁，所以它们将并行运行。
+
 # 性质
 
 **可重入性质**
@@ -109,3 +135,47 @@ monitorexit：执行monitorexit的线程必须是对象所对应的monitor的所
 **可见性原理**
 
 synchronized修饰的方法或者代码块在执行完毕后，该方法或者代码块中对共享变量的所作的任何修改都要在释放锁之前从线程内存写入到主内存中，因此就保证了线程内存的变量与主内存中变量的一致性。同样，在进入同步代码块或者方法中所得到的共享变量值也是直接从主内存中获取的。
+
+## Monitor
+
+可以把它理解为 **一个同步工具**，也可以描述为 **一种同步机制**，它通常被 **描述为一个对象**。与一切皆对象一样，所有的Java对象是天生的Monitor，每一个Java对象都有成为Monitor的潜质，**因为在Java的设计中 ，每一个Java对象自打娘胎里出来就带了一把看不见的锁，它叫做内部锁或者Monitor锁**。**也就是通常说Synchronized的对象锁，MarkWord锁标识位为10，其中指针指向的是Monitor对象的起始地址**。
+
+在Java虚拟机（HotSpot）中，**Monitor是由ObjectMonitor实现的**，其主要数据结构如下（位于HotSpot虚拟机源码`ObjectMonitor.hpp`文件，C++实现的）：
+
+```c++
+ObjectMonitor() {
+    _header       = NULL;
+    _count        = 0; // 记录个数
+    _waiters      = 0,
+    _recursions   = 0;
+    _object       = NULL;
+    _owner        = NULL;
+    _WaitSet      = NULL; // 处于wait状态的线程，会被加入到_WaitSet
+    _WaitSetLock  = 0 ;
+    _Responsible  = NULL ;
+    _succ         = NULL ;
+    _cxq          = NULL ;
+    FreeNext      = NULL ;
+    _EntryList    = NULL ; // 处于等待锁block状态的线程，会被加入到该列表
+    _SpinFreq     = 0 ;
+    _SpinClock    = 0 ;
+    OwnerIsThread = 0 ;
+  }
+```
+
+每个 Java 对象在 JVM 的对等对象的头中保存锁状态，指向 ObjectMonitor
+
+ObjectMonitor 保存了当前持有锁的线程引用，EntryList 中保存目前等待获取锁的线程，WaitSet 保存 wait 的线程。此外还有一个计数器，每当线程获得 monitor 锁，计数器 +1，当线程重入此锁时，计数器还会 +1。当计数器不为0时，其它尝试获取 monitor 锁的线程将会被保存到EntryList中，并被阻塞。
+
+当持有锁的线程释放了monitor 锁后，计数器 -1。当计数器归位为 0 时，所有 EntryList 中的线程会尝试去获取锁，但只会有一个线程会成功，没有成功的线程仍旧保存在 EntryList 中。
+
+**由此可以看出 monitor 锁是非公平锁**
+
+ObjectMonitor中有两个队列，**_WaitSet 和 _EntryList**，用来保存ObjectWaiter对象列表（ **每个等待锁的线程都会被封装成ObjectWaiter对象** ），**_owner指向持有ObjectMonitor对象的线程**，当多个线程同时访问一段同步代码时：
+
+1. 首先会进入 `_EntryList` 集合，**当线程获取到对象的monitor后，进入 _Owner区域并把monitor中的owner变量设置为当前线程，同时monitor中的计数器count加1**；
+2. 若线程调用 wait() 方法，**将释放当前持有的monitor，owner变量恢复为null，count自减1，同时该线程进入 WaitSet集合中等待被唤醒**；
+3. 若当前线程执行完毕，**也将释放monitor（锁）并复位count的值，以便其他线程进入获取monitor(锁)**；
+
+同时，**Monitor对象存在于每个Java对象的对象头Mark Word中（存储的指针的指向），Synchronized锁便是通过这种方式获取锁的**，也是为什么Java中任意对象可以作为锁的原因，**同时notify/notifyAll/wait等方法会使用到Monitor锁对象，所以必须在同步代码块中使用**。
+
