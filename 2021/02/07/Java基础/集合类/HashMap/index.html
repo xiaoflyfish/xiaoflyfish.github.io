@@ -1,0 +1,4560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		HashMap | 
+	 
+	月伴飞鱼
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/%E5%A4%B4%E5%83%8F.jpg">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="/css/clipboard-use.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+<script src="/js/jquery.fancybox.min.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+	
+<script src="/js/clipboard.min.js"></script>
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">月伴飞鱼</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">关于我</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="/note" class="menu-item-link">读书笔记</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="/summary" class="menu-item-link">公众号文章汇总</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://tech.meituan.com/" class="menu-item-link" target="_blank">
+				美团技术团队
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://tech.youzan.com/" class="menu-item-link" target="_blank">
+				有赞技术团队
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://stackoverflow.com/" class="menu-item-link" target="_blank">
+				StackOverFlow
+			</a>
+		</li>
+		<!--<li class="menu-item">
+			<select class="menu-item-link menu-item-select">
+				<option class="menu-item-link"  value="volvo">Volvo</option>
+				<option class="menu-item-link"  value="saab">Saab</option>
+				<option class="menu-item-link"  value="fiat">Fiat</option>
+				<option class="menu-item-link"  value="audi">Audi</option>
+			</select>
+		</li>-->
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="搜索一下">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Docker/Service%20Mesh/">
+										Service Mesh
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Docker/%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
+										基本原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Docker/%E5%AE%B9%E5%99%A8%E5%8C%96%E6%8A%80%E6%9C%AF/">
+										容器化技术
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Docker/%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+										核心概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ElasticSearch
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ElasticSearch/%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95/">
+										倒排索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/ElasticSearch/%E5%88%86%E8%AF%8D/">
+										分词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/ElasticSearch/%E5%88%86%E9%A1%B5/">
+										分页
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/ElasticSearch/%E6%90%9C%E7%B4%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+										搜索性能优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ElasticSearch/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+										数据处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ElasticSearch/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/">
+										数据持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ElasticSearch/%E8%84%91%E8%A3%82%E9%97%AE%E9%A2%98/">
+										脑裂问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										JVM
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/JIT%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91/">
+										JIT即时编译
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">
+										内存泄漏
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/JVM/%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA/">
+										内存溢出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/">
+										垃圾收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/JVM/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95/">
+										垃圾收集算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										对象
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">
+										内存分配
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
+										内存回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/">
+										四大引用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/JVM/%E5%AF%B9%E8%B1%A1/%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
+										基本结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/JVM/%E5%B8%B8%E8%A7%81%E5%8F%82%E6%95%B0/">
+										常见参数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
+										类加载机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Java基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/Final/">
+										Final
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/String/">
+										String
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/ThreadLocal/">
+										ThreadLocal
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										集合类
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/ArrayList/">
+										ArrayList
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/02/07/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/HashMap/">
+										HashMap
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/HashSet/">
+										HashSet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/LinkedList/">
+										LinkedList
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/Linux/CPU100%25/">
+										CPU100%
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/Linux/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+										IO多路复用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Linux/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Linux/VIM/">
+										VIM
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/Linux/%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+										基础命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/Linux/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/Linux/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
+										线程模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MyBatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/MyBatis/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MyBatis/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+										缓存机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										MySQL
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/Buffer%20Pool/">
+										Buffer Pool
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/Explain/">
+										Explain
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/MySQL/Join/">
+										Join
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/MySQL/MVCC/">
+										MVCC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/Order%20By/">
+										Order By
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
+										SQL执行
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
+										SQL更新
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
+										主从复制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
+										事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
+										分页优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">
+										存储引擎
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/MySQL/%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6/">
+										日志文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/MySQL/%E7%B4%A2%E5%BC%95/">
+										索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/MySQL/%E8%8C%83%E5%BC%8F/">
+										范式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/MySQL/%E9%94%81/">
+										锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Netty
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Netty/Recycler%E5%AF%B9%E8%B1%A1%E6%B1%A0/">
+										Recycler对象池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Netty/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
+										核心组件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Netty/%E7%B2%98%E5%8C%85%E5%92%8C%E6%8B%86%E5%8C%85/">
+										粘包和拆包
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
+										编解码器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+										零拷贝
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+										反向代理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/12/Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/Nginx/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+										负载均衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/BigKey/">
+										BigKey
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/Pipeline/">
+										Pipeline
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
+										主从复制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/Redis/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
+										内存回收
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E5%8D%95%E7%BA%BF%E7%A8%8B/">
+										单线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/Redis/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
+										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/12/Redis/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E6%8C%81%E4%B9%85%E5%8C%96/">
+										持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据类型
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/12/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/BitMap/">
+										BitMap
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/12/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/HyperLogLog/">
+										HyperLogLog
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/SortedSet/">
+										SortedSet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+										基本介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/Redis/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/">
+										缓存一致性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/Redis/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E3%80%81%E5%87%BB%E7%A9%BF%E3%80%81%E9%9B%AA%E5%B4%A9/">
+										缓存穿透、击穿、雪崩
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Redis/%E9%9B%86%E7%BE%A4/">
+										集群
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Spring
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/Spring/Bean%E4%BD%9C%E7%94%A8%E5%9F%9F/">
+										Bean作用域
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/Spring/Bean%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+										Bean生命周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										SpringBoot
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/12/Spring/SpringBoot/%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">
+										自动配置原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										SpringCloud
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/17/Spring/SpringCloud/Eureka/">
+										Eureka
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Spring/SpringMVC/">
+										SpringMVC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Spring/%E4%BA%8B%E5%8A%A1/">
+										事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/Spring/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
+										动态代理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/Spring/%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/">
+										循环依赖
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Tomcat
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
+										热部署和热加载
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/Tomcat/%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
+										线程池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ZooKeeper
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ZooKeeper/Zab%E5%8D%8F%E8%AE%AE/">
+										Zab协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ZooKeeper/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/ZooKeeper/%E8%84%91%E8%A3%82%E9%97%AE%E9%A2%98/">
+										脑裂问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分布式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/CAP%E5%92%8CBASE/">
+										CAP和BASE
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E4%B8%80%E8%87%B4%E6%80%A7Hash/">
+										一致性Hash
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
+										分布式ID
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分布式事务
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/2PC%E5%8D%8F%E8%AE%AE/">
+										2PC协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/3PC%E5%8D%8F%E8%AE%AE/">
+										3PC协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/TCC/">
+										TCC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/%E6%9C%80%E5%A4%A7%E5%8A%AA%E5%8A%9B%E9%80%9A%E7%9F%A5/">
+										最大努力通知
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										分布式算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/Bully%E7%AE%97%E6%B3%95/">
+										Bully算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/Paxos%E7%AE%97%E6%B3%95/">
+										Paxos算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/Raft%E7%AE%97%E6%B3%95/">
+										Raft算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/ZAB%E7%AE%97%E6%B3%95/">
+										ZAB算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
+										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/">
+										服务容错
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
+										服务架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81%E6%96%B9%E6%A1%88/">
+										限流方案
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										学习笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										DDD1
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/DDD1/%E6%9C%8D%E5%8A%A1%E3%80%81%E5%AE%9E%E4%BD%93%E5%92%8C%E5%80%BC%E5%AF%B9%E8%B1%A1/">
+										服务、实体和值对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/DDD1/%E7%94%B5%E5%95%86%E6%94%AF%E4%BB%98%E6%A1%88%E4%BE%8B/">
+										电商支付案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										KAFKA1
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/KAFKA%E7%89%88%E6%9C%AC/">
+										KAFKA版本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E4%BD%8D%E7%A7%BB%E4%B8%BB%E9%A2%98/">
+										位移主题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E4%BD%8D%E7%A7%BB%E6%8F%90%E4%BA%A4/">
+										位移提交
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%89%AF%E6%9C%AC%E6%9C%BA%E5%88%B6/">
+										副本机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">
+										基本术语
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%B9%82%E7%AD%89%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%94%9F%E4%BA%A7%E8%80%85/">
+										幂等和事务生产者
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E6%97%A0%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1%E9%85%8D%E7%BD%AE/">
+										无消息丢失配置
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E6%B6%88%E8%B4%B9%E8%80%85%E7%BB%84/">
+										消费者组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E7%94%9F%E4%BA%A7%E8%80%85%E5%8E%8B%E7%BC%A9%E7%AE%97%E6%B3%95/">
+										生产者压缩算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E6%81%AF%E5%88%86%E5%8C%BA/">
+										生产者消息分区
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E9%87%8D%E5%B9%B3%E8%A1%A1/">
+										重平衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E9%87%8D%E8%A6%81%E5%8F%82%E6%95%B0/">
+										重要参数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
+										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis1
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
+										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
+										主从复制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E4%BA%8B%E5%8A%A1/">
+										事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
+										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%8C%81%E4%B9%85%E5%8C%96/">
+										持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E9%9B%86%E7%BE%A4/">
+										集群
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										SpringCloud1
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Eureka/">
+										Eureka
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Hystrix/">
+										Hystrix
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Ribbon/">
+										Ribbon
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Zuul/">
+										Zuul
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										ZooKeeper1
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/ACL%E6%9D%83%E9%99%90/">
+										ACL权限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/Curator/">
+										Curator
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/Leader%E9%80%89%E4%B8%BE/">
+										Leader选举
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/Observer%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										Observer服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/Watch/">
+										Watch
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/Zab%E5%8D%8F%E8%AE%AE/">
+										Zab协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E4%BA%8B%E5%8A%A1%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86/">
+										事务请求处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E4%BC%9A%E8%AF%9D/">
+										会话
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%88%86%E6%A1%B6%E7%AD%96%E7%95%A5/">
+										分桶策略
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%9B%9B%E5%AD%97%E5%91%BD%E4%BB%A4/">
+										四字命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%AE%9E%E7%8E%B0%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+										实现负载均衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%8E%9F%E7%90%86/">
+										客户端核心类原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%BA%8F%E5%88%97%E5%8C%96/">
+										序列化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%95%B0%E6%8D%AE%E5%90%8C%E6%AD%A5/">
+										数据同步
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/">
+										数据存储
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6/">
+										数据文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">
+										数据模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%97%A5%E5%BF%97%E6%B8%85%E7%90%86/">
+										日志清理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96/">
+										服务器初始化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D/">
+										服务端处理会话
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
+										生产环境搭建
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
+										网络通信协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E9%9D%9E%E4%BA%8B%E5%8A%A1%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86/">
+										非事务请求处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										设计模式1
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/24/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E4%BA%AB%E5%85%83%E6%A8%A1%E5%BC%8F/">
+										享元模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E5%85%85%E8%A1%80%E6%A8%A1%E5%9E%8B/">
+										充血模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										建造者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
+										抽象类和接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+										桥接模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/24/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+										模板方法模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/24/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+										策略模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E7%BB%84%E5%90%88%E5%92%8C%E7%BB%A7%E6%89%BF/">
+										组合和继承
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E7%BB%84%E5%90%88%E6%A8%A1%E5%BC%8F/">
+										组合模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/">
+										编程规范
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										装饰器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/24/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										观察者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E8%B4%AB%E8%A1%80%E6%A8%A1%E5%9E%8B/">
+										贫血模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F/">
+										适配器模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E5%B7%A5%E5%85%B7/%E5%AE%9E%E7%94%A8%E5%B7%A5%E5%85%B7/">
+										实用工具
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E5%B7%A5%E5%85%B7/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/">
+										开发工具
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										并发编程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/AQS/">
+										AQS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
+										CAS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/MESI%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7%E5%8D%8F%E8%AE%AE/">
+										MESI缓存一致性协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Volatile/">
+										Volatile
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%8F%AF%E8%A7%81%E6%80%A7%EF%BC%8C%E5%8E%9F%E5%AD%90%E6%80%A7%E4%B8%8E%E6%9C%89%E5%BA%8F%E6%80%A7/">
+										可见性，原子性与有序性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										并发工具类
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/ConcurrentHashMap/">
+										ConcurrentHashMap
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CopyOnWriteArrayList/">
+										CopyOnWriteArrayList
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CountDownLatch/">
+										CountDownLatch
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CyclicBarrier/">
+										CyclicBarrier
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/ReentrantLock/">
+										ReentrantLock
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/Semaphore/">
+										Semaphore
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										线程
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E4%B8%AD%E6%96%AD%E7%BA%BF%E7%A8%8B/">
+										中断线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B/">
+										守护线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+										生命周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8/">
+										线程安全
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										线程池
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+										基本介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/09/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
+										基本原理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E5%B8%B8%E7%94%A8%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
+										常用线程池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97/">
+										阻塞队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										锁
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81/Synchronized/">
+										Synchronized
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81/%E6%AD%BB%E9%94%81/">
+										死锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81/%E8%87%AA%E6%97%8B%E9%94%81/">
+										自旋锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81/%E9%94%81%E4%BC%98%E5%8C%96/">
+										锁优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81/%E9%94%81%E5%88%86%E7%B1%BB/">
+										锁分类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E9%94%81/%E9%94%81%E5%8D%87%E7%BA%A7/">
+										锁升级
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										操作系统
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/CPU/">
+										CPU
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%86%85%E6%A0%B8%E6%80%81%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%81/">
+										内核态和用户态
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+										基础知识
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E6%AD%BB%E9%94%81/">
+										死锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E7%BA%BF%E7%A8%8B/">
+										线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%99%9A%E6%8B%9F%E5%9C%B0%E5%9D%80/">
+										虚拟地址
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B/">
+										进程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+										零拷贝
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/B%E5%92%8CB+%E6%A0%91/">
+										B和B+树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/">
+										布隆过滤器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%B7%83%E8%A1%A8/">
+										跳跃表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										消息队列
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										KAFKA
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D/">
+										常用名词
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1/">
+										消息丢失
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%80%89%E4%B8%BE%E6%9C%BA%E5%88%B6/">
+										选举机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%AB%98%E5%8F%AF%E7%94%A8/">
+										高可用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%AB%98%E6%80%A7%E8%83%BD%E5%8E%9F%E5%9B%A0/">
+										高性能原因
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										RabbitMQ
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RabbitMQ/%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+										基本使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RabbitMQ/%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+										核心概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RabbitMQ/%E9%AB%98%E7%BA%A7%E7%89%B9%E6%80%A7/">
+										高级特性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										RocketMQ
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ/%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+										核心概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/RocketMQ/%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97/">
+										核心模块
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/%E4%B8%BB%E6%B5%81%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										主流消息队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LRU%E7%AE%97%E6%B3%95/">
+										LRU算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										LeetCode
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/23/%E7%AE%97%E6%B3%95/LeetCode/100%E7%9B%B8%E5%90%8C%E7%9A%84%E6%A0%91/">
+										100相同的树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/101%E5%AF%B9%E7%A7%B0%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										101对称二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/24/%E7%AE%97%E6%B3%95/LeetCode/102%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										102二叉树的层序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/110%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										110平衡二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/112%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C/">
+										112路径总和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/113%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8CII/">
+										113路径总和II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/1143%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/">
+										1143最长公共子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/11%E7%9B%9B%E6%9C%80%E5%A4%9A%E6%B0%B4%E7%9A%84%E5%AE%B9%E5%99%A8/">
+										11盛最多水的容器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/122%E4%B9%B0%E5%8D%96%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E6%97%B6%E6%9C%BAII/">
+										122买卖股票的最佳时机II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/125%E9%AA%8C%E8%AF%81%E5%9B%9E%E6%96%87%E4%B8%B2/">
+										125验证回文串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/136%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97/">
+										136只出现一次的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/13%E7%BD%97%E9%A9%AC%E6%95%B0%E5%AD%97%E8%BD%AC%E6%95%B4%E6%95%B0/">
+										13罗马数字转整数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/141%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/">
+										141环形链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/142%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8II/">
+										142环形链表II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/144%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										144二叉树的前序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/145%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										145二叉树的后序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/146LRU%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
+										146LRU缓存机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/148%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8/">
+										148排序链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/14%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80/">
+										14最长公共前缀
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/155%E6%9C%80%E5%B0%8F%E6%A0%88/">
+										155最小栈
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/15%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										15三数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/169%E5%A4%9A%E6%95%B0%E5%85%83%E7%B4%A0/">
+										169多数元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/198%E6%89%93%E5%AE%B6%E5%8A%AB%E8%88%8D/">
+										198打家劫舍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/199%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E5%8F%B3%E8%A7%86%E5%9B%BE/">
+										199二叉树的右视图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/19%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9/">
+										19删除链表的倒数第N个节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/1%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">
+										1两数之和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/206%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
+										206反转链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/20%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7/">
+										20有效的括号
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/215%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E7%AC%ACK%E4%B8%AA%E6%9C%80%E5%A4%A7%E5%85%83%E7%B4%A0/">
+										215数组中的第K个最大元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/21%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/">
+										21合并两个有序链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/226%E7%BF%BB%E8%BD%AC%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										226翻转二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/229%E6%B1%82%E4%BC%97%E6%95%B0II/">
+										229求众数II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/234%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8/">
+										234回文链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/240%E6%90%9C%E7%B4%A2%E4%BA%8C%E7%BB%B4%E7%9F%A9%E9%98%B5II/">
+										240搜索二维矩阵II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/24%E4%B8%A4%E4%B8%A4%E4%BA%A4%E6%8D%A2%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E8%8A%82%E7%82%B9/">
+										24两两交换链表中的节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/26%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/">
+										26删除排序数组中的重复项
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/2%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0/">
+										2两数相加
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/300%E6%9C%80%E9%95%BF%E4%B8%8A%E5%8D%87%E5%AD%90%E5%BA%8F%E5%88%97/">
+										300最长上升子序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/31%E4%B8%8B%E4%B8%80%E4%B8%AA%E6%8E%92%E5%88%97/">
+										31下一个排列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/322%E9%9B%B6%E9%92%B1%E5%85%91%E6%8D%A2/">
+										322零钱兑换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/328%E5%A5%87%E5%81%B6%E9%93%BE%E8%A1%A8/">
+										328奇偶链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/344%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+										344反转字符串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/3%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2/">
+										3无重复字符的最长子串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/415%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%8A%A0/">
+										415字符串相加
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/46%E5%85%A8%E6%8E%92%E5%88%97/">
+										46全排列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/470%E7%94%A8Rand7()%E5%AE%9E%E7%8E%B0Rand10()/">
+										470用Rand7()实现Rand10()
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/509%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0/">
+										509斐波那契数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/50%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E5%AD%97%E7%AC%A6/">
+										50第一个只出现一次的字符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/53%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/">
+										53最大子序和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/543%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%9B%B4%E5%BE%84/">
+										543二叉树的直径
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/54%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5/">
+										54螺旋矩阵
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/5%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2/">
+										5最长回文子串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/617%E5%90%88%E5%B9%B6%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										617合并二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/64%E6%9C%80%E5%B0%8F%E8%B7%AF%E5%BE%84%E5%92%8C/">
+										64最小路径和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/674%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E9%80%92%E5%A2%9E%E5%BA%8F%E5%88%97/">
+										674最长连续递增序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/69X%E7%9A%84%E5%B9%B3%E6%96%B9%E6%A0%B9/">
+										69X的平方根
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/704%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/">
+										704二分查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/75%E9%A2%9C%E8%89%B2%E5%88%86%E7%B1%BB/">
+										75颜色分类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/78%E5%AD%90%E9%9B%86/">
+										78子集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/7%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/">
+										7整数反转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/83%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E5%85%83%E7%B4%A0/">
+										83删除排序链表中的重复元素
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/88%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/">
+										88合并两个有序数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/92%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/">
+										92反转链表II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/94%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86/">
+										94二叉树的中序遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/LeetCode/98%E9%AA%8C%E8%AF%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/">
+										98验证二叉搜索树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										剑指OFFER
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/10II%E9%9D%92%E8%9B%99%E8%B7%B3%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98/">
+										10II青蛙跳台阶问题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/15%E4%BA%8C%E8%BF%9B%E5%88%B6%E4%B8%AD1%E7%9A%84%E4%B8%AA%E6%95%B0/">
+										15二进制中1的个数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/18%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E8%8A%82%E7%82%B9/">
+										18删除链表的节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/21%E8%B0%83%E6%95%B4%E6%95%B0%E7%BB%84%E9%A1%BA%E5%BA%8F%E4%BD%BF%E5%A5%87%E6%95%B0%E4%BD%8D%E4%BA%8E%E5%81%B6%E6%95%B0%E5%89%8D%E9%9D%A2/">
+										21调整数组顺序使奇数位于偶数前面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/22%E9%93%BE%E8%A1%A8%E4%B8%AD%E5%80%92%E6%95%B0%E7%AC%ACK%E4%B8%AA%E8%8A%82%E7%82%B9/">
+										22链表中倒数第K个节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/24%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">
+										24反转链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/25%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%8E%92%E5%BA%8F%E7%9A%84%E9%93%BE%E8%A1%A8/">
+										25合并两个排序的链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/26%E6%A0%91%E7%9A%84%E5%AD%90%E7%BB%93%E6%9E%84/">
+										26树的子结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/27%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%95%9C%E5%83%8F/">
+										27二叉树的镜像
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/31%E6%A0%88%E7%9A%84%E5%8E%8B%E5%85%A5%E3%80%81%E5%BC%B9%E5%87%BA%E5%BA%8F%E5%88%97/">
+										31栈的压入、弹出序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/32III%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91III/">
+										32III从上到下打印二叉树III
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/32II%E4%BB%8E%E4%B8%8A%E5%88%B0%E4%B8%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91II/">
+										32II从上到下打印二叉树II
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/33%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97/">
+										33二叉搜索树的后序遍历序列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/39%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97/">
+										39数组中出现次数超过一半的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/3%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/">
+										3数组中重复的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/41%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">
+										41数据流中的中位数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/42%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C/">
+										42连续子数组的最大和
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/4%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">
+										4二维数组中的查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/52%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E8%8A%82%E7%82%B9/">
+										52两个链表的第一个公共节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/54%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84K%E5%A4%A7%E8%8A%82%E7%82%B9/">
+										54二叉搜索树的K大节点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/55I%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6/">
+										55I二叉树的深度
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/63%E8%82%A1%E7%A5%A8%E7%9A%84%E6%9C%80%E5%A4%A7%E5%88%A9%E6%B6%A6/">
+										63股票的最大利润
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/65%E4%B8%8D%E7%94%A8%E5%8A%A0%E5%87%8F%E4%B9%98%E9%99%A4%E5%81%9A%E5%8A%A0%E6%B3%95/">
+										65不用加减乘除做加法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/68II%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">
+										68II二叉树的最近公共祖先
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/68I%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88/">
+										68I二叉搜索树的最近公共祖先
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/6%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/">
+										6从尾到头打印链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/9%E7%94%A8%E4%B8%A4%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97/">
+										9用两个栈实现队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+										排序算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										面试题
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%98/16.06%E6%9C%80%E5%B0%8F%E5%B7%AE/">
+										16.06最小差
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/06/%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%98/17.14%E6%9C%80%E5%B0%8FK%E4%B8%AA%E6%95%B0/">
+										17.14最小K个数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										网络基础
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/CSRF%E5%92%8CXSS/">
+										CSRF和XSS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/09/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/DOS%E6%94%BB%E5%87%BB/">
+										DOS攻击
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/HTTP/">
+										HTTP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/HTTPS/">
+										HTTPS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B/">
+										OSI七层模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/TCP%E5%92%8CIP%E6%A8%A1%E5%9E%8B/">
+										TCP和IP模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/10/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/TCP%E5%92%8CUDP/">
+										TCP和UDP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/TCP%E6%8A%A5%E6%96%87%E5%A4%B4/">
+										TCP报文头
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/UDP%E6%8A%A5%E6%96%87%E5%A4%B4/">
+										UDP报文头
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">
+										三次握手
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+										四次挥手
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/">
+										拥塞控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/">
+										流量控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML/">
+										UML
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%85%AD%E5%A4%A7%E5%8E%9F%E5%88%99/">
+										六大原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
+										单例模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/">
+										命令模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+										工厂方法模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E5%BB%BA%E9%80%A0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										建造者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A1%A5%E6%8E%A5%E6%A8%A1%E5%BC%8F/">
+										桥接模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E6%A8%A1%E6%9D%BF%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F/">
+										模板方法模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/">
+										策略模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">
+										简单工厂模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F/">
+										装饰者模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										读书笔记
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Redis设计与实现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%8E%8B%E7%BC%A9%E5%88%97%E8%A1%A8/">
+										压缩列表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AD%97%E5%85%B8/">
+										字典
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E5%AF%B9%E8%B1%A1/">
+										对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%94%AE%E7%A9%BA%E9%97%B4/">
+										数据库键空间
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E6%95%B4%E6%95%B0%E9%9B%86%E5%90%88/">
+										整数集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E7%AE%80%E5%8D%95%E5%8A%A8%E6%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+										简单动态字符串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E8%B7%B3%E8%B7%83%E8%A1%A8/">
+										跳跃表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/Redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/%E9%93%BE%E8%A1%A8/">
+										链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										代码精进之路从码农到工匠
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E4%BB%A3%E7%A0%81%E7%B2%BE%E8%BF%9B%E4%B9%8B%E8%B7%AF%E4%BB%8E%E7%A0%81%E5%86%9C%E5%88%B0%E5%B7%A5%E5%8C%A0/%E5%91%BD%E5%90%8D/">
+										命名
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										深入理解Java虚拟机
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/HotSpot%E7%AE%97%E6%B3%95%E7%BB%86%E8%8A%82%E5%AE%9E%E7%8E%B0/">
+										HotSpot算法细节实现
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95/">
+										垃圾收集算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%AF%B9%E8%B1%A1%E5%B7%B2%E6%AD%BB/">
+										对象已死
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
+										类加载器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%9A%84%E6%97%B6%E6%9C%BA/">
+										类加载的时机
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E7%9A%84%E8%BF%87%E7%A8%8B/">
+										类加载的过程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%BB%8F%E5%85%B8%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8/">
+										经典垃圾收集器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%AF%B9%E8%B1%A1%E6%8E%A2%E7%A7%98/">
+										虚拟机对象探秘
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA%E5%9F%9F/">
+										运行时数据区域
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E8%BF%90%E8%A1%8C%E6%97%B6%E6%A0%88%E5%B8%A7%E7%BB%93%E6%9E%84/">
+										运行时栈帧结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	HashMap
+</h1>
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2021/02/07/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/HashMap/" class="leancloud_visitors" data-flag-title="HashMap"></span>
+		</span>
+	
+	<span>月伴飞鱼</span>
+	<span>2021-02-07 21:44:00</span>
+    
+		<div id="article-categories">
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/Java基础/">Java基础</a>
+						
+							>
+						
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/Java基础/集合类/">集合类</a>
+						
+                    </span>
+                
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h1 id="整体架构"><a href="#整体架构" class="headerlink" title="整体架构"></a>整体架构</h1><p>HashMap 底层的数据结构主要是：数组 + 链表 + 红黑树。其中当链表的长度大于等于 8 时，链表会转化成红黑树，当红黑树的大小小于等于 6 时，红黑树会转化成链表，整体的数据结构如下：</p>
+<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20201127095949.png" style="zoom:30%;" />
+
+<h1 id="类注释"><a href="#类注释" class="headerlink" title="类注释"></a>类注释</h1><p>从 HashMap 的类注释中，我们可以得到如下信息：</p>
+<ul>
+<li>允许 null 值，不同于 <code>HashTable</code> ，是线程不安全的；</li>
+<li>load factor（影响因子） 默认值是 0.75， 是均衡了时间和空间损耗算出来的值，较高的值会减少空间开销（扩容减少，数组大小增长速度变慢），但增加了查找成本（<code>hash</code> 冲突增加，链表长度变长），不扩容的条件：数组容量 &gt; 需要的数组大小 /load factor；</li>
+<li>如果有很多数据需要储存到 HashMap 中，建议 <code>HashMap</code> 的容量一开始就设置成足够的大小，这样可以防止在其过程中不断的扩容，影响性能；</li>
+<li>HashMap 是非线程安全的，我们可以自己在外部加锁，或者通过 <code>Collections#synchronizedMap</code> 来实现线程安全，<code>Collections#synchronizedMap</code> 的实现是在每个方法上加上了 synchronized 锁；</li>
+<li>在迭代过程中，如果 HashMap 的结构被修改，会快速失败。</li>
+</ul>
+<p><strong>HashMap 源码中包含了以下几个属性：</strong></p>
+<pre><code class="java"> //初始容量为 16
+ static final int DEFAULT_INITIAL_CAPACITY = 1 &lt;&lt; 4;
+
+ //最大容量
+ static final int MAXIMUM_CAPACITY = 1 &lt;&lt; 30;
+
+ //负载因子默认值
+ static final float DEFAULT_LOAD_FACTOR = 0.75f;
+
+ //桶上的链表长度大于等于8时，链表转化成红黑树
+ static final int TREEIFY_THRESHOLD = 8;
+
+ //桶上的红黑树大小小于等于6时，红黑树转化成链表
+ static final int UNTREEIFY_THRESHOLD = 6;
+
+ //当数组容量大于 64 时，链表才会转化成红黑树
+ static final int MIN_TREEIFY_CAPACITY = 64;
+
+ //记录迭代过程中 HashMap 结构是否发生变化，如果有变化，迭代时会 fail-fast
+ transient int modCount;
+
+ //HashMap 的实际大小，可能不准(因为当你拿到这个值的时候，可能又发生了变化)
+ transient int size;
+
+ //存放数据的数组
+ transient Node&lt;K,V&gt;[] table;
+
+ // 扩容的门槛，有两种情况
+ // 如果初始化时，给定数组大小的话，通过 tableSizeFor 方法计算，数组大小永远接近于 2 的幂次方，比如你给定初始化大小 19，实际上初始化大小为 32，为 2 的 5 次方。
+ // 如果是通过 resize 方法进行扩容，大小 = 数组容量 * 0.75
+ int threshold;
+
+ //链表的节点
+ static class Node&lt;K,V&gt; implements Map.Entry&lt;K,V&gt; &#123;
+
+ //红黑树的节点
+ static final class TreeNode&lt;K,V&gt; extends LinkedHashMap.Entry&lt;K,V&gt; &#123;</code></pre>
+<h1 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h1><p>新增 key，value 大概的步骤如下：</p>
+<ol>
+<li>空数组有无初始化，没有的话初始化；</li>
+<li>如果通过 key 的 hash 能够直接找到值，跳转到 6，否则到 3；</li>
+<li>如果 hash 冲突，两种解决方案：链表 or 红黑树；</li>
+<li>如果是链表，递归循环，把新元素追加到队尾；</li>
+<li>如果是红黑树，调用红黑树新增的方法；</li>
+<li>通过 2、4、5 将新元素追加成功，再根据 onlyIfAbsent 判断是否需要覆盖；</li>
+<li>判断是否需要扩容，需要扩容进行扩容，结束。</li>
+</ol>
+<img src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/053f9916a958437880f1abeff91b1205~tplv-k3u1fbpfcp-watermark.image" style="zoom:33%;" />
+
+<pre><code class="java">public V put(K key, V value) &#123;
+    // 对 key 进行哈希操作
+    return putVal(hash(key), key, value, false, true);
+&#125;
+// 入参 hash：通过 hash 算法计算出来的值。
+// 入参 onlyIfAbsent：false 表示即使 key 已经存在了，仍然会用新值覆盖原来的值，默认为 false
+final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
+               boolean evict) &#123;
+    // n 表示数组的长度，i 为数组索引下标，p 为 i 下标位置的 Node 值
+    Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; p; int n, i;
+    //如果数组为空，使用 resize 方法初始化
+    if ((tab = table) == null || (n = tab.length) == 0)
+        n = (tab = resize()).length;
+    // 如果当前索引位置是空的，直接生成新的节点在当前索引位置上
+    if ((p = tab[i = (n - 1) &amp; hash]) == null)
+        tab[i] = newNode(hash, key, value, null);
+    // 如果当前索引位置有值的处理方法，即我们常说的如何解决 hash 冲突
+    else &#123;
+        // e 当前节点的临时变量
+        Node&lt;K,V&gt; e; K k;
+        // 如果 key 的 hash 和值都相等，直接把当前下标位置的 Node 值赋值给临时变量
+        if (p.hash == hash &amp;&amp;
+            ((k = p.key) == key || (key != null &amp;&amp; key.equals(k))))
+            e = p;
+        // 如果是红黑树，使用红黑树的方式新增
+        else if (p instanceof TreeNode)
+            e = ((TreeNode&lt;K,V&gt;)p).putTreeVal(this, tab, hash, key, value);
+        // 是个链表，把新节点放到链表的尾端
+        else &#123;
+            // 自旋
+            for (int binCount = 0; ; ++binCount) &#123;
+                // e = p.next 表示从头开始，遍历链表
+                // p.next == null 表明 p 是链表的尾节点
+                if ((e = p.next) == null) &#123;
+                    // 把新节点放到链表的尾部 
+                    p.next = newNode(hash, key, value, null);
+                    // 当链表的长度大于等于 8 时，链表转红黑树
+                    if (binCount &gt;= TREEIFY_THRESHOLD - 1)
+                        treeifyBin(tab, hash);
+                    break;
+                &#125;
+                // 链表遍历过程中，发现有元素和新增的元素相等，结束循环
+                if (e.hash == hash &amp;&amp;
+                    ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+                    break;
+                //更改循环的当前元素，使 p 在遍历过程中，一直往后移动。
+                p = e;
+            &#125;
+        &#125;
+        // 说明新节点的新增位置已经找到了
+        if (e != null) &#123;
+            V oldValue = e.value;
+            // 当 onlyIfAbsent 为 false 时，才会覆盖值 
+            if (!onlyIfAbsent || oldValue == null)
+                e.value = value;
+            afterNodeAccess(e);
+            // 返回老值
+            return oldValue;
+        &#125;
+    &#125;
+    // 记录 HashMap 的数据结构发生了变化
+    ++modCount;
+    //如果 HashMap 的实际大小大于扩容的门槛，开始扩容
+    if (++size &gt; threshold)
+        resize();
+    afterNodeInsertion(evict);
+    return null;
+&#125;</code></pre>
+<p><strong>为什么是 8，这个答案在源码中注释有说，中文翻译过来大概的意思是：</strong></p>
+<p>链表查询的时间复杂度是 <code>O (n)</code>，红黑树的查询复杂度是 <code>O (log (n))</code>。在链表数据不多的时候，使用链表进行遍历也比较快，只有当链表数据比较多的时候，才会转化成红黑树，但红黑树需要的占用空间是链表的 2 倍，考虑到转化时间和空间损耗，所以我们需要定义出转化的边界值。</p>
+<p>在考虑设计 8 这个值的时候，我们参考了泊松分布概率函数，由泊松分布中得出结论，链表各个长度的命中概率为：</p>
+<pre><code>* 0:    0.60653066
+* 1:    0.30326533
+* 2:    0.07581633
+* 3:    0.01263606
+* 4:    0.00157952
+* 5:    0.00015795
+* 6:    0.00001316
+* 7:    0.00000094
+* 8:    0.00000006</code></pre>
+<p>意思是，当链表的长度是 8 的时候，出现的概率是 0.00000006，不到千万分之一，所以说正常情况下，链表的长度不可能到达 8 ，而一旦到达 8 时，肯定是 hash 算法出了问题，所以在这种情况下，为了让<code>HashMap</code>仍然有较高的查询性能，所以让链表转化成红黑树，我们正常写代码，使用 HashMap 时，几乎不会碰到链表转化成红黑树的情况，毕竟概念只有千万分之一。</p>
+<p><strong>红黑树新增节点过程</strong></p>
+<ol>
+<li><p>首先判断新增的节点在红黑树上是不是已经存在，判断手段有如下两种：</p>
+<p>1.1. 如果节点没有实现 <code>Comparable</code> 接口，使用 equals 进行判断；</p>
+<p>1.2. 如果节点自己实现了 Comparable 接口，使用 <code>compareTo</code> 进行判断。</p>
+</li>
+<li><p>新增的节点如果已经在红黑树上，直接返回；不在的话，判断新增节点是在当前节点的左边还是右边，左边值小，右边值大；</p>
+</li>
+<li><p>自旋递归 1 和 2 步，直到当前节点的左边或者右边的节点为空时，停止自旋，当前节点即为我们新增节点的父节点；</p>
+</li>
+<li><p>把新增节点放到当前节点的左边或右边为空的地方，并于当前节点建立父子节点关系；</p>
+</li>
+<li><p>进行着色和旋转，结束。</p>
+</li>
+</ol>
+<pre><code class="java">//入参 h：key 的hash值
+final TreeNode&lt;K,V&gt; putTreeVal(HashMap&lt;K,V&gt; map, Node&lt;K,V&gt;[] tab,
+                               int h, K k, V v) &#123;
+    Class&lt;?&gt; kc = null;
+    boolean searched = false;
+    //找到根节点
+    TreeNode&lt;K,V&gt; root = (parent != null) ? root() : this;
+    //自旋
+    for (TreeNode&lt;K,V&gt; p = root;;) &#123;
+        int dir, ph; K pk;
+        // p hash 值大于 h，说明 p 在 h 的右边
+        if ((ph = p.hash) &gt; h)
+            dir = -1;
+        // p hash 值小于 h，说明 p 在 h 的左边
+        else if (ph &lt; h)
+            dir = 1;
+        //要放进去key在当前树中已经存在了(equals来判断)
+        else if ((pk = p.key) == k || (k != null &amp;&amp; k.equals(pk)))
+            return p;
+        //自己实现的Comparable的话，不能用hashcode比较了，需要用compareTo
+        else if ((kc == null &amp;&amp;
+                  //得到key的Class类型，如果key没有实现Comparable就是null
+                  (kc = comparableClassFor(k)) == null) ||
+                  //当前节点pk和入参k不等
+                 (dir = compareComparables(kc, k, pk)) == 0) &#123;
+            if (!searched) &#123;
+                TreeNode&lt;K,V&gt; q, ch;
+                searched = true;
+                if (((ch = p.left) != null &amp;&amp;
+                     (q = ch.find(h, k, kc)) != null) ||
+                    ((ch = p.right) != null &amp;&amp;
+                     (q = ch.find(h, k, kc)) != null))
+                    return q;
+            &#125;
+            dir = tieBreakOrder(k, pk);
+        &#125;
+
+        TreeNode&lt;K,V&gt; xp = p;
+        //找到和当前hashcode值相近的节点(当前节点的左右子节点其中一个为空即可)
+        if ((p = (dir &lt;= 0) ? p.left : p.right) == null) &#123;
+            Node&lt;K,V&gt; xpn = xp.next;
+            //生成新的节点
+            TreeNode&lt;K,V&gt; x = map.newTreeNode(h, k, v, xpn);
+            //把新节点放在当前子节点为空的位置上
+            if (dir &lt;= 0)
+                xp.left = x;
+            else
+                xp.right = x;
+            //当前节点和新节点建立父子，前后关系
+            xp.next = x;
+            x.parent = x.prev = xp;
+            if (xpn != null)
+                ((TreeNode&lt;K,V&gt;)xpn).prev = x;
+            //balanceInsertion 对红黑树进行着色或旋转，以达到更多的查找效率，着色或旋转的几种场景如下
+            //着色：新节点总是为红色；如果新节点的父亲是黑色，则不需要重新着色；如果父亲是红色，那么必须通过重新着色或者旋转的方法，再次达到红黑树的5个约束条件
+            //旋转： 父亲是红色，叔叔是黑色时，进行旋转
+            //如果当前节点是父亲的右节点，则进行左旋
+            //如果当前节点是父亲的左节点，则进行右旋
+
+            //moveRootToFront 方法是把算出来的root放到根节点上
+            moveRootToFront(tab, balanceInsertion(root, x));
+            return null;
+        &#125;
+    &#125;
+&#125;</code></pre>
+<h1 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h1><p>HashMap 的查找主要分为以下三步：</p>
+<ul>
+<li>根据 hash 算法定位数组的索引位置，<code>equals</code> 判断当前节点是否是我们需要寻找的 key，是的话直接返回，不是的话往下。</li>
+<li>判断当前节点有无 <code>next </code>节点，有的话判断是链表类型，还是红黑树类型。</li>
+<li>分别走链表和红黑树不同类型的查找方法。</li>
+</ul>
+<pre><code class="java">public V get(Object key) &#123;
+    Node&lt;K,V&gt; e;
+    // 对 key 进行哈希操作
+    return (e = getNode(hash(key), key)) == null ? null : e.value;
+&#125;
+final Node&lt;K,V&gt; getNode(int hash, Object key) &#123;
+    Node&lt;K,V&gt;[] tab; Node&lt;K,V&gt; first, e; int n; K k;
+    // 非空判断
+    if ((tab = table) != null &amp;&amp; (n = tab.length) &gt; 0 &amp;&amp;
+        (first = tab[(n - 1) &amp; hash]) != null) &#123;
+        // 判断第一个元素是否是要查询的元素
+        if (first.hash == hash &amp;&amp; // always check first node
+            ((k = first.key) == key || (key != null &amp;&amp; key.equals(k))))
+            return first;
+        // 下一个节点非空判断
+        if ((e = first.next) != null) &#123;
+            // 如果第一节点是树结构，则使用 getTreeNode 直接获取相应的数据
+            if (first instanceof TreeNode)
+                return ((TreeNode&lt;K,V&gt;)first).getTreeNode(hash, key);
+            do &#123; // 非树结构，循环节点判断
+                // hash 相等并且 key 相同，则返回此节点
+                if (e.hash == hash &amp;&amp;
+                    ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+                    return e;
+            &#125; while ((e = e.next) != null);
+        &#125;
+    &#125;
+    return null;
+&#125;</code></pre>
+<pre><code class="java">// 采用自旋方式从链表中查找 key，e 初始为为链表的头节点
+do &#123;
+    // 如果当前节点 hash 等于 key 的 hash，并且 equals 相等，当前节点就是我们要找的节点
+    // 当 hash 冲突时，同一个 hash 值上是一个链表的时候，我们是通过 equals 方法来比较 key 是否相等的
+    if (e.hash == hash &amp;&amp;
+        ((k = e.key) == key || (key != null &amp;&amp; key.equals(k))))
+        return e;
+    // 否则，把当前节点的下一个节点拿出来继续寻找
+&#125; while ((e = e.next) != null);</code></pre>
+<p><strong>红黑树查找：</strong></p>
+<ol>
+<li>从根节点递归查找；</li>
+<li>根据 <code>hashcode</code>，比较查找节点，左边节点，右边节点之间的大小，根本红黑树左小右大的特性进行判断；</li>
+<li>判断查找节点在第 2 步有无定位节点位置，有的话返回，没有的话重复 2，3 两步；</li>
+<li>一直自旋到定位到节点位置为止。</li>
+</ol>
+<p>如果红黑树比较平衡的话，每次查找的次数就是树的深度。</p>
+<h1 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h1><p><strong>什么时候进行扩容</strong></p>
+<p>1.当hashmap中的元素个数超过数组大小loadFactor时，就会进行数组扩容，loadFactor的默认值为0.75，也就是说，默认情况下，数组大小为16，那么当hashmap中元素个数超过<code>16*0.75=12</code>的时候，就把数组的大小扩展为<code>2*16=32</code>，即扩大一倍，然后重新计算每个元素在数组中的位置，而这是一个非常消耗性能的操作，所以如果我们已经预知hashmap中元素的个数，那么预设元素的个数能够有效的提高hashmap的性能</p>
+<p>2.数组长度小于64，且某个桶中的元素大于8</p>
+<p><strong>为什么扩容是2的次幂</strong></p>
+<p>HashMap的初始容量是2的n次幂，扩容也是2倍的形式进行扩容，是因为容量是2的n次幂，可以使得添加的元素均匀分布在HashMap中的数组上，减少hash碰撞，避免形成链表的结构，使得查询效率降低</p>
+<p>根据数学规律，对n取模，就是和n-1进行与运算。与运算的效率远远高于求模运算</p>
+<p>当数组长度是2的幂次时，hash值对数组长度取模的效果和<code>hash&amp;(n-1)</code>是一样的</p>
+<p><strong>扩容步骤</strong></p>
+<p>当这个数组满了以后，就会自动扩容，变成一个更大的数组，可以在里面放更多的元素。</p>
+<p>1.在resize()方法中，定义了<code>oldCap</code>参数，记录了原table的长度，定义了<code>newCap</code>参数，记录新table长度，newCap是oldCap长度的2倍。</p>
+<p>2.循环原table，把原<code>table</code>中的每个链表中的每个元素放入新table。</p>
+<p>假设table原长度是16，扩容后长度32，那么一个<code>hash</code>值在扩容前后的table下标是这么计算的：</p>
+<p>判断条件<code>(e.hash &amp; oldCap) == 0</code> 计算出来的值，如果等于0，就放入低位节点，低位节点在新数组的位置跟原数组一样。 等于1，就放入高位节点，高位放在新数组的位置等于原来位置在加上原数组的长度</p>
+<pre><code class="java">final Node&lt;K,V&gt;[] resize() &#123;
+    // 扩容前的数组
+    Node&lt;K,V&gt;[] oldTab = table;
+    // 扩容前的数组的大小和阈值
+    int oldCap = (oldTab == null) ? 0 : oldTab.length;
+    int oldThr = threshold;
+    // 预定义新数组的大小和阈值
+    int newCap, newThr = 0;
+    if (oldCap &gt; 0) &#123;
+        // 超过最大值就不再扩容了
+        if (oldCap &gt;= MAXIMUM_CAPACITY) &#123;
+            threshold = Integer.MAX_VALUE;
+            return oldTab;
+        &#125;
+        // 扩大容量为当前容量的两倍，但不能超过 MAXIMUM_CAPACITY
+        else if ((newCap = oldCap &lt;&lt; 1) &lt; MAXIMUM_CAPACITY &amp;&amp;
+                 oldCap &gt;= DEFAULT_INITIAL_CAPACITY)
+            newThr = oldThr &lt;&lt; 1; // double threshold
+    &#125;
+    // 当前数组没有数据，使用初始化的值
+    else if (oldThr &gt; 0) // initial capacity was placed in threshold
+        newCap = oldThr;
+    else &#123;               // zero initial threshold signifies using defaults
+        // 如果初始化的值为 0，则使用默认的初始化容量
+        newCap = DEFAULT_INITIAL_CAPACITY;
+        newThr = (int)(DEFAULT_LOAD_FACTOR * DEFAULT_INITIAL_CAPACITY);
+    &#125;
+    // 如果新的容量等于 0
+    if (newThr == 0) &#123;
+        float ft = (float)newCap * loadFactor;
+        newThr = (newCap &lt; MAXIMUM_CAPACITY &amp;&amp; ft &lt; (float)MAXIMUM_CAPACITY ?
+                  (int)ft : Integer.MAX_VALUE);
+    &#125;
+    threshold = newThr; 
+    @SuppressWarnings(&#123;&quot;rawtypes&quot;,&quot;unchecked&quot;&#125;)
+    Node&lt;K,V&gt;[] newTab = (Node&lt;K,V&gt;[])new Node[newCap];
+    // 开始扩容，将新的容量赋值给 table
+    table = newTab;
+    // 原数据不为空，将原数据复制到新 table 中
+    if (oldTab != null) &#123;
+        // 根据容量循环数组，复制非空元素到新 table
+        for (int j = 0; j &lt; oldCap; ++j) &#123;
+            Node&lt;K,V&gt; e;
+            if ((e = oldTab[j]) != null) &#123;
+                oldTab[j] = null;
+                // 如果链表只有一个，则进行直接赋值
+                if (e.next == null)
+                    newTab[e.hash &amp; (newCap - 1)] = e;
+                else if (e instanceof TreeNode)
+                    // 红黑树相关的操作
+                    ((TreeNode&lt;K,V&gt;)e).split(this, newTab, j, oldCap);
+                else &#123; // preserve order
+                    // 链表复制，JDK 1.8 扩容优化部分
+                    Node&lt;K,V&gt; loHead = null, loTail = null;
+                    Node&lt;K,V&gt; hiHead = null, hiTail = null;
+                    Node&lt;K,V&gt; next;
+                    do &#123;
+                        next = e.next;
+                        // 原索引
+                        if ((e.hash &amp; oldCap) == 0) &#123;
+                            if (loTail == null)
+                                loHead = e;
+                            else
+                                loTail.next = e;
+                            loTail = e;
+                        &#125;
+                        // 原索引 + oldCap
+                        else &#123;
+                            if (hiTail == null)
+                                hiHead = e;
+                            else
+                                hiTail.next = e;
+                            hiTail = e;
+                        &#125;
+                    &#125; while ((e = next) != null);
+                    // 将原索引放到哈希桶中
+                    if (loTail != null) &#123;
+                        loTail.next = null;
+                        newTab[j] = loHead;
+                    &#125;
+                    // 将原索引 + oldCap 放到哈希桶中
+                    if (hiTail != null) &#123;
+                        hiTail.next = null;
+                        newTab[j + oldCap] = hiHead;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    return newTab;
+&#125;</code></pre>
+<h1 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h1><p><strong>JDK1.8中对hash算法优化</strong></p>
+<p>JDK1.7中通过<code>key.hashcode()</code>得到关键字的hash值</p>
+<p>hash算法的优化：</p>
+<pre><code class="java">//JDK1.8以后的HashMap部分源码
+static final int hash(Object key)&#123;
+ int h;
+ return (key == null)?0(h=key.hashCode())^(h&gt;&gt;&gt;16);
+&#125;</code></pre>
+<p>将32位的hash值右移16位，结果是将高16位推到了低16位上，高16位用0来补齐，优化的实质是将高16位与低16位进行异或运算，对于两个hash值的低16位相等，高16位不等的情况，尽量减少了hash冲突</p>
+<p><strong>寻址算法的优化：</strong></p>
+<p>寻址算法就是对长度为n的数组取模，得到在数组中的位置。根据数学规律，对n取模，就是和n-1进行与运算。与运算的效率远远高于求模运算，所以采用与运算。</p>
+<p>当数组长度是2的幂次时，hash值对数组长度取模的效果和<code>hash&amp;(n-1)</code>是一样的</p>
+<p><strong>加载因子为什么是 0.75</strong></p>
+<p>加载因子也叫扩容因子或负载因子，用来判断什么时候进行扩容的，假如加载因子是 0.5，<code>HashMap</code> 的初始化容量是 16，那么当 HashMap 中有 <code>16*0.5=8</code> 个元素时，HashMap 就会进行扩容。</p>
+<p>这其实是出于容量和性能之间平衡的结果：</p>
+<ul>
+<li>当加载因子设置比较大的时候，扩容的门槛就被提高了，扩容发生的频率比较低，占用的空间会比较小，但此时发生 Hash 冲突的几率就会提升，因此需要更复杂的数据结构来存储元素，这样对元素的操作时间就会增加，运行效率也会因此降低；</li>
+<li>而当加载因子值比较小的时候，扩容的门槛会比较低，因此会占用更多的空间，此时元素的存储就比较稀疏，发生哈希冲突的可能性就比较小，因此操作性能会比较高。</li>
+</ul>
+<p>所以综合了以上情况就取了一个 0.5 到 1.0 的平均数 0.75 作为加载因子。</p>
+<p><strong>为什么线程不安全</strong></p>
+<p>HashMap 在并发时可能出现的问题主要是两方面：</p>
+<ul>
+<li>如果多个线程同时使用 put 方法添加元素，而且假设正好存在两个 put 的 key 发生了碰撞（根据 hash 值计算的 bucket 一样），那么根据 <code>HashMap</code> 的实现，这两个 key 会添加到数组的同一个位置，这样最终就会发生其中一个线程 put 的数据被覆盖</li>
+<li>如果多个线程同时检测到元素个数超过<code>数组大小 * loadFactor</code>，这样就会发生多个线程同时对 Node 数组进行扩容，都在重新计算元素位置以及复制数据，但是最终只有一个线程扩容后的数组会赋给 table，也就是说其他线程的都会丢失，并且各自线程 put 的数据也丢失</li>
+</ul>
+<p><strong>一般用什么作为HashMap的key</strong></p>
+<p>一般用Integer、String这种不可变类当<code>HashMap</code>当key，而且String最为常用。</p>
+<ul>
+<li>因为字符串是不可变的，所以在它创建的时候hashcode就被缓存了，不需要重新计算。这就使得字符串很适合作为Map中的键，字符串的处理速度要快过其它的键对象。这就是HashMap中的键往往都使用字符串。</li>
+<li>因为获取对象的时候要用到<code>equals()</code>和hashCode()方法，那么键对象正确的重写这两个方法是非常重要的,这些类已经很规范的覆写了hashCode()以及equals()方法。</li>
+</ul>
+<p><strong>用可变类当HashMap的key有什么问题</strong></p>
+<p>hashcode可能发生改变，导致put进去的值，无法get出，如下所示</p>
+<pre><code class="java">HashMap&lt;List&lt;String&gt;, Object&gt; changeMap = new HashMap&lt;&gt;();
+List&lt;String&gt; list = new ArrayList&lt;&gt;();
+list.add(&quot;hello&quot;);
+Object objectValue = new Object();
+changeMap.put(list, objectValue);
+System.out.println(changeMap.get(list));
+list.add(&quot;hello world&quot;);//hashcode发生了改变
+System.out.println(changeMap.get(list));</code></pre>
+<p>输出值如下   </p>
+<pre><code>java.lang.Object@74a14482
+null</code></pre>
+<p><strong>实现一个自定义的class作为HashMap的key该如何实现</strong></p>
+<p>记住下面四个原则</p>
+<ul>
+<li>两个对象相等，hashcode一定相等</li>
+<li>两个对象不等，hashcode不一定不等</li>
+<li>hashcode相等，两个对象不一定相等</li>
+<li>hashcode不等，两个对象一定不等</li>
+</ul>
+<p><strong>记住如何写一个不可变类</strong></p>
+<ul>
+<li>类添加final修饰符，保证类不被继承。<br>如果类可以被继承会破坏类的不可变性机制，只要继承类覆盖父类的方法并且继承类可以改变成员变量值，那么一旦子类以父类的形式出现时，不能保证当前类是否可变。</li>
+<li>保证所有成员变量必须私有，并且加上<code>final</code>修饰<br>通过这种方式保证成员变量不可改变。但只做到这一步还不够，因为如果是对象成员变量有可能再外部改变其值。</li>
+<li>不提供改变成员变量的方法，包括setter<br>避免通过其他接口改变成员变量的值，破坏不可变特性。</li>
+<li>通过构造器初始化所有成员，进行深拷贝</li>
+</ul>
+<pre><code class="java">public final class MyImmutableDemo &#123;  
+    private final int[] myArray;  
+    public MyImmutableDemo(int[] array) &#123;  
+        this.myArray = array.clone();   
+    &#125;   
+&#125;</code></pre>
+<ul>
+<li>在getter方法中，不要直接返回对象本身，而是克隆对象，并返回对象的拷贝<br>这种做法也是防止对象外泄，防止通过getter获得内部可变成员对象后对成员变量直接操作，导致成员变量发生改变。</li>
+</ul>
+<p><strong>和HashTable的区别</strong></p>
+<p>1.Hashtable 是不允许键或值为 null 的，HashMap 的键值则都可以为 null，在HashMap 中不能用get()方法来判断HashMap中是否存在某个键，而应该用<code>containsKey()</code>方法来判断</p>
+<p>2.Hashtable 继承了 Dictionary类，而 HashMap 继承的是 AbstractMap 类，<code>Dictionary</code>的子类同时也实现了<code>Map</code>接口</p>
+<p>3.HashMap 的初始容量为：16，Hashtable 初始容量为：11，两者的负载因子默认都是：0.75，当现有容量大于<code>总容量 * 负载因子</code>时，HashMap 扩容规则为当前容量翻倍，Hashtable 扩容规则为当前容量翻倍 + 1，<code>int newCapacity = (oldCapacity &lt;&lt; 1) + 1;</code></p>
+<p>5.<code>HashTable</code>是直接使用key的hashCode(<code>key.hashCode()</code>)作为hash值，不像<code>HashMap</code>内部使用<code>static final int hash(Object key)</code>扰动函数对key的hashCode进行扰动后作为hash值</p>
+<p>6.<code>HashTable</code>取哈希桶下标是直接用模运算<code>%</code>（因为其默认容量也不是2的n次方。所以也无法用位运算替代模运算）</p>
+<p>7.Hashtable是线程安全的，方法是Synchronized的</p>
+<p><strong>尾插法好处</strong></p>
+<p>尾插法主要是为了安全，防止环化，因为resize的赋值方式，也就是使用了单链表的头插入方式，同一位置上新元素总会被放在链表的头部位置，在旧数组中同一条Entry链上的元素，通过重新计算索引位置后，有可能被放到了新数组的不同位置上</p>
+<p>使用头插会改变链表的上的顺序，但是如果使用尾插，在扩容时会保持链表元素原本的顺序，就不会出现链表成环的问题了</p>
+<p><strong>死循环造成 CPU 100%</strong></p>
+<p>HashMap 有可能会发生死循环并且造成  CPU 100% ，这种情况发生最主要的原因就是在扩容的时候，也就是内部新建新的 HashMap 的时候，扩容的逻辑会反转散列桶中的节点顺序，当有多个线程同时进行扩容的时候，由于 HashMap 并非线程安全的，所以如果两个线程同时反转的话，便可能形成一个循环，并且这种循环是链表的循环，相当于 A 节点指向 B 节点，B 节点又指回到 A 节点，这样一来，在下一次想要获取该 key 所对应的 value 的时候，便会在遍历链表的时候发生永远无法遍历结束的情况，也就发生 CPU 100% 的情况。</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2021/02/09/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B%E6%B1%A0/%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  基本原理
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2021/02/06/%E7%AE%97%E6%B3%95/%E9%9D%A2%E8%AF%95%E9%A2%98/17.14%E6%9C%80%E5%B0%8FK%E4%B8%AA%E6%95%B0/">
+                17.14最小K个数
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'D9raxjOhsifiaJHt7xQLnpTb-gzGzoHsz',
+			appKey: 'IbDGf2GaDd0dlBP3XMvzBlbF',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">月伴飞鱼</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			PV
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			UV
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	微信搜索 <a href="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/个人公众号.jpg" target="_blank">月伴飞鱼</a> 关注我
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
