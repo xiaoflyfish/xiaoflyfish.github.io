@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,207 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+				<h2 class="index-title">
+					消息队列
+				</h2>
+				<div class="index-brief">
+					Redis 从 5.0 版本开始提供的 Streams 数据类型了
+基于 Streams 的消息队列解决方案
+Streams 是 Redis 专门为消息队列设计的数据类型，它提供了丰富的消息队列操作命令。
+
+XADD：插入消息，保证有序，可以自动生成全局唯一 ID；
+XREAD：用于读取消息，可以按
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					异步机制
+				</h2>
+				<div class="index-brief">
+					Redis 的网络 IO 和键值对读写是由主线程完成的
+那么，如果在主线程上执行的操作消耗的时间太长，就会引起主线程阻塞。但是，Redis 既有服务客户端请求的键值对增删改查操作，也有保证可靠性的持久化操作，还有进行主从复制时的数据同步操作，等等
+Redis 实例有哪些阻塞点
+
+客户端：网络 IO，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+				<h2 class="index-title">
+					变慢的Redis
+				</h2>
+				<div class="index-brief">
+					查看 Redis 的响应延迟:
+
+大部分时候，Redis 延迟很低，但是在某些时刻，有些 Redis 实例会出现很高的响应延迟，甚至能达到几秒到十几秒，不过持续时间不长
+当你发现 Redis 命令的执行时间突然就增长到了几秒，基本就可以认定 Redis 变慢了。
+
+基于当前环境下的 Redis 基线
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+				<h2 class="index-title">
+					CPU影响Redis
+				</h2>
+				<div class="index-brief">
+					主流的 CPU 架构
+一个 CPU 处理器中一般有多个运行核心，我们把一个运行核心称为一个物理核，每个物理核都可以运行应用程序。每个物理核都拥有私有的一级缓存（Level 1 cache，简称 L1 cache），包括一级指令缓存和一级数据缓存，以及私有的二级缓存（Level 2 cache，简称 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+				<h2 class="index-title">
+					String
+				</h2>
+				<div class="index-brief">
+					为什么String 类型内存开销大
+String 类型结构：
+
+当你保存 64 位有符号整数时，String 类型会把它保存为一个 8 字节的 Long 类型整数，这种保存方式通常也叫作 int 编码方式。
+当你保存的数据中包含字符时，String 类型就会用简单动态字符串（SDS）结构体来保存
+
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/21/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%8C%81%E4%B9%85%E5%8C%96/">
 				<h2 class="index-title">
 					持久化
@@ -4158,85 +4404,10 @@ Redis 使用了一个哈希表来保存所有键值对
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E4%BA%8B%E5%8A%A1/">
-				<h2 class="index-title">
-					事务
-				</h2>
-				<div class="index-brief">
-					事务的执行过程包含三个步骤
-
-客户端要使用MULTI命令显式地表示一个事务的开启
-客户端把事务中本身要执行的具体操作（例如增删改数据）发送给服务器端。这些操作就是 Redis 本身提供的数据读写命令，例如 GET、SET 等。不过，这些命令虽然被客户端发送到了服务器端，但 Redis 实例只是把这些
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					IO模型
-				</h2>
-				<div class="index-brief">
-					Linux 中的 IO 多路复用机制是指一个线程处理多个 IO 流，就是我们经常听到的 select/epoll 机制
-简单来说，在 Redis 只运行单线程的情况下，该机制允许内核中，同时存在多个监听套接字和已连接套接字。
-内核会一直监听这些套接字上的连接请求或数据请求。一旦有请求到达，就会交给 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
+		
+			<span class="page-number current">1</span><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/page/2/">2</a><a class="extend next" rel="next" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/page/2/">&gt;</a>
 		
 	</div>
 </div>

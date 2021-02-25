@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,177 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/14/Linux/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+				<h2 class="index-title">
+					IO多路复用
+				</h2>
+				<div class="index-brief">
+					IO多路复用是指内核一旦发现进程指定的一个或者多个IO条件准备读取，它就通知该进程
+目前支持I/O多路复用的系统调用有 select，pselect，poll，epoll
+I/O多路复用就是通过一种机制，一个进程可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Linux/">Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/Linux/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+				<h2 class="index-title">
+					基础知识
+				</h2>
+				<div class="index-brief">
+					信号在命令行支持kill -l，可以显示所有的信号列表
+常用信号
+
+
+
+信号宏名
+信号编号
+说明
+系统默认处理方式
+
+
+
+SIGABRT
+6
+终止进程，调用abort函数时产生
+终止，产生core文件
+
+
+SIGALRM
+14
+超时，调用alarm函数时产生
+终止
+
+
+SIGBUS
+7
+硬件故障
+终
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Linux/">Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/Linux/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
+				<h2 class="index-title">
+					线程模型
+				</h2>
+				<div class="index-brief">
+					在高性能的I/O设计中，有两个著名的模型：Reactor模型和Proactor模型，其中Reactor模型用于同步I/O，而Proactor模型运用于异步I/O操作
+Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reactor模型进行设计和开发，Reactor模型基于事件驱动，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Linux/">Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/MySQL/Join/">
+				<h2 class="index-title">
+					Join
+				</h2>
+				<div class="index-brief">
+					写出好的Join语句，前提你得懂这些：https://mp.weixin.qq.com/s/8XuX9Su1qvHrMLWcQzKTaQ
+join连接时哪个表是驱动表，哪个表是被驱动表：
+
+当使用left join时，左表是驱动表，右表是被驱动表
+当使用right join时，右表是驱动表，左表是被
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					类加载机制
+				</h2>
+				<div class="index-brief">
+					基本过程
+
+加载
+在加载阶段，Java虚拟机需要完成以下三件事情：
+
+1.通过一个类的全限定名来获取定义此类的二进制字节流。
+2.将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。
+3.在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口。
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/JVM/">JVM</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/14/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
 					基础知识
@@ -4124,194 +4340,10 @@ PFADD 添加一个元素，如果重复，只算作一个PFCOUNT
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2021/02/12/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/BitMap/">
-				<h2 class="index-title">
-					BitMap
-				</h2>
-				<div class="index-brief">
-					bitmaps为一个以位为单位的数组，数组的每个单元只能存储0和1
-在redis 2.2.0版本之后，新增了一个位图数据，其实它不是一种数据结构
-实际上它就是一个一个字符串结构（涉及单个bitmap可存储最大值问题），只不过value是一个二进制数据，每一位只能是0或者1
-redis单独对bitma
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-12</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/数据类型/">数据类型</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/12/Redis/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					为什么要用缓存
-用缓存，主要有两个用途：高性能、高并发
-高性能
-对于一些需要复杂操作耗时查出来的结果，且确定后面不怎么变化，但是有很多读请求，那么直接将查询出来的结果放在缓存中，后面直接读缓存就好
-高并发
-
-缓存是走内存的，内存天然就支撑高并发
-
-为什么使用Reids作为缓存
-首先 Redis 支持
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-12</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/12/Spring/SpringBoot/%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86/">
-				<h2 class="index-title">
-					自动配置原理
-				</h2>
-				<div class="index-brief">
-					@SpringBootApplication注解
-
-SpringBoot 项目的一切都要从 @SpringBootApplication 这个注解开始说起
-
-@SpringBootApplication 标注在某个类上说明：
-
-这个类是 SpringBoot 的主配置类。
-SpringBoot 就应
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-12</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Spring/">Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Spring/SpringBoot/">SpringBoot</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/12/Nginx/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					Nginx是一个高性能的HTTP和反向代理web服务器，同时也提供了 IMAP/POP3/SMTP服务，由于它的内存占用少，启动极快，高并发能力强，在互联网项目中广泛应用
-Nginx采用了Linux的epoll模型，epoll模型基于事件驱动机制，它可以监控多个事件是否准备完毕，如果OK，那么放入e
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-12</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Nginx/">Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/Spring/Bean%E4%BD%9C%E7%94%A8%E5%9F%9F/">
-				<h2 class="index-title">
-					Bean作用域
-				</h2>
-				<div class="index-brief">
-					目前Spring Bean的作用域或者说范围主要有五种
-
-
-
-作用域
-描述
-
-
-
-singleton
-在spring IoC容器仅存在一个Bean实例，Bean以单例方式存在，bean作用域范围的默认值。
-
-
-prototype
-每次从容器中调用Bean时，都返回一个新的实例，即每次调用getBea
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2021/page/10/">&lt;</a><a class="page-number" href="/archives/2021/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/9/">9</a><a class="page-number" href="/archives/2021/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/archives/2021/page/12/">12</a><a class="page-number" href="/archives/2021/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/15/">15</a><a class="extend next" rel="next" href="/archives/2021/page/12/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/page/10/">&lt;</a><a class="page-number" href="/archives/2021/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/9/">9</a><a class="page-number" href="/archives/2021/page/10/">10</a><span class="page-number current">11</span><a class="page-number" href="/archives/2021/page/12/">12</a><a class="page-number" href="/archives/2021/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/page/16/">16</a><a class="extend next" rel="next" href="/archives/2021/page/12/">&gt;</a>
 		
 	</div>
 </div>

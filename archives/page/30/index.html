@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,205 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/Semaphore/">
+				<h2 class="index-title">
+					Semaphore
+				</h2>
+				<div class="index-brief">
+					信号量的一个最主要的作用就是，来控制那些需要限制并发访问量的资源。
+具体来讲，信号量会维护许可证的计数，而线程去访问共享资源前，必须先拿到许可证。线程可以从信号量中去获取一个许可证，一旦线程获取之后，信号量持有的许可证就转移过去了，所以信号量手中剩余的许可证要减一
+同理，线程也可以释放一个许可证，如
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/并发工具类/">并发工具类</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E4%B8%AD%E6%96%AD%E7%BA%BF%E7%A8%8B/">
+				<h2 class="index-title">
+					中断线程
+				</h2>
+				<div class="index-brief">
+					用 interrupt 停止线程
+while (!Thread.currentThread().isInterrupted() &amp;&amp; more work to do) &#123;
+    do more work
+&#125;
+我们一旦调用某个线程的 interrupt() 之后，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/线程/">线程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E5%AE%88%E6%8A%A4%E7%BA%BF%E7%A8%8B/">
+				<h2 class="index-title">
+					守护线程
+				</h2>
+				<div class="index-brief">
+					Java 提供了两种类型的线程：守护线程 和 用户线程
+
+用户线程 是高优先级线程。JVM 会在终止之前等待任何用户线程完成其任务。
+用户线程 是低优先级线程。其唯一作用是为用户线程提供服务
+
+由于守护线程的作用是为用户线程提供服务，并且仅在用户线程运行时才需要，因此一旦所有用户线程完成执行，JVM
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/线程/">线程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/">
+				<h2 class="index-title">
+					生命周期
+				</h2>
+				<div class="index-brief">
+					线程的状态在 JDK 1.5 之后以枚举的方式被定义在 Thread 的源码中，它总共包含以下 6 个状态：
+
+NEW，新建状态，线程被创建出来，但尚未启动时的线程状态；
+RUNNABLE，就绪状态，表示可以运行的线程状态，它可能正在运行，或者是在排队等待操作系统给它分配 CPU 资源；
+BLOCK
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/线程/">线程</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CountDownLatch/">
+				<h2 class="index-title">
+					CountDownLatch
+				</h2>
+				<div class="index-brief">
+					CountDownLatch会等主线程等待另外一组线程都执行完成之后，再继续执行。
+使用CountDownLatch
+我们来模拟打篮球的例子，主线程假如是控球后卫
+public class Client &#123;
+    private static  final CountDownLatch 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/并发工具类/">并发工具类</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CyclicBarrier/">
 				<h2 class="index-title">
 					CyclicBarrier
@@ -4117,174 +4361,6 @@ putConcurrentHashMap 在 put 方法上的整体思路和 HashMap 相同，但在
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/并发编程/并发工具类/">并发工具类</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CopyOnWriteArrayList/">
-				<h2 class="index-title">
-					CopyOnWriteArrayList
-				</h2>
-				<div class="index-brief">
-					整体架构
-从整体架构上来说，CopyOnWriteArrayList 数据结构和 ArrayList 是一致的，底层是个数组，只不过 CopyOnWriteArrayList 在对数组进行操作的时候，基本会分四步走：
-
-加锁；
-从原数组中拷贝出新数组；
-在新数组上进行操作，并把新数组赋值给数组容器；
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/">并发编程</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/并发工具类/">并发工具类</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/">
-				<h2 class="index-title">
-					服务容错
-				</h2>
-				<div class="index-brief">
-					为什么要实现服务容错？
-我们知道，在微服务架构中，服务之间通过跨进程的远程调用来完成交互。假设系统中存在两个微服务，分别是服务 A 和服务 B，其中服务 B 会调用服务 A
-现在，系统出现故障了。首先，服务 A 因为某种原因发生了宕机而变得不可用，这是故障的第一阶段
-服务 A 不可用的原因有很多，包
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
-				<h2 class="index-title">
-					服务架构
-				</h2>
-				<div class="index-brief">
-					单体架构
-1、所有的功能集成在一个项目工程中。
-2、所有的功能打一个war包部署到服务器。
-3、应用与数据库分开部署。
-4、通过部署应用集群和数据库集群来提高系统的性能。
-垂直架构
-以单体结构规模的项目为单位进行垂直划分项目即将一个大项目拆分成一个一个单体结构项目
-分布式
-分布式系统的特点
-将系统的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81%E6%96%B9%E6%A1%88/">
-				<h2 class="index-title">
-					限流方案
-				</h2>
-				<div class="index-brief">
-					容器限流Tomcat限流
-Tomcat 8.5 版本的最大线程数在 conf/server.xml 配置
-&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
-          connectionTimeout=&qu
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/AQS/">
-				<h2 class="index-title">
-					AQS
-				</h2>
-				<div class="index-brief">
-					AQS定义了一套多线程访问共享资源的同步器框架
-整体架构图
-
-
-JDK里利用AQS类的主要步骤：
-
-在内部写一个 Sync 类，该 Sync 类继承 AbstractQueuedSynchronizer，即 AQS；
-
-在 Sync 类里，根据是否是独占，来重写对应的方法。如果是独占，则重写 try
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/">并发编程</a>
 										
                                     </span>
                                 

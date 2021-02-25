@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,170 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E5%8D%95%E7%BA%BF%E7%A8%8B/">
+				<h2 class="index-title">
+					单线程
+				</h2>
+				<div class="index-brief">
+					优点
+纯内存操作
+
+Redis是一个内存数据库，它的数据都存储在内存中，这意味着我们读写数据都是在内存中完成，这个速度是非常快的。
+Redis是一个KV内存数据库，它内部构建了一个哈希表，根据指定的KEY访问时，只需要O(1)的时间复杂度就可以找到对应的数据。
+同时，Redis提供了丰富的数据类型，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E6%8C%81%E4%B9%85%E5%8C%96/">
+				<h2 class="index-title">
+					持久化
+				</h2>
+				<div class="index-brief">
+					RDBRDB 持久化（也称作快照持久化）是指将内存中的数据生成快照保存到磁盘里面，保存的文件后缀是 .rdb。
+rdb 文件是一个经过压缩的二进制文件，当 Redis 重新启动时，可以读取rdb快照文件恢复数据。
+Redis 服务器默认是通过 RDB 方式完成持久化的，对应 redis.conf 文
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E9%9B%86%E7%BE%A4/">
+				<h2 class="index-title">
+					集群
+				</h2>
+				<div class="index-brief">
+					Redis Cluster 是 在 3.0 版本正式推出的高可用集群方案，相比Redis Sentinel，Redis Cluster方案不需要额外部署Sentinel集群，而是通过集群内部通信实现集群监控，故障时主从切换；同时，支持内部基于哈希实现数据分片，支持动态水平扩容
+数据分片Redis C
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/SortedSet/">
+				<h2 class="index-title">
+					SortedSet
+				</h2>
+				<div class="index-brief">
+					有序集合每个字符串元素都关联到一个双精度64位的浮点型数字字符串score，里面的元素总是通过score进行着排序，因此它是可以检索的一系列元素
+默认升序排列，即通过命令ZRANGE实现；如果要按照降序排列，需要通过命令ZREVRANGE实现
+当score即得分一样时，按照字典顺序对member进行
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/数据类型/">数据类型</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+				<h2 class="index-title">
+					基本介绍
+				</h2>
+				<div class="index-brief">
+					String应用：
+分布式锁，计数器
+Hash是一个 string 类型的 field 和 value 的映射表，hash 特别适合用于存储对象。Redis 中每个 hash 可以存储 232-1 键值对（40多亿）
+不能使用hash键的情况：
+过期功能的使用，过期功能只能使用在key上；（因为里面
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/数据类型/">数据类型</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/12/30/Redis/BigKey/">
 				<h2 class="index-title">
 					BigKey
@@ -4097,151 +4306,6 @@ SETNX的使用方式为：SETNX key value，只在键key不存在的情况下，
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Netty/%E7%B2%98%E5%8C%85%E5%92%8C%E6%8B%86%E5%8C%85/">
-				<h2 class="index-title">
-					粘包和拆包
-				</h2>
-				<div class="index-brief">
-					TCP粘包和拆包基本介绍
-TCP 是面向连接的， 面向流的， 提供高可靠性服务。 收发两端（客户端和服务器端） 都要有一一成对的 socket，因此， 发送端为了将多个发给接收端的包， 更有效的发给对方， 使用了优化方法（Nagle算法） ， 将多次间隔较小且数据量小的数据， 合并成一个大的数据块，
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
-				<h2 class="index-title">
-					编解码器
-				</h2>
-				<div class="index-brief">
-					编写网络应用程序时， 因为数据在网络中传输的都是二进制字节码数据， 在发送数据时就需要编码， 接收数据时就需要解码
-codec(编解码器) 的组成部分有两个：
-
-decoder(解码器)和 encoder(编码器)。
-encoder 负责把业务数据转换成字节码数据， decoder 负责把字节码数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
-				<h2 class="index-title">
-					零拷贝
-				</h2>
-				<div class="index-brief">
-					CompositeByteBuf
-CompositeByteBuf 是 Netty 中实现零拷贝机制非常重要的一个数据结构
-它是由多个 ByteBuf 组合而成，但是在 CompositeByteBuf 内部保存着每个 ByteBuf 的引用关系，从逻辑上构成一个整体。
-比较常见的像 HTTP 协议
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
-				<h2 class="index-title">
-					反向代理
-				</h2>
-				<div class="index-brief">
-					正向代理的概念：
-正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。这个过程当中客户端需要知道代理服务器地址，并配置连接
-反向代理的概念：
-反向代理是指 客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求转发至
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Nginx/">Nginx</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
-				<h2 class="index-title">
-					事务
-				</h2>
-				<div class="index-brief">
-					ACID原子性
-根据定义，原子性是指一个事务是一个不可分割的工作单位，其中的操作要么都做，要么都不做。即要么转账成功，要么转账失败
-怎么保证原子性的
-利用Innodb的undo log
-undo log名为回滚日志，是实现原子性的关键，当事务回滚时能够撤销所有已经成功执行的sql语句，他需要记录你要
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
 										
                                     </span>
                                 

@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,170 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E5%8D%95%E7%BA%BF%E7%A8%8B/">
+				<h2 class="index-title">
+					单线程
+				</h2>
+				<div class="index-brief">
+					优点
+纯内存操作
+
+Redis是一个内存数据库，它的数据都存储在内存中，这意味着我们读写数据都是在内存中完成，这个速度是非常快的。
+Redis是一个KV内存数据库，它内部构建了一个哈希表，根据指定的KEY访问时，只需要O(1)的时间复杂度就可以找到对应的数据。
+同时，Redis提供了丰富的数据类型，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E6%8C%81%E4%B9%85%E5%8C%96/">
+				<h2 class="index-title">
+					持久化
+				</h2>
+				<div class="index-brief">
+					RDBRDB 持久化（也称作快照持久化）是指将内存中的数据生成快照保存到磁盘里面，保存的文件后缀是 .rdb。
+rdb 文件是一个经过压缩的二进制文件，当 Redis 重新启动时，可以读取rdb快照文件恢复数据。
+Redis 服务器默认是通过 RDB 方式完成持久化的，对应 redis.conf 文
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E9%9B%86%E7%BE%A4/">
+				<h2 class="index-title">
+					集群
+				</h2>
+				<div class="index-brief">
+					Redis Cluster 是 在 3.0 版本正式推出的高可用集群方案，相比Redis Sentinel，Redis Cluster方案不需要额外部署Sentinel集群，而是通过集群内部通信实现集群监控，故障时主从切换；同时，支持内部基于哈希实现数据分片，支持动态水平扩容
+数据分片Redis C
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/SortedSet/">
+				<h2 class="index-title">
+					SortedSet
+				</h2>
+				<div class="index-brief">
+					有序集合每个字符串元素都关联到一个双精度64位的浮点型数字字符串score，里面的元素总是通过score进行着排序，因此它是可以检索的一系列元素
+默认升序排列，即通过命令ZRANGE实现；如果要按照降序排列，需要通过命令ZREVRANGE实现
+当score即得分一样时，按照字典顺序对member进行
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/数据类型/">数据类型</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D/">
+				<h2 class="index-title">
+					基本介绍
+				</h2>
+				<div class="index-brief">
+					String应用：
+分布式锁，计数器
+Hash是一个 string 类型的 field 和 value 的映射表，hash 特别适合用于存储对象。Redis 中每个 hash 可以存储 232-1 键值对（40多亿）
+不能使用hash键的情况：
+过期功能的使用，过期功能只能使用在key上；（因为里面
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/数据类型/">数据类型</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/12/30/Redis/BigKey/">
 				<h2 class="index-title">
 					BigKey
@@ -4407,152 +4616,6 @@ binlog 是 mysql 的逻辑日志，并且由 Server层进行记录，使用任�
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Buffer%20Pool/">
-				<h2 class="index-title">
-					Buffer Pool
-				</h2>
-				<div class="index-brief">
-					Buffer Pool就是数据库的一个内存组件，里面缓存了磁盘上的真实数据，然后我们的Java系统对数据库执行的增删改操 作，其实主要就是对这个内存数据结构中的缓存数据执行的
-在对数据库执行增删改操作的时候，实际上主要都是针对内存里的Buffer Pool中的数据进行的，也 就是你实际上主要是对数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Explain/">
-				<h2 class="index-title">
-					Explain
-				</h2>
-				<div class="index-brief">
-					最完整的Explain总结，SQL优化不再困难
-最完整的Explain总结，SQL优化不再困难
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Order%20By/">
-				<h2 class="index-title">
-					Order By
-				</h2>
-				<div class="index-brief">
-					工作原理MySQL会给每个线程分配一块内存用于排序，称为sort_buffer。
-全字段排序:
-一般带有order by 的SQL语句 会初始化sort_buffer，放入需要返回的字段。
-查找一条记录就放入到sort_buffer,继续找，直到找完符合条件的为止。
-对sort_buffer中的数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-				<h2 class="index-title">
-					SQL更新
-				</h2>
-				<div class="index-brief">
-					首先假设我们有一条SQL语句是这样的：
-update users set name=&#39;xxx&#39; where id=10
-那么这条SQL语句是如何执行的
-
-
-InnoDB存储引擎中有一个非常重要的放在内存里的组件，就是缓冲池（Buffer Pool），这里面会缓存很多的数据， 以便于以
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Linux/IO%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					IO模型
-				</h2>
-				<div class="index-brief">
-					同步和异步
-同步指的是用户进程触发IO操作并等待或者轮询的去查看IO操作是否就绪
-异步指的是用户进程触发IO操作以后便开始做其他的事情，而当IO操作已经完成的时候会得到IO完成的通知
-阻塞与非阻塞
-阻塞指的是当试图对该文件描述符进行读写时，如果当时没有东西可读，或暂时不可写，程序就进入等待状态，直到
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Linux/">Linux</a>
 										
                                     </span>
                                 

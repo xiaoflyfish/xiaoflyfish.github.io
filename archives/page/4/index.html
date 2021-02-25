@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,162 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/21/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%8C%81%E4%B9%85%E5%8C%96/">
+				<h2 class="index-title">
+					持久化
+				</h2>
+				<div class="index-brief">
+					AOF我们比较熟悉的是数据库的写前日志（Write Ahead Log, WAL），也就是说，在实际写数据前，先把修改的数据记到日志文件中，以便故障时进行恢复。不过，AOF 日志正好相反，它是写后日志，“写后”的意思是 Redis 是先执行命令，把数据写入内存，然后才记录日志
+我们以 Redis 收
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/21/MySQL/%E9%94%81/">
+				<h2 class="index-title">
+					锁
+				</h2>
+				<div class="index-brief">
+					行锁行锁，也称为记录锁，顾名思义就是在记录上加的锁
+MySQL 的行锁是在引擎层由各个引擎自己实现的。但并不是所有的引擎都支持行锁，比如 MyISAM 引擎就不支持行锁。不支持行锁意味着并发控制只能使用表锁，对于这种引擎的表，同一张表上任何时刻只能有一个更新在执行，这就会影响到业务并发度。InnoD
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/21/ElasticSearch/%E6%90%9C%E7%B4%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+				<h2 class="index-title">
+					搜索性能优化
+				</h2>
+				<div class="index-brief">
+					filesystem cache
+公司 es 节点有 3 台机器，每台机器64G，总内存就是 64 * 3 = 192G 。每台机器给 es jvm heap 是 32G ，那么剩下来留给 filesystem cache 的就是每台机器才 32G ，总共集群里给 filesystem cache 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/21/ElasticSearch/%E5%88%86%E8%AF%8D/">
+				<h2 class="index-title">
+					分词
+				</h2>
+				<div class="index-brief">
+					将文本转换成一系列单词Term/Token的过程，也可称作文本分析，ES中叫作：Analysis。
+分词器(Analyzer)：
+ES中专门处理分词的组件，组成和执行顺序如下：
+
+Character Filters(多个)。针对原始文本进行处理，如：去除html特使标记符&lt;/p&gt;等。
+
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/21/ElasticSearch/%E5%88%86%E9%A1%B5/">
+				<h2 class="index-title">
+					分页
+				</h2>
+				<div class="index-brief">
+					ES提供了三种方式来解决分页和遍历的问题：from/size，scroll，search_after
+from/size:
+from：指明开始位置；
+size：指明获取总数
+#使用from——size
+GET my_index/_search
+&#123;
+ &quot;from&quot;:1, 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-21</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E9%9B%86%E7%BE%A4/">
 				<h2 class="index-title">
 					集群
@@ -4154,197 +4355,6 @@ kafka的消息是不断追加到文件中的，这个特性使kafka可以充分�
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/消息队列/KAFKA/">KAFKA</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E4%BA%8B%E5%8A%A1/">
-				<h2 class="index-title">
-					事务
-				</h2>
-				<div class="index-brief">
-					事务的执行过程包含三个步骤
-
-客户端要使用MULTI命令显式地表示一个事务的开启
-客户端把事务中本身要执行的具体操作（例如增删改数据）发送给服务器端。这些操作就是 Redis 本身提供的数据读写命令，例如 GET、SET 等。不过，这些命令虽然被客户端发送到了服务器端，但 Redis 实例只是把这些
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D/">
-				<h2 class="index-title">
-					常用名词
-				</h2>
-				<div class="index-brief">
-					AR（Assigned Replicas）：分区中的所有副本统称为AR。所有消息会先发送到leader副本，然后follower副本才能从leader中拉取消息进行同步。但是在同步期间，follower对于leader而言会有一定程度的滞后，这个时候follower和leader并非完全同步状态
-O
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/消息队列/">消息队列</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%80%89%E4%B8%BE%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					选举机制
-				</h2>
-				<div class="index-brief">
-					Kafka集群中的选举大致可以分为：控制器的选举、分区leader的选举
-控制器选举在Kafka集群中有多个broker，那么就有一个broker会被选举为控制器（Kafka Controller），它的作用负责管理整个集群中所有分区和副本的状态。
-比如当某个分区的leader副本出现故障时，由控制
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/消息队列/">消息队列</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					IO模型
-				</h2>
-				<div class="index-brief">
-					Linux 中的 IO 多路复用机制是指一个线程处理多个 IO 流，就是我们经常听到的 select/epoll 机制
-简单来说，在 Redis 只运行单线程的情况下，该机制允许内核中，同时存在多个监听套接字和已连接套接字。
-内核会一直监听这些套接字上的连接请求或数据请求。一旦有请求到达，就会交给 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-19</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%89%AF%E6%9C%AC%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					副本机制
-				</h2>
-				<div class="index-brief">
-					所谓的副本机制（Replication），也可以称之为备份机制，通常是指分布式系统在多台网络互联的机器上保存有相同的数据拷贝。
-对于 Apache Kafka 而言，目前只能享受到副本机制的好处就是提供数据冗余实现高可用性和高持久性。
-副本定义
-Kafka 是有主题概念的，而每个主题又进一步划分成若
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
 										
                                     </span>
                                 

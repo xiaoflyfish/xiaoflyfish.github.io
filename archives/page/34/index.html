@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,151 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2020/12/30/Netty/%E7%B2%98%E5%8C%85%E5%92%8C%E6%8B%86%E5%8C%85/">
+				<h2 class="index-title">
+					粘包和拆包
+				</h2>
+				<div class="index-brief">
+					TCP粘包和拆包基本介绍
+TCP 是面向连接的， 面向流的， 提供高可靠性服务。 收发两端（客户端和服务器端） 都要有一一成对的 socket，因此， 发送端为了将多个发给接收端的包， 更有效的发给对方， 使用了优化方法（Nagle算法） ， 将多次间隔较小且数据量小的数据， 合并成一个大的数据块，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
+				<h2 class="index-title">
+					编解码器
+				</h2>
+				<div class="index-brief">
+					编写网络应用程序时， 因为数据在网络中传输的都是二进制字节码数据， 在发送数据时就需要编码， 接收数据时就需要解码
+codec(编解码器) 的组成部分有两个：
+
+decoder(解码器)和 encoder(编码器)。
+encoder 负责把业务数据转换成字节码数据， decoder 负责把字节码数据
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+				<h2 class="index-title">
+					零拷贝
+				</h2>
+				<div class="index-brief">
+					CompositeByteBuf
+CompositeByteBuf 是 Netty 中实现零拷贝机制非常重要的一个数据结构
+它是由多个 ByteBuf 组合而成，但是在 CompositeByteBuf 内部保存着每个 ByteBuf 的引用关系，从逻辑上构成一个整体。
+比较常见的像 HTTP 协议
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+				<h2 class="index-title">
+					反向代理
+				</h2>
+				<div class="index-brief">
+					正向代理的概念：
+正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。这个过程当中客户端需要知道代理服务器地址，并配置连接
+反向代理的概念：
+反向代理是指 客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求转发至
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Nginx/">Nginx</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
+				<h2 class="index-title">
+					事务
+				</h2>
+				<div class="index-brief">
+					ACID原子性
+根据定义，原子性是指一个事务是一个不可分割的工作单位，其中的操作要么都做，要么都不做。即要么转账成功，要么转账失败
+怎么保证原子性的
+利用Innodb的undo log
+undo log名为回滚日志，是实现原子性的关键，当事务回滚时能够撤销所有已经成功执行的sql语句，他需要记录你要
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/12/30/MySQL/%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
 				<h2 class="index-title">
 					分页优化
@@ -4112,152 +4302,6 @@ binlog 是 mysql 的逻辑日志，并且由 Server层进行记录，使用任�
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Buffer%20Pool/">
-				<h2 class="index-title">
-					Buffer Pool
-				</h2>
-				<div class="index-brief">
-					Buffer Pool就是数据库的一个内存组件，里面缓存了磁盘上的真实数据，然后我们的Java系统对数据库执行的增删改操 作，其实主要就是对这个内存数据结构中的缓存数据执行的
-在对数据库执行增删改操作的时候，实际上主要都是针对内存里的Buffer Pool中的数据进行的，也 就是你实际上主要是对数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Explain/">
-				<h2 class="index-title">
-					Explain
-				</h2>
-				<div class="index-brief">
-					最完整的Explain总结，SQL优化不再困难
-最完整的Explain总结，SQL优化不再困难
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Order%20By/">
-				<h2 class="index-title">
-					Order By
-				</h2>
-				<div class="index-brief">
-					工作原理MySQL会给每个线程分配一块内存用于排序，称为sort_buffer。
-全字段排序:
-一般带有order by 的SQL语句 会初始化sort_buffer，放入需要返回的字段。
-查找一条记录就放入到sort_buffer,继续找，直到找完符合条件的为止。
-对sort_buffer中的数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-				<h2 class="index-title">
-					SQL更新
-				</h2>
-				<div class="index-brief">
-					首先假设我们有一条SQL语句是这样的：
-update users set name=&#39;xxx&#39; where id=10
-那么这条SQL语句是如何执行的
-
-
-InnoDB存储引擎中有一个非常重要的放在内存里的组件，就是缓冲池（Buffer Pool），这里面会缓存很多的数据， 以便于以
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Linux/IO%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					IO模型
-				</h2>
-				<div class="index-brief">
-					同步和异步
-同步指的是用户进程触发IO操作并等待或者轮询的去查看IO操作是否就绪
-异步指的是用户进程触发IO操作以后便开始做其他的事情，而当IO操作已经完成的时候会得到IO完成的通知
-阻塞与非阻塞
-阻塞指的是当试图对该文件描述符进行读写时，如果当时没有东西可读，或暂时不可写，程序就进入等待状态，直到
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Linux/">Linux</a>
 										
                                     </span>
                                 

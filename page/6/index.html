@@ -1497,8 +1497,26 @@
 									
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/CPU%E5%BD%B1%E5%93%8DRedis/">
+										CPU影响Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/IO%E6%A8%A1%E5%9E%8B/">
 										IO模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/String/">
+										String
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1524,8 +1542,26 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%8F%98%E6%85%A2%E7%9A%84Redis/">
+										变慢的Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
 										哨兵模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%BC%82%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+										异步机制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1544,6 +1580,15 @@
 								<li class="file">
 									<a href="/2021/02/19/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
 										数据结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/25/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/">
+										消息队列
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -3956,6 +4001,177 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/14/Linux/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+				<h2 class="index-title">
+					IO多路复用
+				</h2>
+				<div class="index-brief">
+					IO多路复用是指内核一旦发现进程指定的一个或者多个IO条件准备读取，它就通知该进程
+目前支持I/O多路复用的系统调用有 select，pselect，poll，epoll
+I/O多路复用就是通过一种机制，一个进程可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Linux/">Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/Linux/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+				<h2 class="index-title">
+					基础知识
+				</h2>
+				<div class="index-brief">
+					信号在命令行支持kill -l，可以显示所有的信号列表
+常用信号
+
+
+
+信号宏名
+信号编号
+说明
+系统默认处理方式
+
+
+
+SIGABRT
+6
+终止进程，调用abort函数时产生
+终止，产生core文件
+
+
+SIGALRM
+14
+超时，调用alarm函数时产生
+终止
+
+
+SIGBUS
+7
+硬件故障
+终
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Linux/">Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/Linux/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
+				<h2 class="index-title">
+					线程模型
+				</h2>
+				<div class="index-brief">
+					在高性能的I/O设计中，有两个著名的模型：Reactor模型和Proactor模型，其中Reactor模型用于同步I/O，而Proactor模型运用于异步I/O操作
+Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reactor模型进行设计和开发，Reactor模型基于事件驱动，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Linux/">Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/MySQL/Join/">
+				<h2 class="index-title">
+					Join
+				</h2>
+				<div class="index-brief">
+					写出好的Join语句，前提你得懂这些：https://mp.weixin.qq.com/s/8XuX9Su1qvHrMLWcQzKTaQ
+join连接时哪个表是驱动表，哪个表是被驱动表：
+
+当使用left join时，左表是驱动表，右表是被驱动表
+当使用right join时，右表是驱动表，左表是被
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					类加载机制
+				</h2>
+				<div class="index-brief">
+					基本过程
+
+加载
+在加载阶段，Java虚拟机需要完成以下三件事情：
+
+1.通过一个类的全限定名来获取定义此类的二进制字节流。
+2.将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。
+3.在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口。
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/JVM/">JVM</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/14/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
 					基础知识
@@ -4449,150 +4665,6 @@ prototype
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/数据结构/">数据结构</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
-				<h2 class="index-title">
-					热部署和热加载
-				</h2>
-				<div class="index-brief">
-					热部署和热加载是类似的，都是在不重启Tomcat的情况下，使得应用的最新代码生效。热部署表示重新部署应用，它的执行主体是Host，表示主机。热加载表示重新加载class，它的执行主体是Context，表示应用。
-后台线程热部署和热加载都需要监听相应的文件或文件夹是否发生了变化。它们都是由Tomcat
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Tomcat/">Tomcat</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E5%86%85%E6%A0%B8%E6%80%81%E5%92%8C%E7%94%A8%E6%88%B7%E6%80%81/">
-				<h2 class="index-title">
-					内核态和用户态
-				</h2>
-				<div class="index-brief">
-					内核态与用户态是操作系统的两种运行级别，当程序运行在3级特权级上时，就可以称之为运行在用户态
-因为这是最低特权级，是普通的用户进程运行的特权级，大部分用户直接面对的程序都是运行在用户态；
-当程序运行在0级特权级上时，就可以称之为运行在内核态
-运行在用户态下的程序不能直接访问操作系统内核数据结构和程序
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/操作系统/">操作系统</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/B%E5%92%8CB+%E6%A0%91/">
-				<h2 class="index-title">
-					B和B+树
-				</h2>
-				<div class="index-brief">
-					
-
-树中有些节点是有多个元素的，并且和二叉查找树一样，左节点的所有元素的值都比父亲元素小。例如对于(3, 7)这个节点。两个元素把这个节点分割成三个值域，即可以有 3 个孩子。2 相当于 3 的左孩子节点，而 （4，6）相当于 3 的右孩子，同时也是 7 的左孩子，而 9 是 7 的右孩子
-B树的两
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据结构/">数据结构</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/Spring/%E5%BE%AA%E7%8E%AF%E4%BE%9D%E8%B5%96/">
-				<h2 class="index-title">
-					循环依赖
-				</h2>
-				<div class="index-brief">
-					循环依赖，其实就是循环引用，就是两个或者两个以上的 bean 互相引用对方，最终形成一个闭环，如 A 依赖 B，B 依赖 C，C 依赖 A
-Spring循环依赖的情况有两种：
-构造器的循环依赖，field属性的循环依赖
-对于构造器的循环依赖，Spring 是无法解决的，只能抛出 BeanCurren
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/MyBatis/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					#和$的区别
-#&#123;&#125; 解析为一个 JDBC 预编译语句的参数标记符 ?
-#&#123;&#125; 是经过预编译的，是安全的。因为 SQL 语句已经预编译好了，传入参数的时候，不会重新生产 SQL 语句
-#{}将传入的参数当成一个字符串，会给传入的参数加一个双引号
-${}将传入的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MyBatis/">MyBatis</a>
 										
                                     </span>
                                 
