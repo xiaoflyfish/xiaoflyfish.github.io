@@ -275,11 +275,11 @@ a {
 }
 /* article */
 #article-title {
-	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid #009688;
 }
 #article-content {
 	padding: 10px 0;
-	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid rgb(271, 93, 108);
 }
 #article-content ol,
 #article-content ul {
@@ -429,4 +429,7 @@ table td {
 	#sidebar {
 		opacity: 0.95;
 	}
+}
+::marker {
+    color: rgb(248, 57, 41);
 }
