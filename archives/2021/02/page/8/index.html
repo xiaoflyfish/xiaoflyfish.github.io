@@ -578,24 +578,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Explain/">
-										Explain
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/Join/">
-										Join
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/MVCC/">
 										MVCC
 									</a>
@@ -607,24 +589,6 @@
 								<li class="file">
 									<a href="/2020/12/30/MySQL/Order%20By/">
 										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
-										SQL执行
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-										SQL更新
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1360,6 +1324,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%20Swarm/">
+										Docker Swarm
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/27/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%E5%AE%89%E8%A3%85/">
 										Docker安装
 									</a>
@@ -1491,6 +1464,15 @@
 							</ul>
 			
 							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/">
+										Java源码1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1613,6 +1595,15 @@
 								<li class="file">
 									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
 										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+										MySQL2
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4176,6 +4167,123 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E9%87%8D%E5%B9%B3%E8%A1%A1/">
+				<h2 class="index-title">
+					重平衡
+				</h2>
+				<div class="index-brief">
+					在 Rebalance 过程中，所有 Consumer 实例共同参与，在协调者组件的帮助下，完成订阅主题分区的分配。
+但是，在整个过程中，所有实例都不能消费任何消息，因此它对 Consumer 的 TPS 影响很大。
+所谓协调者，在 Kafka 中对应的术语是 Coordinator，它专门为 Co
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E9%87%8D%E8%A6%81%E5%8F%82%E6%95%B0/">
+				<h2 class="index-title">
+					重要参数
+				</h2>
+				<div class="index-brief">
+					Broker端参数首先 Broker 是需要配置存储信息的，即 Broker 使用哪些磁盘。
+那么针对存储信息的重要参数有以下这么几个：
+
+log.dirs：这是非常重要的参数，指定了 Broker 需要使用的若干个文件目录路径。这个参数是没有默认值的
+log.dir：注意这是 dir，结尾没有 s
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E6%97%A0%E6%B6%88%E6%81%AF%E4%B8%A2%E5%A4%B1%E9%85%8D%E7%BD%AE/">
+				<h2 class="index-title">
+					无消息丢失配置
+				</h2>
+				<div class="index-brief">
+					Kafka 到底在什么情况下才能保证消息不丢失呢
+一句话概括，Kafka 只对“已提交”的消息（committed message）做有限度的持久化保证
+案例 1：生产者程序丢失数据
+Producer 永远要使用带有回调通知的发送 API，也就是说不要使用 producer.send(msg)，而要
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E6%B6%88%E8%B4%B9%E8%80%85%E7%BB%84/">
 				<h2 class="index-title">
 					消费者组
@@ -4364,47 +4472,6 @@ Apache Kafka 是最“正宗”的 Kafka，也应该是你最熟悉的发行版�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%B9%82%E7%AD%89%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%94%9F%E4%BA%A7%E8%80%85/">
-				<h2 class="index-title">
-					幂等和事务生产者
-				</h2>
-				<div class="index-brief">
-					所谓的消息交付可靠性保障，是指 Kafka 对 Producer 和 Consumer 要处理的消息提供什么样的承诺
-常见的承诺有以下三种：
-
-最多一次（at most once）：消息可能会丢失，但绝不会被重复发送。
-至少一次（at least once）：消息不会丢失，但有可能被重复发送。
-精确
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">
 				<h2 class="index-title">
 					基本术语
@@ -4448,17 +4515,22 @@ B
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Hystrix/">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%B9%82%E7%AD%89%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%94%9F%E4%BA%A7%E8%80%85/">
 				<h2 class="index-title">
-					Hystrix
+					幂等和事务生产者
 				</h2>
 				<div class="index-brief">
-					服务容错假设，微服务系统中还存在依赖于服务 B 的服务 C。这样，基于同样的原因，服务 B 的不可用同样会导致服务 C 的不可用。类似的，系统中可能还存在服务 D 等其他服务依赖服务 C……以此类推，最终在以服务 A 为起点的整个调用链路上的所有服务都会变得不可用。这种扩散效应就是所谓的服务雪崩效应
+					所谓的消息交付可靠性保障，是指 Kafka 对 Producer 和 Consumer 要处理的消息提供什么样的承诺
+常见的承诺有以下三种：
+
+最多一次（at most once）：消息可能会丢失，但绝不会被重复发送。
+至少一次（at least once）：消息不会丢失，但有可能被重复发送。
+精确
 					...
 				</div>
 			</a>
                 <div class="article-meta">
-				    <span>2021-02-17</span>
+				    <span>2021-02-18</span>
                     
                             
                                 
@@ -4474,84 +4546,7 @@ B
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/SpringCloud1/">SpringCloud1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Ribbon/">
-				<h2 class="index-title">
-					Ribbon
-				</h2>
-				<div class="index-brief">
-					负载均衡基于 Spring Cloud Netflix Ribbon，通过注解就能简单实现在面向服务的接口调用中，自动集成负载均衡功能，使用方式主要包括以下两种：
-使用 @LoadBalanced 注解。
-@LoadBalanced 注解用于修饰发起 HTTP 请求的 RestTemplate 工具
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-17</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/SpringCloud1/">SpringCloud1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Zuul/">
-				<h2 class="index-title">
-					Zuul
-				</h2>
-				<div class="index-brief">
-					在 Spring Cloud 中，针对 API 网关的实现提供了两种解决方案。
-一种是集成 Netflix 中的 Zuul 网关，一种是自研 Spring Cloud Gateway
-构建API网关&lt;dependency&gt;
-      &lt;groupId&gt;org.springf
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-17</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/SpringCloud1/">SpringCloud1</a>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
 										
                                     </span>
                                 

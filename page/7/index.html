@@ -578,24 +578,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Explain/">
-										Explain
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/Join/">
-										Join
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/MVCC/">
 										MVCC
 									</a>
@@ -607,24 +589,6 @@
 								<li class="file">
 									<a href="/2020/12/30/MySQL/Order%20By/">
 										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
-										SQL执行
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-										SQL更新
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1360,6 +1324,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%20Swarm/">
+										Docker Swarm
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/27/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%E5%AE%89%E8%A3%85/">
 										Docker安装
 									</a>
@@ -1491,6 +1464,15 @@
 							</ul>
 			
 							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/">
+										Java源码1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1613,6 +1595,15 @@
 								<li class="file">
 									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
 										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+										MySQL2
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4176,39 +4167,44 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/14/Linux/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+			<a href="/2021/02/14/MySQL/MVCC/">
 				<h2 class="index-title">
-					基础知识
+					MVCC
 				</h2>
 				<div class="index-brief">
-					信号在命令行支持kill -l，可以显示所有的信号列表
-常用信号
+					MVCC由浅入深学习
+下面几个语句都是当前读，都会读取最新的快照数据，都会加锁（除了第一个加共享锁，其他都是互斥锁）：
+select * from table where ? lock in share mode; 
+select * from table where ? for update; 
 
-
-
-信号宏名
-信号编号
-说明
-系统默认处理方式
-
-
-
-SIGABRT
-6
-终止进程，调用abort函数时产生
-终止，产生core文件
-
-
-SIGALRM
-14
-超时，调用alarm函数时产生
-终止
-
-
-SIGBUS
-7
-硬件故障
-终
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/Linux/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
+				<h2 class="index-title">
+					IO多路复用
+				</h2>
+				<div class="index-brief">
+					IO多路复用是指内核一旦发现进程指定的一个或者多个IO条件准备读取，它就通知该进程
+目前支持I/O多路复用的系统调用有 select，pselect，poll，epoll
+I/O多路复用就是通过一种机制，一个进程可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的
 					...
 				</div>
 			</a>
@@ -4256,16 +4252,39 @@ Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reacto
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/14/MySQL/Join/">
+			<a href="/2021/02/14/Linux/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
-					Join
+					基础知识
 				</h2>
 				<div class="index-brief">
-					写出好的Join语句，前提你得懂这些：https://mp.weixin.qq.com/s/8XuX9Su1qvHrMLWcQzKTaQ
-join连接时哪个表是驱动表，哪个表是被驱动表：
+					信号在命令行支持kill -l，可以显示所有的信号列表
+常用信号
 
-当使用left join时，左表是驱动表，右表是被驱动表
-当使用right join时，右表是驱动表，左表是被
+
+
+信号宏名
+信号编号
+说明
+系统默认处理方式
+
+
+
+SIGABRT
+6
+终止进程，调用abort函数时产生
+终止，产生core文件
+
+
+SIGALRM
+14
+超时，调用alarm函数时产生
+终止
+
+
+SIGBUS
+7
+硬件故障
+终
 					...
 				</div>
 			</a>
@@ -4276,7 +4295,7 @@ join连接时哪个表是驱动表，哪个表是被驱动表：
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
+                                        <a href="/categories/Linux/">Linux</a>
 										
                                     </span>
                                 
@@ -4812,33 +4831,6 @@ prototype
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/数据结构/">数据结构</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
-				<h2 class="index-title">
-					热部署和热加载
-				</h2>
-				<div class="index-brief">
-					热部署和热加载是类似的，都是在不重启Tomcat的情况下，使得应用的最新代码生效。热部署表示重新部署应用，它的执行主体是Host，表示主机。热加载表示重新加载class，它的执行主体是Context，表示应用。
-后台线程热部署和热加载都需要监听相应的文件或文件夹是否发生了变化。它们都是由Tomcat
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Tomcat/">Tomcat</a>
 										
                                     </span>
                                 

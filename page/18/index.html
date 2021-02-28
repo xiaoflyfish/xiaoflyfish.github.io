@@ -578,24 +578,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Explain/">
-										Explain
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/Join/">
-										Join
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/MVCC/">
 										MVCC
 									</a>
@@ -607,24 +589,6 @@
 								<li class="file">
 									<a href="/2020/12/30/MySQL/Order%20By/">
 										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
-										SQL执行
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-										SQL更新
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1360,6 +1324,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%20Swarm/">
+										Docker Swarm
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/27/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%E5%AE%89%E8%A3%85/">
 										Docker安装
 									</a>
@@ -1491,6 +1464,15 @@
 							</ul>
 			
 							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/">
+										Java源码1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1613,6 +1595,15 @@
 								<li class="file">
 									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
 										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+										MySQL2
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4176,6 +4167,37 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2020/12/30/Redis/%E5%8D%95%E7%BA%BF%E7%A8%8B/">
+				<h2 class="index-title">
+					单线程
+				</h2>
+				<div class="index-brief">
+					优点
+纯内存操作
+
+Redis是一个内存数据库，它的数据都存储在内存中，这意味着我们读写数据都是在内存中完成，这个速度是非常快的。
+Redis是一个KV内存数据库，它内部构建了一个哈希表，根据指定的KEY访问时，只需要O(1)的时间复杂度就可以找到对应的数据。
+同时，Redis提供了丰富的数据类型，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/12/30/Redis/%E6%8C%81%E4%B9%85%E5%8C%96/">
 				<h2 class="index-title">
 					持久化
@@ -4309,16 +4331,18 @@ Hash是一个 string 类型的 field 和 value 的映射表，hash 特别适合�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Redis/Pipeline/">
+			<a href="/2020/12/30/Redis/BigKey/">
 				<h2 class="index-title">
-					Pipeline
+					BigKey
 				</h2>
 				<div class="index-brief">
-					Pipeline交互模型
-客户端首先将执行的命令写入到缓冲区（内存）中，最后再一次性发送 Redis。
-pipeline通过将一批命令进行打包，然后发送给服务器，服务器执行完按顺序打包返回，这样就减少了频繁交互往返的时间，提升了性能
-基本使用
-Pipeline pipeline =jedis.pip
+					bigkey是指key对应的value所占的内存空间比较大
+如果按照数据结构来细分的话，一般分为字符串类型和非字符串类型：
+
+字符串类型：体现在单个value值很大，一般认为超过10KB就是bigkey
+非字符串类型：哈希、列表、集合、有序集合，体现在元素个数过多
+
+bigkey的危害体现在三个方面
 					...
 				</div>
 			</a>
@@ -4339,18 +4363,16 @@ Pipeline pipeline =jedis.pip
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Redis/BigKey/">
+			<a href="/2020/12/30/Redis/Pipeline/">
 				<h2 class="index-title">
-					BigKey
+					Pipeline
 				</h2>
 				<div class="index-brief">
-					bigkey是指key对应的value所占的内存空间比较大
-如果按照数据结构来细分的话，一般分为字符串类型和非字符串类型：
-
-字符串类型：体现在单个value值很大，一般认为超过10KB就是bigkey
-非字符串类型：哈希、列表、集合、有序集合，体现在元素个数过多
-
-bigkey的危害体现在三个方面
+					Pipeline交互模型
+客户端首先将执行的命令写入到缓冲区（内存）中，最后再一次性发送 Redis。
+pipeline通过将一批命令进行打包，然后发送给服务器，服务器执行完按顺序打包返回，这样就减少了频繁交互往返的时间，提升了性能
+基本使用
+Pipeline pipeline =jedis.pip
 					...
 				</div>
 			</a>
@@ -4429,15 +4451,16 @@ SETNX的使用方式为：SETNX key value，只在键key不存在的情况下，
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+			<a href="/2020/12/30/Netty/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
 				<h2 class="index-title">
-					反向代理
+					核心组件
 				</h2>
 				<div class="index-brief">
-					正向代理的概念：
-正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。这个过程当中客户端需要知道代理服务器地址，并配置连接
-反向代理的概念：
-反向代理是指 客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求转发至
+					Netty 的逻辑处理架构为典型网络分层架构设计，共分为网络通信层、事件调度层、服务编排层，每一层各司其职。
+图中包含了 Netty 每一层所用到的核心组件。
+
+
+网络通信层网络通信层的职责是执行网络 I/O 的操作。它支持多种网络协议和 I/O 模型的连接操作。当网络数据读取到内核缓冲区后，会触发
 					...
 				</div>
 			</a>
@@ -4448,7 +4471,7 @@ SETNX的使用方式为：SETNX key value，只在键key不存在的情况下，
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Nginx/">Nginx</a>
+                                        <a href="/categories/Netty/">Netty</a>
 										
                                     </span>
                                 
@@ -4514,36 +4537,6 @@ CompositeByteBuf 是 Netty 中实现零拷贝机制非常重要的一个数据�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Netty/%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6/">
-				<h2 class="index-title">
-					核心组件
-				</h2>
-				<div class="index-brief">
-					Netty 的逻辑处理架构为典型网络分层架构设计，共分为网络通信层、事件调度层、服务编排层，每一层各司其职。
-图中包含了 Netty 每一层所用到的核心组件。
-
-
-网络通信层网络通信层的职责是执行网络 I/O 的操作。它支持多种网络协议和 I/O 模型的连接操作。当网络数据读取到内核缓冲区后，会触发
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
 				<h2 class="index-title">
 					编解码器
@@ -4565,6 +4558,35 @@ encoder 负责把业务数据转换成字节码数据， decoder 负责把字节
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/">
+				<h2 class="index-title">
+					反向代理
+				</h2>
+				<div class="index-brief">
+					正向代理的概念：
+正向代理是指客户端与目标服务器之间增加一个代理服务器，客户端直接访问代理服务器，在由代理服务器访问目标服务器并返回客户端并返回 。这个过程当中客户端需要知道代理服务器地址，并配置连接
+反向代理的概念：
+反向代理是指 客户端访问目标服务器，在目标服务内部有一个统一接入网关将请求转发至
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Nginx/">Nginx</a>
 										
                                     </span>
                                 
@@ -4760,33 +4782,6 @@ binlog 是 mysql 的逻辑日志，并且由 Server层进行记录，使用任�
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/MyBatis/">MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Buffer%20Pool/">
-				<h2 class="index-title">
-					Buffer Pool
-				</h2>
-				<div class="index-brief">
-					Buffer Pool就是数据库的一个内存组件，里面缓存了磁盘上的真实数据，然后我们的Java系统对数据库执行的增删改操 作，其实主要就是对这个内存数据结构中的缓存数据执行的
-在对数据库执行增删改操作的时候，实际上主要都是针对内存里的Buffer Pool中的数据进行的，也 就是你实际上主要是对数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
 										
                                     </span>
                                 

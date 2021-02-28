@@ -578,24 +578,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Explain/">
-										Explain
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/Join/">
-										Join
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/MVCC/">
 										MVCC
 									</a>
@@ -607,24 +589,6 @@
 								<li class="file">
 									<a href="/2020/12/30/MySQL/Order%20By/">
 										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
-										SQL执行
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-										SQL更新
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1360,6 +1324,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%20Swarm/">
+										Docker Swarm
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/27/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%E5%AE%89%E8%A3%85/">
 										Docker安装
 									</a>
@@ -1491,6 +1464,15 @@
 							</ul>
 			
 							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/">
+										Java源码1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1613,6 +1595,15 @@
 								<li class="file">
 									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
 										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+										MySQL2
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4176,6 +4167,127 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E4%BD%8D%E7%A7%BB%E4%B8%BB%E9%A2%98/">
+				<h2 class="index-title">
+					位移主题
+				</h2>
+				<div class="index-brief">
+					老版本 Consumer 的位移管理是依托于 Apache ZooKeeper 的，它会自动或手动地将位移数据提交到ZooKeeper 中保存
+当 Consumer 重启后，它能自动从 ZooKeeper 中读取位移数据，从而在上次消费截止的地方继续消费。这种设计使得 Kafka Broker 不需
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">
+				<h2 class="index-title">
+					基本术语
+				</h2>
+				<div class="index-brief">
+					
+
+主题
+发布订阅的对象是主题（Topic），可以为每 个业务、每个应用甚至是每类数据都创建专属的主题
+生产者和消费者
+向主题发布消息的客户端应用程序称为生产者，生产者程序通常持续不断地 向一个或多个主题发送消息
+订阅这些主题消息的客户端应用程序就被称为消费者，消费者也能够同时订阅多个主题的消息
+B
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E5%B9%82%E7%AD%89%E5%92%8C%E4%BA%8B%E5%8A%A1%E7%94%9F%E4%BA%A7%E8%80%85/">
+				<h2 class="index-title">
+					幂等和事务生产者
+				</h2>
+				<div class="index-brief">
+					所谓的消息交付可靠性保障，是指 Kafka 对 Producer 和 Consumer 要处理的消息提供什么样的承诺
+常见的承诺有以下三种：
+
+最多一次（at most once）：消息可能会丢失，但绝不会被重复发送。
+至少一次（at least once）：消息不会丢失，但有可能被重复发送。
+精确
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-18</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/17/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/SpringCloud1/Hystrix/">
 				<h2 class="index-title">
 					Hystrix
@@ -4439,123 +4551,10 @@ ZAB 协议算法（Zookeeper Atom
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%9B%9B%E5%AD%97%E5%91%BD%E4%BB%A4/">
-				<h2 class="index-title">
-					四字命令
-				</h2>
-				<div class="index-brief">
-					除了在部署的时候尽量采用分布式、集群服务等方式提高 ZooKeeper 服务的可靠性外，在服务上线运行的时候，我们还可以通过对 ZooKeeper 服务的运行状态进行监控，如运行 ZooKeeper 服务的生产服务器的 CPU 、内存、磁盘等使用情况来达到目的。
-在系统性能达到瓶颈的时候，可以增加服
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">
-				<h2 class="index-title">
-					生产环境搭建
-				</h2>
-				<div class="index-brief">
-					运行方式首先，我们来介绍一下 ZooKeeper 服务的几种运行模式，ZooKeeper 的运行模式一般分为单机模式、伪集群模式、集群模式。其中单机模式和伪集群模式，在我们的日常开发中经常用到。
-单机模式配置
-在 ZooKeeper 的单机模式下，整个 ZooKeeper 服务只运行在一台服务器节点
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D/">
-				<h2 class="index-title">
-					服务端处理会话
-				</h2>
-				<div class="index-brief">
-					服务端处理过程
-会话的创建过程，当客户端需要和 ZooKeeper 服务端进行相互协调通信时，首先要建立该客户端与服务端的连接会话，在会话成功创建后，ZooKeeper 服务端就可以接收来自客户端的请求操作了。
-ZooKeeper 服务端在处理一次客户端发起的会话请求时，所采用的处理过程很像是一条工
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/6/">&lt;</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/5/">5</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/8/">8</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/9/">9</a><a class="extend next" rel="next" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/8/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/6/">&lt;</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">1</a><span class="space">&hellip;</span><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/5/">5</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/8/">8</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/9/">9</a><a class="page-number" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/10/">10</a><a class="extend next" rel="next" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/page/8/">&gt;</a>
 		
 	</div>
 </div>

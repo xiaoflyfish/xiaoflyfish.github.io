@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		SQL执行 | 
+		Java源码1 | 
 	 
 	月伴飞鱼
 	</title>
@@ -580,24 +580,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Explain/">
-										Explain
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/Join/">
-										Join
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/MVCC/">
 										MVCC
 									</a>
@@ -609,24 +591,6 @@
 								<li class="file">
 									<a href="/2020/12/30/MySQL/Order%20By/">
 										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file active">
-									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
-										SQL执行
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-										SQL更新
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1362,6 +1326,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%20Swarm/">
+										Docker Swarm
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/27/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%E5%AE%89%E8%A3%85/">
 										Docker安装
 									</a>
@@ -1493,6 +1466,15 @@
 							</ul>
 			
 							<ul>
+								<li class="file active">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/">
+										Java源码1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1615,6 +1597,15 @@
 								<li class="file">
 									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
 										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+										MySQL2
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4177,23 +4168,23 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	SQL执行
+	Java源码1
 </h1>
 <div class="article-meta">
 	
 		<span>
-			阅读量:<span id="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/" class="leancloud_visitors" data-flag-title="SQL执行"></span>
+			阅读量:<span id="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/" class="leancloud_visitors" data-flag-title="Java源码1"></span>
 		</span>
 	
 	<span>月伴飞鱼</span>
-	<span>2021-02-14 21:40:49</span>
+	<span>2021-02-28 21:37:18</span>
     
 		<div id="article-categories">
             
                 
                     <span>
                         <i class="fa fa-folder" aria-hidden="true"></i>
-                        <a href="/categories/MySQL/">MySQL</a>
+                        <a href="/categories/学习笔记/">学习笔记</a>
 						
                     </span>
                 
@@ -4203,45 +4194,51 @@
 </div>
 
 <div id="article-content">
-	<p>MySQL 可以分为 Server 层和存储引擎层两部分。</p>
-<p>Server 层包括连接器、查询缓存、分析器、优化器、执行器等</p>
-<p>存储引擎层负责数据的存储和提取</p>
-<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20201220083433.png" style="zoom:30%;" />
-
-<h1 id="连接器"><a href="#连接器" class="headerlink" title="连接器"></a>连接器</h1><p>第一步你会先连接到这个数据库上，这时候接待你的就是连接器。连接器负责跟客户端建立连接、获取权限、维持和管理连接</p>
-<p>连接完成后，如果你没有后续的动作，这个连接就处于空闲状态，你可以在 show processlist 命令中看到它</p>
-<p> show processlist 的结果，其中的 Command 列显示为“Sleep”的这一行，就表示现在系统里面有一个空闲连接</p>
-<p>客户端如果太长时间没动静，连接器就会自动将它断开</p>
-<p>这个时间是由参数 <code>wait_timeout</code> 控制的，默认值是 8 小时</p>
-<p>如果在连接被断开之后，客户端再次发送请求的话，就会收到一个错误提醒： Lost connection to MySQL server during query。这时候如果你要继续，就需要重连，然后再执行请求了</p>
-<p>数据库里面，长连接是指连接成功后，如果客户端持续有请求，则一直使用同一个连接。短连接则是指每次执行完很少的几次查询就断开连接，下次查询再重新建立一个</p>
-<p>建立连接的过程通常是比较复杂的，所以我建议你在使用中要尽量减少建立连接的动作，也就是尽量使用长连接</p>
-<p>但是全部使用长连接后，你可能会发现，有些时候 MySQL 占用内存涨得特别快，这是因为 MySQL 在执行过程中临时使用的内存是管理在连接对象里面的。这些资源会在连接断开的时候才释放。所以如果长连接累积下来，可能导致内存占用太大，被系统强行杀掉（OOM），从现象看就是 MySQL 异常重启了</p>
-<p><strong>怎么解决这个问题呢？你可以考虑以下两种方案</strong></p>
-<ol>
-<li>定期断开长连接。使用一段时间，或者程序里面判断执行过一个占用内存的大查询后，断开连接，之后要查询再重连。</li>
-<li>如果你用的是 MySQL 5.7 或更新版本，可以在每次执行一个比较大的操作后，通过执行 <code>mysql_reset_connection</code> 来重新初始化连接资源。这个过程不需要重连和重新做权限验证，但是会将连接恢复到刚刚创建完时的状态</li>
-</ol>
-<h1 id="查询缓存"><a href="#查询缓存" class="headerlink" title="查询缓存"></a>查询缓存</h1><p>MySQL 拿到一个查询请求后，会先到查询缓存看看，之前是不是执行过这条语句</p>
-<p>MySQL 拿到一个查询请求后，会先到查询缓存看看，之前是不是执行过这条语句。之前执行过的语句及其结果可能会以 key-value 对的形式，被直接缓存在内存中。key 是查询的语句，value 是查询的结果。如果你的查询能够直接在这个缓存中找到 key，那么这个 value 就会被直接返回给客户端</p>
-<p>如果语句不在查询缓存中，就会继续后面的执行阶段。执行完成后，执行结果会被存入查询缓存中。你可以看到，如果查询命中缓存，MySQL 不需要执行后面的复杂操作，就可以直接返回结果，这个效率会很高</p>
-<p><strong>但是大多数情况下我会建议你不要使用查询缓存，为什么呢？因为查询缓存往往弊大于利</strong></p>
-<p>查询缓存的失效非常频繁，只要有对一个表的更新，这个表上所有的查询缓存都会被清空。因此很可能你费劲地把结果存起来，还没使用呢，就被一个更新全清空了。对于更新压力大的数据库来说，查询缓存的命中率会非常低</p>
-<p>除非你的业务就是有一张静态表，很长时间才会更新一次</p>
-<p>比如，一个系统配置表，那这张表上的查询才适合使用查询缓存</p>
-<p>好在 MySQL 也提供了这种“按需使用”的方式。你可以将参数 <code>query_cache_type</code> 设置成 DEMAND，这样对于默认的 SQL 语句都不使用查询缓存。而对于你确定要使用查询缓存的语句，可以用 <code>SQL_CACHE</code> 显式指定</p>
-<pre><code class="sql">mysql&gt; select SQL_CACHE * from T where ID=10；</code></pre>
-<p>需要注意的是，MySQL 8.0 版本直接将查询缓存的整块功能删掉了，也就是说 8.0 开始彻底没有这个功能了</p>
-<h1 id="分析器"><a href="#分析器" class="headerlink" title="分析器"></a>分析器</h1><p>分析器先会做词法分析</p>
-<p>根据词法分析的结果，语法分析器会根据语法规则，判断你输入的这个 SQL 语句是否满足 MySQL 语法</p>
-<p>分析器先会做“词法分析”。你输入的是由多个字符串和空格组成的一条 SQL 语句，MySQL 需要识别出里面的字符串分别是什么，代表什么</p>
-<p>MySQL 从你输入的”select”这个关键字识别出来，这是一个查询语句。它也要把字符串“T”识别成“表名 T”，把字符串“ID”识别成“列 ID”</p>
-<p>做完了这些识别以后，就要做“语法分析”。根据词法分析的结果，语法分析器会根据语法规则，判断你输入的这个 SQL 语句是否满足 MySQL 语法</p>
-<p>如果你的语句不对，就会收到“You have an error in your SQL syntax”的错误提醒</p>
-<h1 id="优化器"><a href="#优化器" class="headerlink" title="优化器"></a>优化器</h1><p>优化器是在表里面有多个索引的时候，决定使用哪个索引；或者在一个语句有多表关联的时候，决定各个表的连接顺序</p>
-<h1 id="执行器"><a href="#执行器" class="headerlink" title="执行器"></a>执行器</h1><p>这个执行器会根据优化器选择的执行方案，去调用存储引擎的接口按照一定的顺序和 步骤，就把SQL语句的逻辑给执行了</p>
-<p>数据库的慢查询日志中看到一个 <code>rows_examined</code> 的字段，表示这个语句执行过程中扫描了多少行。这个值就是在执行器每次调用引擎获取数据行的时候累加的</p>
-<p>在有些场景下，执行器调用一次，在引擎内部则扫描了多行，因此<strong>引擎扫描行数跟 rows_examined 并不是完全相同的</strong></p>
+	<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104167904">String、Long 源码解析和面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104167942">Java 常用关键字理解</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104167959">Arrays、Collections、Objects 常用方法源码解析</a></p>
+<h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104167982">ArrayList 源码解析和设计思路</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104213211">LinkedList 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104168164">List 源码会问哪些面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104168124">HashMap 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104168155">TreeMap 和 LinkedHashMap 核心源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104168019">Map源码会问哪些面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104212942">HashSet、TreeSet 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104212973">彰显细节：看集合源码对我们实际工作的帮助和应用</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104213008">差异对比：集合在 Java 7 和 8 有何不同和改进</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104213057">Guava Lists Maps 实际工作运用和源码</a></p>
+<h1 id="并发集合类"><a href="#并发集合类" class="headerlink" title="并发集合类"></a>并发集合类</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104213084">CopyOnWriteArrayList 源码解析和设计思路</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104213128">ConcurrentHashMap 源码解析和设计思路</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104213160">并发 List、Map源码面试题</a></p>
+<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104213211">LinkedBlockingQueue 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104213239">SynchronousQueue 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104384919">DelayQueue 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104384953">ArrayBlockingQueue 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104384988">队列在源码方面的面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385011">举一反三：队列在 Java 其它源码中的应用</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385044">整体设计：队列设计思想、工作中使用场景</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385062">由浅入深手写队列</a></p>
+<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385106">Thread 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385134">Future、ExecutorService 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385158">押宝线程源码面试题</a></p>
+<h1 id="锁"><a href="#锁" class="headerlink" title="锁"></a>锁</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385197">AbstractQueuedSynchronizer 源码解析（上）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385225">AbstractQueuedSynchronizer 源码解析（下）</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385265">ReentrantLock 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104385306">CountDownLatch、Atomic 等其它源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104385317">只求问倒：连环相扣系列锁面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385341">经验总结：各种锁在工作中使用场景和细节</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104385351">从容不迫：重写锁的设计结构和细节</a></p>
+<h1 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104385361">ThreadPoolExecutor 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385379">线程池源码面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/aria_miazzy/article/details/104385392">经验总结：不同场景，如何使用线程池</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385399">打动面试官：线程池流程编排中的运用实战</a></p>
+<h1 id="Lambda流"><a href="#Lambda流" class="headerlink" title="Lambda流"></a>Lambda流</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104385429">突破难点：如何看 Lambda 源码</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104389196">常用的 Lambda 表达式使用场景解析和应用</a></p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104389263">ThreadLocal 源码解析</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104389321">场景实战：ThreadLocal 在上下文传值场景下的实践</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104389422?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161450785816780357258197%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=161450785816780357258197&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v1~rank_blog_v1-1-104389422.pc_v1_rank_blog_v1&utm_term=45">Socket 源码及面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104389462?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161450790816780262578331%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=161450790816780262578331&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v1~rank_blog_v1-1-104389462.pc_v1_rank_blog_v1&utm_term=46">ServerSocket 源码及面试题</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/Aria_Miazzy/article/details/104389490?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522161450793716780269860034%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=161450793716780269860034&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_v1~rank_blog_v1-1-104389490.pc_v1_rank_blog_v1&utm_term=47">工作实战：Socket 结合线程池的使用</a></p>
 
 </div>
 
@@ -4249,16 +4246,11 @@
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/02/14/MySQL/MVCC/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  MVCC
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/02/14/Linux/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
-                IO多路复用
+              <a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+                MySQL2
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

@@ -578,24 +578,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Explain/">
-										Explain
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/Join/">
-										Join
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/MVCC/">
 										MVCC
 									</a>
@@ -607,24 +589,6 @@
 								<li class="file">
 									<a href="/2020/12/30/MySQL/Order%20By/">
 										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2021/02/14/MySQL/SQL%E6%89%A7%E8%A1%8C/">
-										SQL执行
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/MySQL/SQL%E6%9B%B4%E6%96%B0/">
-										SQL更新
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1360,6 +1324,15 @@
 			
 							<ul>
 								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%20Swarm/">
+										Docker Swarm
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
 									<a href="/2021/02/27/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Docker1/Docker%E5%AE%89%E8%A3%85/">
 										Docker安装
 									</a>
@@ -1491,6 +1464,15 @@
 							</ul>
 			
 							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Java%E6%BA%90%E7%A0%811/">
+										Java源码1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1613,6 +1595,15 @@
 								<li class="file">
 									<a href="/2021/02/14/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/">
 										MySQL1
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+										MySQL2
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4176,15 +4167,17 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%B9%B6%E5%8F%91%E5%B7%A5%E5%85%B7%E7%B1%BB/CopyOnWriteArrayList/">
 				<h2 class="index-title">
-					服务容错
+					CopyOnWriteArrayList
 				</h2>
 				<div class="index-brief">
-					为什么要实现服务容错？
-我们知道，在微服务架构中，服务之间通过跨进程的远程调用来完成交互。假设系统中存在两个微服务，分别是服务 A 和服务 B，其中服务 B 会调用服务 A
-现在，系统出现故障了。首先，服务 A 因为某种原因发生了宕机而变得不可用，这是故障的第一阶段
-服务 A 不可用的原因有很多，包
+					整体架构
+从整体架构上来说，CopyOnWriteArrayList 数据结构和 ArrayList 是一致的，底层是个数组，只不过 CopyOnWriteArrayList 在对数组进行操作的时候，基本会分四步走：
+
+加锁；
+从原数组中拷贝出新数组；
+在新数组上进行操作，并把新数组赋值给数组容器；
 					...
 				</div>
 			</a>
@@ -4195,7 +4188,17 @@
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
+                                        <a href="/categories/并发编程/">并发编程</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/并发编程/并发工具类/">并发工具类</a>
 										
                                     </span>
                                 
@@ -4220,6 +4223,35 @@
 分布式
 分布式系统的特点
 将系统的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/分布式/">分布式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/">
+				<h2 class="index-title">
+					服务容错
+				</h2>
+				<div class="index-brief">
+					为什么要实现服务容错？
+我们知道，在微服务架构中，服务之间通过跨进程的远程调用来完成交互。假设系统中存在两个微服务，分别是服务 A 和服务 B，其中服务 B 会调用服务 A
+现在，系统出现故障了。首先，服务 A 因为某种原因发生了宕机而变得不可用，这是故障的第一阶段
+服务 A 不可用的原因有很多，包
 					...
 				</div>
 			</a>
@@ -4269,20 +4301,13 @@ Tomcat 8.5 版本的最大线程数在 conf/server.xml 配置
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/AQS/">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
 				<h2 class="index-title">
-					AQS
+					CAS
 				</h2>
 				<div class="index-brief">
-					AQS定义了一套多线程访问共享资源的同步器框架
-整体架构图
-
-
-JDK里利用AQS类的主要步骤：
-
-在内部写一个 Sync 类，该 Sync 类继承 AbstractQueuedSynchronizer，即 AQS；
-
-在 Sync 类里，根据是否是独占，来重写对应的方法。如果是独占，则重写 try
+					CAS 全称是 compare and swap(比较并且交换)，是一种用于在多线程环境下实现同步功能的机制，其也是无锁优化，或者叫自旋，还有自适应自旋。
+在jdk中，CAS加volatile关键字作为实现并发包的基石。没有CAS就不会有并发包，java.util.concurrent中借助了CAS
 					...
 				</div>
 			</a>
@@ -4303,13 +4328,20 @@ JDK里利用AQS类的主要步骤：
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/AQS/">
 				<h2 class="index-title">
-					CAS
+					AQS
 				</h2>
 				<div class="index-brief">
-					CAS 全称是 compare and swap(比较并且交换)，是一种用于在多线程环境下实现同步功能的机制，其也是无锁优化，或者叫自旋，还有自适应自旋。
-在jdk中，CAS加volatile关键字作为实现并发包的基石。没有CAS就不会有并发包，java.util.concurrent中借助了CAS
+					AQS定义了一套多线程访问共享资源的同步器框架
+整体架构图
+
+
+JDK里利用AQS类的主要步骤：
+
+在内部写一个 Sync 类，该 Sync 类继承 AbstractQueuedSynchronizer，即 AQS；
+
+在 Sync 类里，根据是否是独占，来重写对应的方法。如果是独占，则重写 try
 					...
 				</div>
 			</a>
@@ -4406,44 +4438,6 @@ R = 一次数据对象读取要访问的副本的数量
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/ZAB%E7%AE%97%E6%B3%95/">
-				<h2 class="index-title">
-					ZAB算法
-				</h2>
-				<div class="index-brief">
-					ZAB算法是为 ZooKeeper 实现分布式协调功能而设计的
-相较于 Raft 算法的投票机制，ZAB 算法增加了通过节点 ID 和数据 ID 作为参考进行选主，节点 ID 和数据 ID 越大，表示数据越新，优先成为主
-相比较于 Raft 算法，ZAB 算法尽可能保证数据的最新性。所以，ZAB 算
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式算法/">分布式算法</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式算法/选举算法/">选举算法</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/Raft%E7%AE%97%E6%B3%95/">
 				<h2 class="index-title">
 					Raft算法
@@ -4483,12 +4477,14 @@ Leader，即主节点，同一时刻只有一个 Leader，负责协调和管理�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/2PC%E5%8D%8F%E8%AE%AE/">
+			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8F%E7%AE%97%E6%B3%95/ZAB%E7%AE%97%E6%B3%95/">
 				<h2 class="index-title">
-					2PC协议
+					ZAB算法
 				</h2>
 				<div class="index-brief">
-					两阶段提交协议的目标在于为分布式系统保证数据的一致性，许多分布式系统采用该协议提供对分布式事务的支持。该协议将一个分布式的事务过程拆分成两个阶段： 投票 和 事务提交 。为了让整个数据库集群能够正常的运行，该协议指定了一个 协调者 单点，用于协调整个数据库集群各节点的运行。为了简化描述，我们将数据库
+					ZAB算法是为 ZooKeeper 实现分布式协调功能而设计的
+相较于 Raft 算法的投票机制，ZAB 算法增加了通过节点 ID 和数据 ID 作为参考进行选主，节点 ID 和数据 ID 越大，表示数据越新，优先成为主
+相比较于 Raft 算法，ZAB 算法尽可能保证数据的最新性。所以，ZAB 算
 					...
 				</div>
 			</a>
@@ -4499,7 +4495,7 @@ Leader，即主节点，同一时刻只有一个 Leader，负责协调和管理�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
+                                        <a href="/categories/分布式算法/">分布式算法</a>
 										
 											>
 										
@@ -4509,7 +4505,7 @@ Leader，即主节点，同一时刻只有一个 Leader，负责协调和管理�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/分布式事务/">分布式事务</a>
+                                        <a href="/categories/分布式算法/选举算法/">选举算法</a>
 										
                                     </span>
                                 
