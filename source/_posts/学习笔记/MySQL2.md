@@ -18,3 +18,5 @@ categories:
 
 [行锁功过：怎么减少行锁对性能的影响](https://blog.csdn.net/shenchaohao12321/article/details/104457577)
 
+[事务到底是隔离的还是不隔离的](https://blog.csdn.net/shenchaohao12321/article/details/104458059)
+
