@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,45 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/12/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/BitMap/">
-				<h2 class="index-title">
-					BitMap
-				</h2>
-				<div class="index-brief">
-					bitmaps为一个以位为单位的数组，数组的每个单元只能存储0和1
-在redis 2.2.0版本之后，新增了一个位图数据，其实它不是一种数据结构
-实际上它就是一个一个字符串结构（涉及单个bitmap可存储最大值问题），只不过value是一个二进制数据，每一位只能是0或者1
-redis单独对bitma
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-12</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/数据类型/">数据类型</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/12/Redis/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
 					基础知识
@@ -4440,6 +4374,38 @@ prototype
 		</div>	
 	
 		<div class="index-li">
+			<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%B7%83%E8%A1%A8/">
+				<h2 class="index-title">
+					跳跃表
+				</h2>
+				<div class="index-brief">
+					跳表是一种随机化的数据结构，插入、删除、查找的复杂度均为O(logN)
+简单说来跳表也是链表的一种，只不过它在链表的基础上增加了跳跃功能，正是这个跳跃的功能，使得在查找元素时，跳表能够提供O(logN)的时间复杂度
+基本性质
+
+由很多层结构组成
+每一层都是一个有序的链表
+最底层(Level 1)的链
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-11</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/数据结构/">数据结构</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8/">
 				<h2 class="index-title">
 					布隆过滤器
@@ -4468,18 +4434,13 @@ prototype
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/11/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E8%B7%B3%E8%B7%83%E8%A1%A8/">
+			<a href="/2021/02/11/Tomcat/%E7%83%AD%E9%83%A8%E7%BD%B2%E5%92%8C%E7%83%AD%E5%8A%A0%E8%BD%BD/">
 				<h2 class="index-title">
-					跳跃表
+					热部署和热加载
 				</h2>
 				<div class="index-brief">
-					跳表是一种随机化的数据结构，插入、删除、查找的复杂度均为O(logN)
-简单说来跳表也是链表的一种，只不过它在链表的基础上增加了跳跃功能，正是这个跳跃的功能，使得在查找元素时，跳表能够提供O(logN)的时间复杂度
-基本性质
-
-由很多层结构组成
-每一层都是一个有序的链表
-最底层(Level 1)的链
+					热部署和热加载是类似的，都是在不重启Tomcat的情况下，使得应用的最新代码生效。热部署表示重新部署应用，它的执行主体是Host，表示主机。热加载表示重新加载class，它的执行主体是Context，表示应用。
+后台线程热部署和热加载都需要监听相应的文件或文件夹是否发生了变化。它们都是由Tomcat
 					...
 				</div>
 			</a>
@@ -4490,7 +4451,7 @@ prototype
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/数据结构/">数据结构</a>
+                                        <a href="/categories/Tomcat/">Tomcat</a>
 										
                                     </span>
                                 

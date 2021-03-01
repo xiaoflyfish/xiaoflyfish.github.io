@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4208,21 +4181,15 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
+			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/">
 				<h2 class="index-title">
-					服务架构
+					服务容错
 				</h2>
 				<div class="index-brief">
-					单体架构
-1、所有的功能集成在一个项目工程中。
-2、所有的功能打一个war包部署到服务器。
-3、应用与数据库分开部署。
-4、通过部署应用集群和数据库集群来提高系统的性能。
-垂直架构
-以单体结构规模的项目为单位进行垂直划分项目即将一个大项目拆分成一个一个单体结构项目
-分布式
-分布式系统的特点
-将系统的
+					为什么要实现服务容错？
+我们知道，在微服务架构中，服务之间通过跨进程的远程调用来完成交互。假设系统中存在两个微服务，分别是服务 A 和服务 B，其中服务 B 会调用服务 A
+现在，系统出现故障了。首先，服务 A 因为某种原因发生了宕机而变得不可用，这是故障的第一阶段
+服务 A 不可用的原因有很多，包
 					...
 				</div>
 			</a>
@@ -4243,15 +4210,21 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E5%AE%B9%E9%94%99/">
+			<a href="/2020/12/30/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/">
 				<h2 class="index-title">
-					服务容错
+					服务架构
 				</h2>
 				<div class="index-brief">
-					为什么要实现服务容错？
-我们知道，在微服务架构中，服务之间通过跨进程的远程调用来完成交互。假设系统中存在两个微服务，分别是服务 A 和服务 B，其中服务 B 会调用服务 A
-现在，系统出现故障了。首先，服务 A 因为某种原因发生了宕机而变得不可用，这是故障的第一阶段
-服务 A 不可用的原因有很多，包
+					单体架构
+1、所有的功能集成在一个项目工程中。
+2、所有的功能打一个war包部署到服务器。
+3、应用与数据库分开部署。
+4、通过部署应用集群和数据库集群来提高系统的性能。
+垂直架构
+以单体结构规模的项目为单位进行垂直划分项目即将一个大项目拆分成一个一个单体结构项目
+分布式
+分布式系统的特点
+将系统的
 					...
 				</div>
 			</a>
@@ -4301,13 +4274,20 @@ Tomcat 8.5 版本的最大线程数在 conf/server.xml 配置
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/AQS/">
 				<h2 class="index-title">
-					CAS
+					AQS
 				</h2>
 				<div class="index-brief">
-					CAS 全称是 compare and swap(比较并且交换)，是一种用于在多线程环境下实现同步功能的机制，其也是无锁优化，或者叫自旋，还有自适应自旋。
-在jdk中，CAS加volatile关键字作为实现并发包的基石。没有CAS就不会有并发包，java.util.concurrent中借助了CAS
+					AQS定义了一套多线程访问共享资源的同步器框架
+整体架构图
+
+
+JDK里利用AQS类的主要步骤：
+
+在内部写一个 Sync 类，该 Sync 类继承 AbstractQueuedSynchronizer，即 AQS；
+
+在 Sync 类里，根据是否是独占，来重写对应的方法。如果是独占，则重写 try
 					...
 				</div>
 			</a>
@@ -4328,20 +4308,13 @@ Tomcat 8.5 版本的最大线程数在 conf/server.xml 配置
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/AQS/">
+			<a href="/2020/12/30/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/CAS/">
 				<h2 class="index-title">
-					AQS
+					CAS
 				</h2>
 				<div class="index-brief">
-					AQS定义了一套多线程访问共享资源的同步器框架
-整体架构图
-
-
-JDK里利用AQS类的主要步骤：
-
-在内部写一个 Sync 类，该 Sync 类继承 AbstractQueuedSynchronizer，即 AQS；
-
-在 Sync 类里，根据是否是独占，来重写对应的方法。如果是独占，则重写 try
+					CAS 全称是 compare and swap(比较并且交换)，是一种用于在多线程环境下实现同步功能的机制，其也是无锁优化，或者叫自旋，还有自适应自旋。
+在jdk中，CAS加volatile关键字作为实现并发包的基石。没有CAS就不会有并发包，java.util.concurrent中借助了CAS
 					...
 				</div>
 			</a>
@@ -4744,6 +4717,37 @@ A (可用性)：非故障的节点在合理的时间内返回合理的响应
 		</div>	
 	
 		<div class="index-li">
+			<a href="/2020/12/30/Spring/SpringMVC/">
+				<h2 class="index-title">
+					SpringMVC
+				</h2>
+				<div class="index-brief">
+					基本原理
+
+1.客户端（浏览器）发送请求，直接请求到DispatcherServlet
+2.DispatcherServlet根据请求信息调用HandlerMapping，解析请求对应的Handler
+3.解析到对应的Handler后，开始由HandlerAdapter适配器处理
+4.Handler
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Spring/">Spring</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2020/12/30/Spring/%E4%BA%8B%E5%8A%A1/">
 				<h2 class="index-title">
 					事务
@@ -4781,37 +4785,6 @@ A (可用性)：非故障的节点在合理的时间内返回合理的响应
 				<div class="index-brief">
 					静态代理创建一个接口，然后创建被代理的类实现该接口并且实现该接口中的抽象方法。之后再创建一个代理类，同时使其也实现这个接口。在代理类中持有一个被代理对象的引用，而后在代理类方法中调用该对象的方法。
 使用JDK静态代理很容易就完成了对一个类的代理操作。但是JDK静态代理的缺点也暴露了出来：由于代理只能
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Spring/SpringMVC/">
-				<h2 class="index-title">
-					SpringMVC
-				</h2>
-				<div class="index-brief">
-					基本原理
-
-1.客户端（浏览器）发送请求，直接请求到DispatcherServlet
-2.DispatcherServlet根据请求信息调用HandlerMapping，解析请求对应的Handler
-3.解析到对应的Handler后，开始由HandlerAdapter适配器处理
-4.Handler
 					...
 				</div>
 			</a>

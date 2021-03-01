@@ -8,8 +8,6 @@
 	<!-- title -->
 	
 	<title>
-	
-		Pipeline | 
 	 
 	月伴飞鱼
 	</title>
@@ -589,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -777,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file active">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1604,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4166,131 +4137,49 @@
 
 	<!-- 引入正文 -->
 	<div id="content">
-		<h1 id="article-title">
-
-	Pipeline
-</h1>
-<div class="article-meta">
+		<div id="index">
 	
-		<span>
-			阅读量:<span id="/2020/12/30/Redis/Pipeline/" class="leancloud_visitors" data-flag-title="Pipeline"></span>
-		</span>
+		<div class="index-li">
+			<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+				<h2 class="index-title">
+					MySQL2
+				</h2>
+				<div class="index-brief">
+					一条SQL查询语句是如何执行的
+一条SQL更新语句是如何执行的
+事务隔离：为什么你改了我还看不见
+深入浅出索引（上）
+深入浅出索引（下）
+全局锁和表锁：给表加个字段怎么有这么多阻碍
+行锁功过：怎么减少行锁对性能的影响
+事务到底是隔离的还是不隔离的
+普通索引和唯一索引，应该怎么选择
+MySQL为什么有
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-01</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
-	<span>月伴飞鱼</span>
-	<span>2020-12-30 22:08:33</span>
-    
-		<div id="article-categories">
-            
-                
-                    <span>
-                        <i class="fa fa-folder" aria-hidden="true"></i>
-                        <a href="/categories/Redis/">Redis</a>
-						
-                    </span>
-                
-            
-		</div>
-    
+	
+	<div id="index-paginator">
+		
+	</div>
 </div>
 
-<div id="article-content">
-	<p><strong>Pipeline交互模型</strong></p>
-<p>客户端首先将执行的命令写入到缓冲区（内存）中，最后再一次性发送 <code>Redis</code>。</p>
-<p>pipeline通过将一批命令进行打包，然后发送给服务器，服务器执行完按顺序打包返回，这样就减少了频繁交互往返的时间，提升了性能</p>
-<p><strong>基本使用</strong></p>
-<pre><code class="java">Pipeline pipeline =jedis.pipelined();
-// 循环添加 1000个元素
-for(int i = 0; i &lt; 1000; i++)&#123;
-    pipeline.rpush(&quot;rediskey&quot;, i + &quot;&quot;);
-        &#125;
-//执行 
-pipeline.sync()</code></pre>
-<h1 id="优缺点"><a href="#优缺点" class="headerlink" title="优缺点"></a>优缺点</h1><p><strong>Pipeline的优点：</strong></p>
-<p>pipeline 通过打包命令，一次性执行，可以节省连接-&gt;发送命令-&gt;返回结果这个过程所产生的往返时间，减少的I/O的调用（用户态到内核态之间的切换）次数。</p>
-<p><strong>Pipeline的缺点：</strong></p>
-<p>pipeline 每批打包的命令不能过多，因为 pipeline 方式打包命令再发送，那么 <code>redis</code> 必须在处理完所有命令前先缓存起所有命令的处理结果。这样就有一个内存的消耗。</p>
-<p>pipeline不保证原子性，执行命令过程中，如果一个命令出现异常，也会继续执行其他命令，所以如果要求原子性的，不推荐使用 pipeline</p>
-<p>pipeline每次只能作用在一个<code>Redis</code>节点上</p>
-<p><strong>适用场景</strong></p>
-<p>比如短信群发这种场景，如果一下群发10000条，按照第一种模式去实现，那这个请求过来，要很久才能给客户端响应，这个延迟就太长了，如果客户端请求设置了超时时间5秒，那肯定就抛出异常了，而且本身群发短信要求实时性也没那么高，这时候用pipeline最好了。</p>
-
-</div>
-
-
-    <div class="post-guide">
-        <div class="item left">
-            
-              <a href="/2020/12/30/Redis/BigKey/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  BigKey
-              </a>
-            
-        </div>
-        <div class="item right">
-            
-              <a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-                主从复制
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-              </a>
-            
-        </div>
-    </div>
-
-
-
-	<div id="vcomments"></div>
-
-
-<script>
-	
-		// 评论
-		new Valine({
-			av: AV,
-			el: '#vcomments',
-			notify: false,
-			verify: false,
-			path: window.location.pathname,
-			appId: 'D9raxjOhsifiaJHt7xQLnpTb-gzGzoHsz',
-			appKey: 'IbDGf2GaDd0dlBP3XMvzBlbF',
-			placeholder: '请输入评论',
-			avatar: 'retro',
-			recordIP: false
-		})
-	
-	
-    // 显示次数
-		function showTime(Counter) {
-			var query = new AV.Query("Counter");
-			if($(".leancloud_visitors").length > 0){
-				var url = $(".leancloud_visitors").attr('id').trim();
-				// where field
-				query.equalTo("words", url);
-				// count
-				query.count().then(function (number) {
-					// There are number instances of MyClass where words equals url.
-					$(document.getElementById(url)).text(number?  number : '--');
-				}, function (error) {
-					// error is an instance of AVError.
-				});
-			}
-		}
-		// 追加pv
-		function addCount(Counter) {
-			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
-			var Counter = AV.Object.extend("Counter");
-			var query = new Counter;
-			query.save({
-				words: url
-			}).then(function (object) {
-			})
-		}
-		$(function () {
-			var Counter = AV.Object.extend("Counter");
-			addCount(Counter);
-			showTime(Counter);
-		});
-	
-</script>
 	</div>
 	<div id="footer">
 	<p>

@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,36 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/14/MySQL/MVCC/">
-				<h2 class="index-title">
-					MVCC
-				</h2>
-				<div class="index-brief">
-					MVCC由浅入深学习
-下面几个语句都是当前读，都会读取最新的快照数据，都会加锁（除了第一个加共享锁，其他都是互斥锁）：
-select * from table where ? lock in share mode; 
-select * from table where ? for update; 
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-14</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/14/Linux/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">
 				<h2 class="index-title">
 					IO多路复用
@@ -4205,33 +4148,6 @@ select * from table where ? for update;
 					IO多路复用是指内核一旦发现进程指定的一个或者多个IO条件准备读取，它就通知该进程
 目前支持I/O多路复用的系统调用有 select，pselect，poll，epoll
 I/O多路复用就是通过一种机制，一个进程可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-14</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Linux/">Linux</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/14/Linux/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
-				<h2 class="index-title">
-					线程模型
-				</h2>
-				<div class="index-brief">
-					在高性能的I/O设计中，有两个著名的模型：Reactor模型和Proactor模型，其中Reactor模型用于同步I/O，而Proactor模型运用于异步I/O操作
-Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reactor模型进行设计和开发，Reactor模型基于事件驱动，
 					...
 				</div>
 			</a>
@@ -4305,19 +4221,13 @@ SIGBUS
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/14/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+			<a href="/2021/02/14/Linux/%E7%BA%BF%E7%A8%8B%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
-					基础知识
+					线程模型
 				</h2>
 				<div class="index-brief">
-					静态初始化块、初始化块和构造方法
-
-非静态初始化块（构造代码块）：
-
-作用：给对象进行初始化。对象一建立就运行，且优先于构造函数的运行。
-与构造函数的区别：非静态初始化块给所有对象进行统一初始化，构造函数只给对应对象初始化。
-应用：将所有构造函数共性的东西定义在构造代码块中。
-初始化块真正体现其独一
+					在高性能的I/O设计中，有两个著名的模型：Reactor模型和Proactor模型，其中Reactor模型用于同步I/O，而Proactor模型运用于异步I/O操作
+Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reactor模型进行设计和开发，Reactor模型基于事件驱动，
 					...
 				</div>
 			</a>
@@ -4328,7 +4238,7 @@ SIGBUS
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Java基础/">Java基础</a>
+                                        <a href="/categories/Linux/">Linux</a>
 										
                                     </span>
                                 
@@ -4362,6 +4272,39 @@ SIGBUS
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/JVM/">JVM</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+				<h2 class="index-title">
+					基础知识
+				</h2>
+				<div class="index-brief">
+					静态初始化块、初始化块和构造方法
+
+非静态初始化块（构造代码块）：
+
+作用：给对象进行初始化。对象一建立就运行，且优先于构造函数的运行。
+与构造函数的区别：非静态初始化块给所有对象进行统一初始化，构造函数只给对应对象初始化。
+应用：将所有构造函数共性的东西定义在构造代码块中。
+初始化块真正体现其独一
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Java基础/">Java基础</a>
 										
                                     </span>
                                 
@@ -4477,6 +4420,45 @@ SIGBUS
 这个结构可以非常省内存的去统计各种计数，比如注册IP数、每日访问IP数。当然，存在误差！Redis官方给出的数字是0.81%的失误率。
 
 PFADD 添加一个元素，如果重复，只算作一个PFCOUNT 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-12</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/">Redis</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Redis/数据类型/">数据类型</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/12/Redis/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/BitMap/">
+				<h2 class="index-title">
+					BitMap
+				</h2>
+				<div class="index-brief">
+					bitmaps为一个以位为单位的数组，数组的每个单元只能存储0和1
+在redis 2.2.0版本之后，新增了一个位图数据，其实它不是一种数据结构
+实际上它就是一个一个字符串结构（涉及单个bitmap可存储最大值问题），只不过value是一个二进制数据，每一位只能是0或者1
+redis单独对bitma
 					...
 				</div>
 			</a>

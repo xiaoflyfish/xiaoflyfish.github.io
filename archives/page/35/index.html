@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4363,65 +4336,6 @@ bigkey的危害体现在三个方面
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Redis/Pipeline/">
-				<h2 class="index-title">
-					Pipeline
-				</h2>
-				<div class="index-brief">
-					Pipeline交互模型
-客户端首先将执行的命令写入到缓冲区（内存）中，最后再一次性发送 Redis。
-pipeline通过将一批命令进行打包，然后发送给服务器，服务器执行完按顺序打包返回，这样就减少了频繁交互往返的时间，提升了性能
-基本使用
-Pipeline pipeline =jedis.pip
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-				<h2 class="index-title">
-					主从复制
-				</h2>
-				<div class="index-brief">
-					为什么要用主从架构
-做成主从架构，一主多从，主负责写，并且将数据复制到其它的 slave 节点，从节点负责读。所有的读请求全部走从节点，这样也可以很轻松实现水平扩容，支撑读高并发
-全量复制主从库间如何进行第一次同步
-当我们启动多个 Redis 实例的时候，它们相互之间就可以通过 replicaof（
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/Redis/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
 				<h2 class="index-title">
 					分布式锁
@@ -4461,6 +4375,63 @@ SETNX的使用方式为：SETNX key value，只在键key不存在的情况下，
 
 
 网络通信层网络通信层的职责是执行网络 I/O 的操作。它支持多种网络协议和 I/O 模型的连接操作。当网络数据读取到内核缓冲区后，会触发
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Netty/%E7%B2%98%E5%8C%85%E5%92%8C%E6%8B%86%E5%8C%85/">
+				<h2 class="index-title">
+					粘包和拆包
+				</h2>
+				<div class="index-brief">
+					TCP粘包和拆包基本介绍
+TCP 是面向连接的， 面向流的， 提供高可靠性服务。 收发两端（客户端和服务器端） 都要有一一成对的 socket，因此， 发送端为了将多个发给接收端的包， 更有效的发给对方， 使用了优化方法（Nagle算法） ， 将多次间隔较小且数据量小的数据， 合并成一个大的数据块，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
+				<h2 class="index-title">
+					编解码器
+				</h2>
+				<div class="index-brief">
+					编写网络应用程序时， 因为数据在网络中传输的都是二进制字节码数据， 在发送数据时就需要编码， 接收数据时就需要解码
+codec(编解码器) 的组成部分有两个：
+
+decoder(解码器)和 encoder(编码器)。
+encoder 负责把业务数据转换成字节码数据， decoder 负责把字节码数据
 					...
 				</div>
 			</a>

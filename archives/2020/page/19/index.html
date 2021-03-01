@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,36 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
-				<h2 class="index-title">
-					事务
-				</h2>
-				<div class="index-brief">
-					ACID原子性
-根据定义，原子性是指一个事务是一个不可分割的工作单位，其中的操作要么都做，要么都不做。即要么转账成功，要么转账失败
-怎么保证原子性的
-利用Innodb的undo log
-undo log名为回滚日志，是实现原子性的关键，当事务回滚时能够撤销所有已经成功执行的sql语句，他需要记录你要
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/MySQL/%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
 				<h2 class="index-title">
 					分页优化
@@ -4309,32 +4252,6 @@ binlog 是 mysql 的逻辑日志，并且由 Server层进行记录，使用任�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Netty/Recycler%E5%AF%B9%E8%B1%A1%E6%B1%A0/">
-				<h2 class="index-title">
-					Recycler对象池
-				</h2>
-				<div class="index-brief">
-					对象池与内存池的都是为了提高 Netty 的并发处理能力，我们知道 Java 中频繁地创建和销毁对象的开销是很大的，所以很多人会将一些通用对象缓存起来，当需要某个对象时，优先从对象池中获取对象实例。通过重用对象，不仅避免频繁地创建和销毁所带来的性能损耗，而且对 JVM GC 是友好的，这就是对象池的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Netty/">Netty</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/MyBatis/%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6/">
 				<h2 class="index-title">
 					缓存机制
@@ -4369,36 +4286,6 @@ binlog 是 mysql 的逻辑日志，并且由 Server层进行记录，使用任�
 				<div class="index-brief">
 					Buffer Pool就是数据库的一个内存组件，里面缓存了磁盘上的真实数据，然后我们的Java系统对数据库执行的增删改操 作，其实主要就是对这个内存数据结构中的缓存数据执行的
 在对数据库执行增删改操作的时候，实际上主要都是针对内存里的Buffer Pool中的数据进行的，也 就是你实际上主要是对数据
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/MySQL/Order%20By/">
-				<h2 class="index-title">
-					Order By
-				</h2>
-				<div class="index-brief">
-					工作原理MySQL会给每个线程分配一块内存用于排序，称为sort_buffer。
-全字段排序:
-一般带有order by 的SQL语句 会初始化sort_buffer，放入需要返回的字段。
-查找一条记录就放入到sort_buffer,继续找，直到找完符合条件的为止。
-对sort_buffer中的数据
 					...
 				</div>
 			</a>
@@ -4483,10 +4370,118 @@ vim +3 文件名：光标定
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/HashSet/">
+				<h2 class="index-title">
+					HashSet
+				</h2>
+				<div class="index-brief">
+					HashSet是如何组合HashMap的
+// 把 HashMap 组合进来，key 是 Hashset 的 key，value 是下面的 PRESENT
+private transient HashMap&lt;E,Object&gt; map;
+// HashMap 中的 value
+priva
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Java基础/">Java基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Java基础/集合类/">集合类</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E7%B1%BB/LinkedList/">
+				<h2 class="index-title">
+					LinkedList
+				</h2>
+				<div class="index-brief">
+					LinkedList 适用于集合元素先入先出和先入后出的场景
+整体架构LinkedList 底层数据结构是一个双向链表
+
+链表每个节点我们叫做 Node，Node 有 prev 属性，代表前一个节点的位置，next 属性，代表后一个节点的位置；
+first 是双向链表的头节点，它的前一个节点是 nu
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Java基础/">Java基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Java基础/集合类/">集合类</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/String/">
+				<h2 class="index-title">
+					String
+				</h2>
+				<div class="index-brief">
+					以主流的 JDK 版本 1.8 来说，String 内部实际存储结构为 char 数组，源码如下：
+public final class String
+    implements java.io.Serializable, Comparable&lt;String&gt;, CharSequenc
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Java基础/">Java基础</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2020/page/18/">&lt;</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/17/">17</a><a class="page-number" href="/archives/2020/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/archives/2020/page/20/">20</a><a class="page-number" href="/archives/2020/page/21/">21</a><a class="page-number" href="/archives/2020/page/22/">22</a><a class="extend next" rel="next" href="/archives/2020/page/20/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2020/page/18/">&lt;</a><a class="page-number" href="/archives/2020/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/page/17/">17</a><a class="page-number" href="/archives/2020/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/archives/2020/page/20/">20</a><a class="page-number" href="/archives/2020/page/21/">21</a><a class="extend next" rel="next" href="/archives/2020/page/20/">&gt;</a>
 		
 	</div>
 </div>

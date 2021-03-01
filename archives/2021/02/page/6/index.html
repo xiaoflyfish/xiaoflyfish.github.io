@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,44 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E7%BA%BF%E7%A8%8B/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-				<h2 class="index-title">
-					基础知识
-				</h2>
-				<div class="index-brief">
-					CallableCallable 是一个类似于 Runnable 的接口，实现 Callable 接口的类和实现 Runnable 接口的类都是可以被其他线程执行的任务。 我们看一下 Callable 的源码：
-public interface Callable&lt;V&gt; &#123;
-  
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-21</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/">并发编程</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/并发编程/线程/">线程</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Volatile/">
 				<h2 class="index-title">
 					Volatile
@@ -4459,6 +4394,46 @@ GET my_index/_search
 				<div class="index-brief">
 					切片集群，也叫分片集群，就是指启动多个 Redis 实例组成一个集群，然后按照一定的规则，把收到的数据划分成多份，每一份用一个实例来保存
 在切片集群中，实例在为 5GB 数据生成 RDB 时，数据量就小了很多，fork 子进程一般不会给主线程带来较长时间的阻塞。采用多个实例保存数据切片后，我们既能保
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-20</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/Redis1/">Redis1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/20/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Redis1/%E5%93%A8%E5%85%B5%E6%A8%A1%E5%BC%8F/">
+				<h2 class="index-title">
+					哨兵模式
+				</h2>
+				<div class="index-brief">
+					哨兵其实就是一个运行在特殊模式下的 Redis 进程，主从库实例运行的同时，它也在运行
+哨兵主要负责的就是三个任务：监控、选主（选择主库）和通知。
+监控
+监控是指哨兵进程在运行时，周期性地给所有的主从库发送 PING 命令，检测它们是否仍然在线运行。
+如果从库没有在规定时间内响应哨兵的 PING 命
 					...
 				</div>
 			</a>

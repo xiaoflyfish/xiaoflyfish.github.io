@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,146 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
-				<h2 class="index-title">
-					内存回收
-				</h2>
-				<div class="index-brief">
-					堆中几乎放着所有的对象实例，对堆垃圾回收前的第一步就是要判断哪些对象已经死亡
-引用计数法
-给对象中添加一个引用计数器，每当有一个地方引用它，计数器就加1；当引用失效，计数器就减1；任何时候计数器为0 的对象就是不可能再被使用的。
-这个方法实现简单，效率高，但是目前主流的虚拟机中并没有选择这个算法来管
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM/">JVM</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM/对象/">对象</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/">
-				<h2 class="index-title">
-					四大引用
-				</h2>
-				<div class="index-brief">
-					强引用当JVM进行GC时，对于强引用对象，就算出现了OOM也不会对该对象进行回收。强引用是造成Java内存泄露的主要原因之一
-只有在和 GC Roots 断绝关系时，才会被消灭掉
-软引用对于软引用关联的对象，在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之内。
-如果这次回收后还没有足够的
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM/">JVM</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM/对象/">对象</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/ElasticSearch/%E8%84%91%E8%A3%82%E9%97%AE%E9%A2%98/">
-				<h2 class="index-title">
-					脑裂问题
-				</h2>
-				<div class="index-brief">
-					产生脑裂问题的原因
-
-1.网络
-
-由于某些节点之间的网络通信出现问题，导致一些节点认为master节点已经挂了，所以有重新选举了新的master节点，从而导致集群信息混乱
-
-2.节点负载过大
-
-由于master节点与data节点都是混在一起的，有可能master节点的负载过大，导致对应的es实例停止
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/ElasticSearch/">ElasticSearch</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/JVM/JIT%E5%8D%B3%E6%97%B6%E7%BC%96%E8%AF%91/">
-				<h2 class="index-title">
-					JIT即时编译
-				</h2>
-				<div class="index-brief">
-					当 JVM 的初始化完成后，类在调用执行过程中，执行引擎会把字节码转为机器码，然后在操作系统中才能执行。
-最初，JVM 中的字节码是由解释器完成编译的，当虚拟机发现某个方法或代码块的运行特别频繁的时候，就会把这些代码认定为热点代码。
-为了提高热点代码的执行效率，在运行时，即时编译器(JIT)会把这些
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM/">JVM</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/JVM/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
 					内存模型
@@ -4363,16 +4196,20 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Docker/Service%20Mesh/">
+			<a href="/2020/12/30/ElasticSearch/%E8%84%91%E8%A3%82%E9%97%AE%E9%A2%98/">
 				<h2 class="index-title">
-					Service Mesh
+					脑裂问题
 				</h2>
 				<div class="index-brief">
-					Sidecar模式边车模式是一种分布式服务架构的设计模式，特别是在各大云服务厂商中应用较多
+					产生脑裂问题的原因
 
-边车模式因为类似于生活中的边三轮摩托车而得名，也就是侉子摩托车，边三轮摩托车是给摩托车加装一个挎斗，可以装载更多的货物，变得更加多用途，得益于这样的特性，边三轮摩托曾经得到了广泛应用
+1.网络
 
-在系统设计时，边车模
+由于某些节点之间的网络通信出现问题，导致一些节点认为master节点已经挂了，所以有重新选举了新的master节点，从而导致集群信息混乱
+
+2.节点负载过大
+
+由于master节点与data节点都是混在一起的，有可能master节点的负载过大，导致对应的es实例停止
 					...
 				</div>
 			</a>
@@ -4383,35 +4220,7 @@
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Docker/">Docker</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Docker/%E5%AE%B9%E5%99%A8%E5%8C%96%E6%8A%80%E6%9C%AF/">
-				<h2 class="index-title">
-					容器化技术
-				</h2>
-				<div class="index-brief">
-					相比传统虚拟化技术，容器技术是一种更加轻量级的操作系统隔离方案，可以将应用程序及其运行依赖环境打包到镜像中，通过容器引擎进行调度，并且提供进程隔离和资源限制的运行环境。
-虚拟化技术
-虚拟化技术通过 Hypervisor 实现虚拟机与底层硬件的解耦，虚拟机实现依赖 Hypervisor 层，Hyper
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Docker/">Docker</a>
+                                        <a href="/categories/ElasticSearch/">ElasticSearch</a>
 										
                                     </span>
                                 
@@ -4486,10 +4295,96 @@ coordinating node 对 doc 进行路由，将请求转发给对应的node（有pr
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2020/12/30/ElasticSearch/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/">
+				<h2 class="index-title">
+					数据持久化
+				</h2>
+				<div class="index-brief">
+					Elasticsearch底层采用的是lucene这个库来实现倒排索引的功能,在lucene的概念里每一条记录称为document(文档)，lucene使用segment(分段)来存储数据，用commit point来记录所有segment的元数据，一条记录要被搜索到，必须写入到segment中
+
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/ElasticSearch/">ElasticSearch</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Docker/%E5%AE%B9%E5%99%A8%E5%8C%96%E6%8A%80%E6%9C%AF/">
+				<h2 class="index-title">
+					容器化技术
+				</h2>
+				<div class="index-brief">
+					相比传统虚拟化技术，容器技术是一种更加轻量级的操作系统隔离方案，可以将应用程序及其运行依赖环境打包到镜像中，通过容器引擎进行调度，并且提供进程隔离和资源限制的运行环境。
+虚拟化技术
+虚拟化技术通过 Hypervisor 实现虚拟机与底层硬件的解耦，虚拟机实现依赖 Hypervisor 层，Hyper
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/Docker/Service%20Mesh/">
+				<h2 class="index-title">
+					Service Mesh
+				</h2>
+				<div class="index-brief">
+					Sidecar模式边车模式是一种分布式服务架构的设计模式，特别是在各大云服务厂商中应用较多
+
+边车模式因为类似于生活中的边三轮摩托车而得名，也就是侉子摩托车，边三轮摩托车是给摩托车加装一个挎斗，可以装载更多的货物，变得更加多用途，得益于这样的特性，边三轮摩托曾经得到了广泛应用
+
+在系统设计时，边车模
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Docker/">Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2020/12/page/20/">&lt;</a><a class="page-number" href="/archives/2020/12/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/12/page/19/">19</a><a class="page-number" href="/archives/2020/12/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/archives/2020/12/page/22/">22</a><a class="extend next" rel="next" href="/archives/2020/12/page/22/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2020/12/page/20/">&lt;</a><a class="page-number" href="/archives/2020/12/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/12/page/19/">19</a><a class="page-number" href="/archives/2020/12/page/20/">20</a><span class="page-number current">21</span>
 		
 	</div>
 </div>

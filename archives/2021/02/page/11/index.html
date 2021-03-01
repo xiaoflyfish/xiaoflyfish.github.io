@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,44 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%8E%9F%E7%90%86/">
-				<h2 class="index-title">
-					客户端核心类原理
-				</h2>
-				<div class="index-brief">
-					在 ZooKeeper 客户端的底层实现中，ClientCnxn 类是其核心类，所有的客户端操作都是围绕这个类进行的。ClientCnxn 类主要负责维护客户端与服务端的网络连接和信息交互。
-向服务端发送创建数据节点或者添加 Watch 监控等操作时，都会先将请求信息封装成 Packet 对象。
-那
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-15</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E4%BC%9A%E8%AF%9D/">
 				<h2 class="index-title">
 					会话
@@ -4508,6 +4443,35 @@ ZooKeeper 的权限验证方式大体分为两种类型，一种是
 活跃性问题：不正确的加锁、解锁方式可能会导致死锁or活锁问题。
 性能问题：多线程并发即多个线程切换运行，线程切换会有一定的消耗并且不正确的加锁。
 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/操作系统/">操作系统</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/%E8%BF%9B%E7%A8%8B/">
+				<h2 class="index-title">
+					进程
+				</h2>
+				<div class="index-brief">
+					进程和线程区别
+进程：指在系统中正在运行的一个应用程序；程序一旦运行就是进程；是资源分配的最小单位。
+线程：系统分配处理器时间资源的基本单元，是程序执行的最小单位
+每个进程都有独立的内存空间，存放代码和数据段等，程序之间的切换会有较大的开销；线程可以看做轻量级的进程，共享内存空间，每个线程都有自己独
 					...
 				</div>
 			</a>

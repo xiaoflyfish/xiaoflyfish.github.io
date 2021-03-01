@@ -589,15 +589,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -777,24 +768,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1604,7 +1577,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4194,26 +4167,7 @@
 </div>
 
 <div id="article-content">
-	<h1 id="执行SQL语句"><a href="#执行SQL语句" class="headerlink" title="执行SQL语句"></a>执行SQL语句</h1><p><strong>网络连接必须让线程来处理</strong></p>
-<p>现在假设我们的数据库服务器的连接池中的某个连接接收到了网络请求，假设就是一条SQL语句，那么大家先思考一个问题， 谁负责从这个连接中去监听网络请求，谁负责从网络连接里把请求数据读取出来</p>
-<p>如果大家对计算机基础知识有一个简单了解的话，应该或多或少知道一点，那就是网络连接必须得分配给一个线程去进行处理，由一个线程来监听请求以及读取请求数据，比如从网络连接中读取和解析出来一 条我们的系统发送过去的SQL语句</p>
-<p><strong>SQL接口:负责处理接收到的SQL语句</strong></p>
-<p>当MySQL内部的工作线程从一个网络连接中读取出来一个SQL语句之后，此时会如何来执行这个SQL语 句呢</p>
-<p>MySQL内部首先提供了一个组件，就是SQL接口，他是一套执行SQL语句的接口，专门用于执行我们 发送给MySQL的那些增删改查的SQL语句</p>
-<p>因此MySQL的工作线程接收到SQL语句之后，就会转交给SQL接口去执行</p>
-<p><strong>查询解析器:让MySQL能看懂SQL语句</strong></p>
-<p>这个查询解析器就是负责对SQL语句进行解析的</p>
-<p>所谓的SQL解析，就是按照既定的SQL语法，对我们按照SQL语法规则编写的SQL语句进行解析，然后理解这个SQL语句要干什么事情</p>
-<p><strong>查询优化器:选择最优的查询路径</strong></p>
-<p>当我们通过解析器理解了SQL语句要干什么之后，接着会找查询优化器来选择一个最优的查询路径</p>
-<p><strong>调用存储引擎接口，真正执行SQL语句</strong></p>
-<p>最后一步，就是把查询优化器选择的最优查询路径，也就是你到底应该按照一个什么样的顺序和步骤去执行这个SQL语句的计 划，把这个计划交给底层的存储引擎去真正的执行</p>
-<p>所以我们来思考一下，假设我们的数据有的存放在内存里，有的存放在磁盘文件里</p>
-<p>所以这个时候就需要存储引擎了，存储引擎其实就是执行SQL语句的，他会按照一定的步骤去查询内存缓存数据，更新磁盘数 据，查询磁盘数据，等等，执行诸如此类的一系列的操作</p>
-<p><strong>执行器：根据执行计划调用存储引擎的接口</strong></p>
-<p>执行器就会去根据我们的优化器生成的一套执行计划，然后不停的调用存储引擎的各种接口去完成SQL 语句的执行计划，大致就是不停的更新或者提取一些数据出来</p>
-<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210209231054.png" style="zoom:30%;" />
-
+	<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42046105/article/details/103982282">如何执行一条 SQL语句</a></p>
 <h1 id="SQL更新"><a href="#SQL更新" class="headerlink" title="SQL更新"></a>SQL更新</h1><p><strong>缓冲池</strong></p>
 <p>InnoDB存储引擎中有一个非常重要的放在内存里的组件，就是缓冲池（Buffer Pool），这里面会缓存很多的数据， 以便于以后在查询的时候，万一你要是内存缓冲池里有数据，就可以不用去查磁盘了</p>
 <p>引擎要执行更新语句的时候 ，比如对<code>id=10</code>这一行数据，他其实会先将<code>id=10</code>这一行数据看看是否在缓冲池里，如果不在的 话，那么会直接从磁盘里加载到缓冲池里来，而且接着还会对这行记录加独占锁。</p>
@@ -4223,10 +4177,12 @@
 <p><strong>更新buffer pool中的缓存数据</strong></p>
 <p>当我们把要更新的那行记录从磁盘文件加载到缓冲池，同时对他加锁之后，而且还把更新前的旧值写入undo日志文件 之后，我们就可以正式开始更新这行记录了，更新的时候，先是会更新缓冲池中的记录，此时这个数据就是脏数据 了。</p>
 <p>这里所谓的更新内存缓冲池里的数据，意思就是把内存里的“id=10”这行数据的name字段修改为“xxx”</p>
-<p>那么为什么说此时这行数据就是脏数据了呢？ 因为这个时候磁盘上“id=10”这行数据的name字段还是“zhangsan”，但是内存里这行数据已经被修改了，所以 就会叫他是脏数据。</p>
+<p>那么为什么说此时这行数据就是脏数据了呢</p>
+<p>因为这个时候磁盘上“id=10”这行数据的name字段还是“zhangsan”，但是内存里这行数据已经被修改了，所以 就会叫他是脏数据。</p>
 <p><strong>Redo Log Buffer：万一系统宕机，如何避免数据丢失</strong></p>
 <p>现在已经把内存里的数据进行了修改，但是磁盘上的数据还没修改</p>
-<p>那么此时万一MySQL所在的机器宕机了，必然会导致内存里修改过的数据丢失，这可怎么办呢？ 这个时候，就必须要把对内存所做的修改写入到一个Redo Log Buffer里去，这也是内存里的一个缓冲区，是用来存 放redo日志的</p>
+<p>那么此时万一MySQL所在的机器宕机了，必然会导致内存里修改过的数据丢失，这可怎么办呢</p>
+<p>这个时候，就必须要把对内存所做的修改写入到一个Redo Log Buffer里去，这也是内存里的一个缓冲区，是用来存放redo日志的</p>
 <p>所谓的redo日志，就是记录下来你对数据做了什么修改，比如对“id=10这行记录修改了name字段的值为xxx”，这 就是一个日志</p>
 <p><strong>提交事务的时候将redo日志写入磁盘中</strong> </p>
 <p>接着我们想要提交一个事务了，此时就会根据一定的策略把redo日志从redo log buffer里刷入到磁盘文件里去</p>
@@ -4237,8 +4193,8 @@
 <p>这种模式下，你提交事务之后，redo log可能仅仅停留在os cache内存缓存里，没实际进入磁盘文件，万一此时你要 是机器宕机了，那么os cache里的redo log就会丢失，同样会让你感觉提交事务了，结果数据丢了</p>
 <img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210209234102.png" style="zoom:33%;" />
 
-<h1 id="binlog"><a href="#binlog" class="headerlink" title="binlog"></a>binlog</h1><p>binlog叫做归档日志，他里面记录的是偏向于逻辑性的日志，类似于“对users表中的id=10的一行数据做了更新操 作，更新以后的值是什么”</p>
-<p>binlog不是InnoDB存储引擎特有的日志文件，是属于mysql server自己的日志文件。</p>
+<h1 id="binlog"><a href="#binlog" class="headerlink" title="binlog"></a>binlog</h1><p>binlog叫做归档日志，他里面记录的是偏向于逻辑性的日志</p>
+<p>binlog不是InnoDB存储引擎特有的日志文件，是属于mysql server自己的日志文件</p>
 <p><strong>提交事务的时候，同时会写入binlog</strong> </p>
 <p>在我们提交事务的时候，会把redo log日志写入磁盘文件中去。然后其实在提交事务的时 候，我们同时还会把这次更新对应的binlog日志写入到磁盘文件中去</p>
 <p><strong>binlog日志的刷盘策略分析</strong></p>
@@ -4248,14 +4204,37 @@
 <p><strong>基于binlog和redo log完成事务的提交</strong></p>
 <p>当我们把binlog写入磁盘文件之后，接着就会完成最终的事务提交，此时会把本次更新对应的binlog文件名称和这次更新的binlog日志在文件里的位置，都写入到redo log日志文件里去，同时在redo log日志文件里写入一个commit标 记。 在完成这个事情之后，才算最终完成了事务的提交</p>
 <p><strong>最后一步在redo日志中写入commit标记的意义是什么</strong></p>
-<p>说白了，他其实是用来保持redo log日志与binlog日志一致的。</p>
-<p>必须是在redo log中写入最终的事务commit标记了，然后此时事务提交成功，而且redo log里有本次更新对应的日 志，binlog里也有本次更新对应的日志 ，redo log和binlog完全是一致的。</p>
+<p>说白了，他其实是用来保持redo log日志与binlog日志一致的</p>
+<p>必须是在redo log中写入最终的事务commit标记了，然后此时事务提交成功，而且redo log里有本次更新对应的日 志，binlog里也有本次更新对应的日志 ，redo log和binlog完全是一致的</p>
 <p><strong>后台IO线程随机将内存更新后的脏数据刷回磁盘</strong></p>
-<p>现在我们假设已经提交事务了，此时一次更新“update users set name=’xxx’ where id=10”，他已经把内存里的 buffer pool中的缓存数据更新了，同时磁盘里有redo日志和binlog日志，都记录了把我们指定的“id=10”这行数据 修改了“name=’xxx’”。</p>
+<p>现在我们假设已经提交事务了，此时一次更新<code>“update users set name=&#39;xxx&#39; where id=10”</code>，他已经把内存里的 buffer pool中的缓存数据更新了，同时磁盘里有redo日志和binlog日志，都记录了把我们指定的“id=10”这行数据 修改了“name=’xxx’”</p>
 <p>这个时候磁盘上的数据文件里的“id=10”这行数据的name字段还是等于 zhangsan这个旧的值啊</p>
 <p>所以MySQL有一个后台的IO线程，会在之后某个时间里，随机的把内存buffer pool中的修改后的脏数据给刷回到磁 盘上的数据文件里去</p>
 <img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20210210002203.png" style="zoom:33%;" />
 
+<p><strong>生产经验：真实生产环境下的数据库机器配置如何规划</strong></p>
+<p>根据我们大量的经验 观察而言，4核8G的机器部署普通的Java应用系统，每秒大致就是抗下几百的并发访问，从每秒一两百请求到每秒七八百请 求，都是有可能的，关键是看你每个请求处理需要耗费多长时间</p>
+<p>假设你每个请求花费1s可以处理完，那么你一 台机器每秒也许只可以处理100个请求，但是如果你每个请求只要花费100ms就可以处理完，那么你一台机器每秒也许就可以 处理几百个请求</p>
+<p>一般8核16G的机器部署的MySQL数据库，每秒抗个一两千并发请求是没问题的，但是如果你 的并发量再高一些，假设每秒有几千并发请求，那么可能数据库就会有点危险了，因为数据库的CPU、磁盘、IO、内存的负载 都会很高，弄不数据库压力过大就会宕机</p>
+<p>对于16核32G的机器部署的MySQL数据库而言，每秒抗个两三千，甚至三四千的并发请求也都是可以的，但是如果你达到每 秒上万请求，那么数据库的CPU、磁盘、IO、内存的负载瞬间都会飙升到很高，数据库也是可能会扛不住宕机的</p>
+<p><strong>生产经验：互联网公司的生产环境数据库是如何进行性能测试的</strong></p>
+<p>QPS就是说，你的这个数据库每秒可以处理多少个请求，大致可以理解为，一次请求就是一条SQL语句，也就是说这个数据库每秒可以处理多少个SQL语句</p>
+<p>TPS其实就是每秒可处理的事务量，这个TPS往往是用在 数据库中较多一些，其实从字面意思就能看的出来，他就是说数据库每秒会处理多少次事务提交或者回滚</p>
+<p>IOPS：这个指的是机器的随机IO并发处理的能力，比如机器可以达到200 IOPS，意思就是说每秒可以执行200个随机 IO读写请求</p>
+<p>在内存中更新的脏数据库，最后都会由后台IO线程在不确 定的时间，刷回到磁盘里去，这就是随机IO的过程。如果说IOPS指标太低了，那么会导致你内存里的脏数据刷回磁盘的效率就会不高</p>
+<blockquote>
+<p>吞吐量：这个指的是机器的磁盘存储每秒可以读写多少字节的数据量</p>
+</blockquote>
+<p>所以一台机器他的存储每秒可以读写多少字节的数据量，就决定了他每秒可以把多少redo log之类的日志写入到磁盘里去</p>
+<p>一 般来说我们写redo log之类的日志，都是对磁盘文件进行顺序写入的，也就是一行接着一行的写，不会说进行随机的读写，那 么一般普通磁盘的顺序写入的吞吐量每秒都可以达到200MB左右</p>
+<blockquote>
+<p>latency：这个指标说的是往磁盘里写入一条数据的延迟</p>
+</blockquote>
+<p>因为我们执行SQL语句和提交事务的时候，都需要顺序写redo log磁盘文件，所以此时你写一条日志到 磁盘文件里去，到底是延迟1ms，还是延迟100us，这就对你的数据库的SQL语句执行性能是有影响的</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/klvchen/articles/12901727.html">生产经验：如何对生产环境中的数据库进行360度无死角压测</a></p>
+<p><strong>生产经验：在数据库的压测过程中，如何360度无死角观察机器性能</strong></p>
+<p>如何观察机器的磁盘IO情况：使用dstat -d命令</p>
+<p>观察网卡的流量情况：可以使用dstat -n命令</p>
 <h1 id="Buffer-Pool"><a href="#Buffer-Pool" class="headerlink" title="Buffer Pool"></a>Buffer Pool</h1><p><strong>如何配置你的Buffer Pool的大小</strong></p>
 <p>因为Buffer Pool本质其实就是数据库的一个内存组件，你可以理解为他就是一片内存数据结构，所以这个内存数据结构肯定是 有一定的大小的，不可能是无限大的</p>
 <p>这个Buffer Pool默认情况下是128MB，还是有一点偏小了，我们实际生产环境下完全可以对Buffer Pool进行调整</p>

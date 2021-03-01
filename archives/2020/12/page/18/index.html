@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4239,65 +4212,6 @@ bigkey的危害体现在三个方面
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Redis/Pipeline/">
-				<h2 class="index-title">
-					Pipeline
-				</h2>
-				<div class="index-brief">
-					Pipeline交互模型
-客户端首先将执行的命令写入到缓冲区（内存）中，最后再一次性发送 Redis。
-pipeline通过将一批命令进行打包，然后发送给服务器，服务器执行完按顺序打包返回，这样就减少了频繁交互往返的时间，提升了性能
-基本使用
-Pipeline pipeline =jedis.pip
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-				<h2 class="index-title">
-					主从复制
-				</h2>
-				<div class="index-brief">
-					为什么要用主从架构
-做成主从架构，一主多从，主负责写，并且将数据复制到其它的 slave 节点，从节点负责读。所有的读请求全部走从节点，这样也可以很轻松实现水平扩容，支撑读高并发
-全量复制主从库间如何进行第一次同步
-当我们启动多个 Redis 实例的时候，它们相互之间就可以通过 replicaof（
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-12-30</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/Redis/">Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2020/12/30/Redis/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
 				<h2 class="index-title">
 					分布式锁
@@ -4384,15 +4298,16 @@ TCP 是面向连接的， 面向流的， 提供高可靠性服务。 收发两�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
+			<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
 				<h2 class="index-title">
-					零拷贝
+					编解码器
 				</h2>
 				<div class="index-brief">
-					CompositeByteBuf
-CompositeByteBuf 是 Netty 中实现零拷贝机制非常重要的一个数据结构
-它是由多个 ByteBuf 组合而成，但是在 CompositeByteBuf 内部保存着每个 ByteBuf 的引用关系，从逻辑上构成一个整体。
-比较常见的像 HTTP 协议
+					编写网络应用程序时， 因为数据在网络中传输的都是二进制字节码数据， 在发送数据时就需要编码， 接收数据时就需要解码
+codec(编解码器) 的组成部分有两个：
+
+decoder(解码器)和 encoder(编码器)。
+encoder 负责把业务数据转换成字节码数据， decoder 负责把字节码数据
 					...
 				</div>
 			</a>
@@ -4413,16 +4328,15 @@ CompositeByteBuf 是 Netty 中实现零拷贝机制非常重要的一个数据�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Netty/%E7%BC%96%E8%A7%A3%E7%A0%81%E5%99%A8/">
+			<a href="/2020/12/30/Netty/%E9%9B%B6%E6%8B%B7%E8%B4%9D/">
 				<h2 class="index-title">
-					编解码器
+					零拷贝
 				</h2>
 				<div class="index-brief">
-					编写网络应用程序时， 因为数据在网络中传输的都是二进制字节码数据， 在发送数据时就需要编码， 接收数据时就需要解码
-codec(编解码器) 的组成部分有两个：
-
-decoder(解码器)和 encoder(编码器)。
-encoder 负责把业务数据转换成字节码数据， decoder 负责把字节码数据
+					CompositeByteBuf
+CompositeByteBuf 是 Netty 中实现零拷贝机制非常重要的一个数据结构
+它是由多个 ByteBuf 组合而成，但是在 CompositeByteBuf 内部保存着每个 ByteBuf 的引用关系，从逻辑上构成一个整体。
+比较常见的像 HTTP 协议
 					...
 				</div>
 			</a>
@@ -4471,10 +4385,66 @@ encoder 负责把业务数据转换成字节码数据， decoder 负责把字节
                 </div>
 		</div>	
 	
+		<div class="index-li">
+			<a href="/2020/12/30/Netty/Recycler%E5%AF%B9%E8%B1%A1%E6%B1%A0/">
+				<h2 class="index-title">
+					Recycler对象池
+				</h2>
+				<div class="index-brief">
+					对象池与内存池的都是为了提高 Netty 的并发处理能力，我们知道 Java 中频繁地创建和销毁对象的开销是很大的，所以很多人会将一些通用对象缓存起来，当需要某个对象时，优先从对象池中获取对象实例。通过重用对象，不仅避免频繁地创建和销毁所带来的性能损耗，而且对 JVM GC 是友好的，这就是对象池的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/Netty/">Netty</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
+				<h2 class="index-title">
+					事务
+				</h2>
+				<div class="index-brief">
+					ACID原子性
+根据定义，原子性是指一个事务是一个不可分割的工作单位，其中的操作要么都做，要么都不做。即要么转账成功，要么转账失败
+怎么保证原子性的
+利用Innodb的undo log
+undo log名为回滚日志，是实现原子性的关键，当事务回滚时能够撤销所有已经成功执行的sql语句，他需要记录你要
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-12-30</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2020/12/page/17/">&lt;</a><a class="page-number" href="/archives/2020/12/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/12/page/16/">16</a><a class="page-number" href="/archives/2020/12/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/archives/2020/12/page/19/">19</a><a class="page-number" href="/archives/2020/12/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/12/page/22/">22</a><a class="extend next" rel="next" href="/archives/2020/12/page/19/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2020/12/page/17/">&lt;</a><a class="page-number" href="/archives/2020/12/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2020/12/page/16/">16</a><a class="page-number" href="/archives/2020/12/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/archives/2020/12/page/19/">19</a><a class="page-number" href="/archives/2020/12/page/20/">20</a><a class="page-number" href="/archives/2020/12/page/21/">21</a><a class="extend next" rel="next" href="/archives/2020/12/page/19/">&gt;</a>
 		
 	</div>
 </div>

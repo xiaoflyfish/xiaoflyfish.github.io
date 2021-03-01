@@ -587,15 +587,6 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2020/12/30/MySQL/Order%20By/">
-										Order By
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
 									<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
 										主从复制
 									</a>
@@ -775,24 +766,6 @@
 								<li class="file">
 									<a href="/2020/12/30/Redis/BigKey/">
 										BigKey
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/Pipeline/">
-										Pipeline
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
-								<li class="file">
-									<a href="/2020/12/30/Redis/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-										主从复制
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -1602,7 +1575,7 @@
 			
 							<ul>
 								<li class="file">
-									<a href="/2021/02/28/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
+									<a href="/2021/03/01/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL2/">
 										MySQL2
 									</a>
 								</li>
@@ -4167,44 +4140,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%A4%84%E7%90%86%E4%BC%9A%E8%AF%9D/">
-				<h2 class="index-title">
-					服务端处理会话
-				</h2>
-				<div class="index-brief">
-					服务端处理过程
-会话的创建过程，当客户端需要和 ZooKeeper 服务端进行相互协调通信时，首先要建立该客户端与服务端的连接会话，在会话成功创建后，ZooKeeper 服务端就可以接收来自客户端的请求操作了。
-ZooKeeper 服务端在处理一次客户端发起的会话请求时，所采用的处理过程很像是一条工
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-16</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E9%9D%9E%E4%BA%8B%E5%8A%A1%E8%AF%B7%E6%B1%82%E5%A4%84%E7%90%86/">
 				<h2 class="index-title">
 					非事务请求处理
@@ -4517,6 +4452,44 @@ ZooKeeper 中实现的一致性也不是强一致性，即集群中各个服务�
 			</a>
                 <div class="article-meta">
 				    <span>2021-02-16</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A0%B8%E5%BF%83%E7%B1%BB%E5%8E%9F%E7%90%86/">
+				<h2 class="index-title">
+					客户端核心类原理
+				</h2>
+				<div class="index-brief">
+					在 ZooKeeper 客户端的底层实现中，ClientCnxn 类是其核心类，所有的客户端操作都是围绕这个类进行的。ClientCnxn 类主要负责维护客户端与服务端的网络连接和信息交互。
+向服务端发送创建数据节点或者添加 Watch 监控等操作时，都会先将请求信息封装成 Packet 对象。
+那
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-15</span>
                     
                             
                                 
