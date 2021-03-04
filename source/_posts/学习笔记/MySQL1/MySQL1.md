@@ -169,3 +169,12 @@ IOPS是说底层的存储系统每秒可以执行多少次磁盘读写操作， 
 
 磁盘顺序写的性能其实是很高的，某种程度上来说，几乎可以跟内存随机读写的性能差不多，尤其是在数据库里其实 也用了os cache机制，就是redo log顺序写入磁盘之前，先是进入os cache，就是操作系统管理的内存缓里
 
+# 案例实战
+
+[千万级用户场景下的运营系统SQL调优](https://blog.csdn.net/qq_37286668/article/details/112857159)
+
+[亿级数据量商品系统的SQL调优实战](https://blog.csdn.net/qq_37286668/article/details/112874437)
+
+[数十亿数量级评论系统的SQL调优实战](https://blog.csdn.net/qq_37286668/article/details/112915678)
+
+[千万级数据删除导致的慢查询优化实践](https://blog.csdn.net/qq_37286668/article/details/113104302)
