@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,6 +4335,43 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E5%B8%B8%E7%94%A8%E5%90%8D%E8%AF%8D/">
+				<h2 class="index-title">
+					常用名词
+				</h2>
+				<div class="index-brief">
+					AR（Assigned Replicas）：分区中的所有副本统称为AR。所有消息会先发送到leader副本，然后follower副本才能从leader中拉取消息进行同步。但是在同步期间，follower对于leader而言会有一定程度的滞后，这个时候follower和leader并非完全同步状态
+O
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-19</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/">消息队列</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/消息队列/KAFKA/">KAFKA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/19/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97/KAFKA/%E9%80%89%E4%B8%BE%E6%9C%BA%E5%88%B6/">
 				<h2 class="index-title">
 					选举机制
@@ -4649,45 +4686,6 @@ Producer 永远要使用带有回调通知的发送 API，也就是说不要使�
 				<div class="index-brief">
 					怎么压缩Kafka 是如何压缩消息的呢？要弄清楚这个问题，就要从 Kafka 的消息格式说起了。目前 Kafka 共有两大类消息格式，社区分别称之为 V1 版本和 V2 版本。V2 版本是 Kafka 0.11.0.0 中正式引入的。
 不论是哪个版本，Kafka 的消息层次都分为两层：消息集合（me
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-18</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/">学习笔记</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/学习笔记/KAFKA1/">KAFKA1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/KAFKA1/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E6%81%AF%E5%88%86%E5%8C%BA/">
-				<h2 class="index-title">
-					生产者消息分区
-				</h2>
-				<div class="index-brief">
-					Kafka 的消息组织方式实际上是三级结构：主题 - 分区 - 消息。
-主题下的每条消息只会保存在某一个分区中，而不会在多个分区中被保存多份
-对数据进行分区的主要原因，就是为了实现系统的高伸缩性（Scalability）。
-不同的分区能够被放置到不同节点的机器上，而数据的读写操作也都是针对分区这个粒
 					...
 				</div>
 			</a>

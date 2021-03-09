@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4582,15 +4582,15 @@ jstat -gc PID
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
+			<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/">
 				<h2 class="index-title">
-					内存回收
+					四大引用
 				</h2>
 				<div class="index-brief">
-					堆中几乎放着所有的对象实例，对堆垃圾回收前的第一步就是要判断哪些对象已经死亡
-引用计数法
-给对象中添加一个引用计数器，每当有一个地方引用它，计数器就加1；当引用失效，计数器就减1；任何时候计数器为0 的对象就是不可能再被使用的。
-这个方法实现简单，效率高，但是目前主流的虚拟机中并没有选择这个算法来管
+					强引用当JVM进行GC时，对于强引用对象，就算出现了OOM也不会对该对象进行回收。强引用是造成Java内存泄露的主要原因之一
+只有在和 GC Roots 断绝关系时，才会被消灭掉
+软引用对于软引用关联的对象，在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之内。
+如果这次回收后还没有足够的
 					...
 				</div>
 			</a>
@@ -4621,15 +4621,15 @@ jstat -gc PID
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%9B%9B%E5%A4%A7%E5%BC%95%E7%94%A8/">
+			<a href="/2020/12/30/JVM/%E5%AF%B9%E8%B1%A1/%E5%86%85%E5%AD%98%E5%9B%9E%E6%94%B6/">
 				<h2 class="index-title">
-					四大引用
+					内存回收
 				</h2>
 				<div class="index-brief">
-					强引用当JVM进行GC时，对于强引用对象，就算出现了OOM也不会对该对象进行回收。强引用是造成Java内存泄露的主要原因之一
-只有在和 GC Roots 断绝关系时，才会被消灭掉
-软引用对于软引用关联的对象，在系统将要发生内存溢出异常之前，将会把这些对象列进回收范围之内。
-如果这次回收后还没有足够的
+					堆中几乎放着所有的对象实例，对堆垃圾回收前的第一步就是要判断哪些对象已经死亡
+引用计数法
+给对象中添加一个引用计数器，每当有一个地方引用它，计数器就加1；当引用失效，计数器就减1；任何时候计数器为0 的对象就是不可能再被使用的。
+这个方法实现简单，效率高，但是目前主流的虚拟机中并没有选择这个算法来管
 					...
 				</div>
 			</a>

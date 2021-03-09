@@ -9,7 +9,7 @@
 	
 	<title>
 	
-		分布式ID | 
+		博客整理 | 
 	 
 	月伴飞鱼
 	</title>
@@ -1076,15 +1076,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file active">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1182,6 +1173,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4336,16 +4336,16 @@
 	<div id="content">
 		<h1 id="article-title">
 
-	分布式ID
+	博客整理
 </h1>
 <div class="article-meta">
 	
 		<span>
-			阅读量:<span id="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/" class="leancloud_visitors" data-flag-title="分布式ID"></span>
+			阅读量:<span id="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/" class="leancloud_visitors" data-flag-title="博客整理"></span>
 		</span>
 	
 	<span>月伴飞鱼</span>
-	<span>2021-02-06 21:31:15</span>
+	<span>2021-03-09 08:57:11</span>
     
 		<div id="article-categories">
             
@@ -4362,33 +4362,7 @@
 </div>
 
 <div id="article-content">
-	<h1 id="UUID"><a href="#UUID" class="headerlink" title="UUID"></a>UUID</h1><p>UUID 虽然很好地满足了全局唯一这个要求，但是并不适合作为数据库存储的唯一主键</p>
-<p>比如：<code>135c8321-bf10-46d3-9980-19ba588554e8</code>，这是一个 36 位的字符串</p>
-<p>首先 UUID 作为数据库主键太长了，会导致比较大的存储开销，另外一个，UUID 是无序的，如果使用 UUID 作为主键，会降低数据库的写入性能</p>
-<h1 id="雪花算法"><a href="#雪花算法" class="headerlink" title="雪花算法"></a>雪花算法</h1><p>SnowFlake是<code>Twitter</code>开源的分布式ID生成算法，结果是一个long型的ID</p>
-<p>整个结构是64位，该算法实现基本就是二进制操作，单机每秒内理论上最多可以生成<code>1024*(2^12)</code>，也就是409.6万个ID(<code>1024 X 4096 = 4194304</code>)</p>
-<img src="https://xiaoflyfish.oss-cn-beijing.aliyuncs.com/image/20201230222039.png" style="zoom:33%;" />
-
-<ul>
-<li><p> 1位标识，由于long基本类型是带符号的，最高位是符号位，正数是0，负数是1，id一般是正数，最高位是0</p>
-</li>
-<li><p> 41位时间截(毫秒级)，注意，41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截) 得到的值），这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的，41位的时间截，可以使用69年，年=<code> (1L &lt;&lt; 41) / (1000L * 60 * 60 * 24 * 365)</code> = 69</p>
-</li>
-<li><p> 10位的数据机器位，可以部署在1024个节点，包括5位<code>datacenterId</code>和5位<code>workerId</code>，<code>10-bit</code>机器可以分别表示1024台机器</p>
-</li>
-<li><p>12位序列，毫秒内的计数，12位的计数顺序号支持每个节点每毫秒产生4096个ID序号，理论上<code>SnowFlake</code>方案的QPS约为409.6w/s，这种分配方式可以保证在任何一台机器在任意毫秒内生成的ID都是不同的</p>
-<p>加起来刚好64位，为一个Long型</p>
-</li>
-</ul>
-<p><strong>优点：</strong></p>
-<p>整体上按照时间自增排序，并且整个分布式系统内不会产生ID碰撞(由数据中心ID和机器ID作区分)，并且效率较高，经测试，SnowFlake每秒能够产生26万ID左右</p>
-<blockquote>
-<p>毫秒数在高位，自增序列在低位，整个ID都是趋势递增的<br>不依赖数据库等第三方系统，以服务的方式部署，稳定性更高，生成ID的性能也是非常高的<br>可以根据自身业务特性分配bit位，非常灵活</p>
-</blockquote>
-<p><strong>缺点：</strong></p>
-<blockquote>
-<p>强依赖机器时钟，如果机器上时钟回拨，会导致发号重复或者服务会处于不可用状态<br>针对此，美团做出了改进：<a target="_blank" rel="noopener" href="https://github.com/Meituan-Dianping/Leaf">https://github.com/Meituan-Dianping/Leaf</a></p>
-</blockquote>
+	<h1 id="分布式ID"><a href="#分布式ID" class="headerlink" title="分布式ID"></a>分布式ID</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/YiWangJiuShiXingFu/article/details/109445379">雪花算法(snowflake) ：分布式环境，生成全局唯一的订单号</a></p>
 
 </div>
 
@@ -4396,16 +4370,11 @@
     <div class="post-guide">
         <div class="item left">
             
-              <a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E4%B8%80%E8%87%B4%E6%80%A7Hash/">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                  一致性Hash
-              </a>
-            
         </div>
         <div class="item right">
             
-              <a href="/2021/02/06/Redis/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/">
-                缓存一致性
+              <a href="/2021/03/07/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/JVM1/">
+                JVM1
                 <i class="fa fa-angle-right" aria-hidden="true"></i>
               </a>
             

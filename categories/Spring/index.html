@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4546,13 +4546,16 @@ Spring循环依赖的情况有两种：
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Spring/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
+			<a href="/2020/12/30/Spring/%E4%BA%8B%E5%8A%A1/">
 				<h2 class="index-title">
-					动态代理
+					事务
 				</h2>
 				<div class="index-brief">
-					静态代理创建一个接口，然后创建被代理的类实现该接口并且实现该接口中的抽象方法。之后再创建一个代理类，同时使其也实现这个接口。在代理类中持有一个被代理对象的引用，而后在代理类方法中调用该对象的方法。
-使用JDK静态代理很容易就完成了对一个类的代理操作。但是JDK静态代理的缺点也暴露了出来：由于代理只能
+					事务失效@Transactional注解可以作用于哪些地方
+@Transactional 可以作用在接口、类、类方法
+
+作用于类：当把@Transactional 注解放在类上时，表示所有该类的public方法都配置相同的事务属性信息。
+作用于方法：当类配置了@Transactional，方法也配置
 					...
 				</div>
 			</a>
@@ -4573,16 +4576,13 @@ Spring循环依赖的情况有两种：
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Spring/%E4%BA%8B%E5%8A%A1/">
+			<a href="/2020/12/30/Spring/%E5%8A%A8%E6%80%81%E4%BB%A3%E7%90%86/">
 				<h2 class="index-title">
-					事务
+					动态代理
 				</h2>
 				<div class="index-brief">
-					事务失效@Transactional注解可以作用于哪些地方
-@Transactional 可以作用在接口、类、类方法
-
-作用于类：当把@Transactional 注解放在类上时，表示所有该类的public方法都配置相同的事务属性信息。
-作用于方法：当类配置了@Transactional，方法也配置
+					静态代理创建一个接口，然后创建被代理的类实现该接口并且实现该接口中的抽象方法。之后再创建一个代理类，同时使其也实现这个接口。在代理类中持有一个被代理对象的引用，而后在代理类方法中调用该对象的方法。
+使用JDK静态代理很容易就完成了对一个类的代理操作。但是JDK静态代理的缺点也暴露了出来：由于代理只能
 					...
 				</div>
 			</a>

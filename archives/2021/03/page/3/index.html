@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4333,6 +4333,45 @@
 	<!-- 引入正文 -->
 	<div id="content">
 		<div id="index">
+	
+		<div class="index-li">
+			<a href="/2021/03/03/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/%E4%BA%8B%E5%8A%A1/">
+				<h2 class="index-title">
+					事务
+				</h2>
+				<div class="index-brief">
+					脏写
+他的意思就是说有两个事务，事务A和事务B同时在更新一条数据，事务A先把他更新为 A值，事务B紧接着就把他更新为B值
+此时事务A更新之后会记录一条undo log日志，大家应该还记得吧。事务A是先更新的， 他在更新之前，这行数据的值为NULL
+所以此时事务A的undo log日志大概就是：更新之
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-03-03</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/MySQL1/">MySQL1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
 	
 		<div class="index-li">
 			<a href="/2021/03/03/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/MySQL1/%E5%AD%98%E5%82%A8%E6%A8%A1%E5%9E%8B/">

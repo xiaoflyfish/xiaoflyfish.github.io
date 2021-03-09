@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4484,16 +4484,16 @@ select * from table where ? for update;
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/MySQL/%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
+			<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
 				<h2 class="index-title">
-					分页优化
+					事务
 				</h2>
 				<div class="index-brief">
-					使用子查询优化
-这种方式先定位偏移位置的 id，然后往后查询，这种方式适用于 id 递增的情况
-select * from orders_history where type=8 limit 100000,100;
-
-select * from orders_history where type=8
+					ACID原子性
+根据定义，原子性是指一个事务是一个不可分割的工作单位，其中的操作要么都做，要么都不做。即要么转账成功，要么转账失败
+怎么保证原子性的
+利用Innodb的undo log
+undo log名为回滚日志，是实现原子性的关键，当事务回滚时能够撤销所有已经成功执行的sql语句，他需要记录你要
 					...
 				</div>
 			</a>
@@ -4514,16 +4514,16 @@ select * from orders_history where type=8
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/MySQL/%E4%BA%8B%E5%8A%A1/">
+			<a href="/2020/12/30/MySQL/%E5%88%86%E9%A1%B5%E4%BC%98%E5%8C%96/">
 				<h2 class="index-title">
-					事务
+					分页优化
 				</h2>
 				<div class="index-brief">
-					ACID原子性
-根据定义，原子性是指一个事务是一个不可分割的工作单位，其中的操作要么都做，要么都不做。即要么转账成功，要么转账失败
-怎么保证原子性的
-利用Innodb的undo log
-undo log名为回滚日志，是实现原子性的关键，当事务回滚时能够撤销所有已经成功执行的sql语句，他需要记录你要
+					使用子查询优化
+这种方式先定位偏移位置的 id，然后往后查询，这种方式适用于 id 递增的情况
+select * from orders_history where type=8 limit 100000,100;
+
+select * from orders_history where type=8
 					...
 				</div>
 			</a>

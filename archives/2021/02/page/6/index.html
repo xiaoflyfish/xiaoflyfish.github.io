@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,20 +4335,13 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Volatile/">
+			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
-					Volatile
+					内存模型
 				</h2>
 				<div class="index-brief">
-					volatile是Java虚拟机提供的轻量级的同步机制
-volatile关键字有如下两个作用
-
-保证被volatile修饰的共享变量对所有线程总数可见的，也就是当一个线程修改了一个被volatile修饰共享变量的值，新值总是可以被其他线程立即得知。
-禁止指令重排序优化。
-
-内存可见性
-
-第一： 使用
+					Java内存模型(Java Memory Model简称JMM)是一种抽象的概念，并不真实存在，它描述的是一组规则或规范，通过这组规范定义了程序中各个变量（包括实例字段，静态字段和构成数组对象的元素）的访问方式
+每个线程创建时都会为其创建一个工作内存，用于存储线程私有的数据，而Java内存模型中规定
 					...
 				</div>
 			</a>
@@ -4369,13 +4362,20 @@ volatile关键字有如下两个作用
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Volatile/">
 				<h2 class="index-title">
-					内存模型
+					Volatile
 				</h2>
 				<div class="index-brief">
-					Java内存模型(Java Memory Model简称JMM)是一种抽象的概念，并不真实存在，它描述的是一组规则或规范，通过这组规范定义了程序中各个变量（包括实例字段，静态字段和构成数组对象的元素）的访问方式
-每个线程创建时都会为其创建一个工作内存，用于存储线程私有的数据，而Java内存模型中规定
+					volatile是Java虚拟机提供的轻量级的同步机制
+volatile关键字有如下两个作用
+
+保证被volatile修饰的共享变量对所有线程总数可见的，也就是当一个线程修改了一个被volatile修饰共享变量的值，新值总是可以被其他线程立即得知。
+禁止指令重排序优化。
+
+内存可见性
+
+第一： 使用
 					...
 				</div>
 			</a>
@@ -4661,7 +4661,7 @@ GET my_index/_search
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/2021/02/page/5/">&lt;</a><a class="page-number" href="/archives/2021/02/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/02/page/4/">4</a><a class="page-number" href="/archives/2021/02/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/2021/02/page/7/">7</a><a class="page-number" href="/archives/2021/02/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/02/page/18/">18</a><a class="extend next" rel="next" href="/archives/2021/02/page/7/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/2021/02/page/5/">&lt;</a><a class="page-number" href="/archives/2021/02/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/02/page/4/">4</a><a class="page-number" href="/archives/2021/02/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/archives/2021/02/page/7/">7</a><a class="page-number" href="/archives/2021/02/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/archives/2021/02/page/17/">17</a><a class="extend next" rel="next" href="/archives/2021/02/page/7/">&gt;</a>
 		
 	</div>
 </div>

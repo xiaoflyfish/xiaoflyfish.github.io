@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,6 +4335,35 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/14/JVM/%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E7%AE%97%E6%B3%95/">
+				<h2 class="index-title">
+					垃圾收集算法
+				</h2>
+				<div class="index-brief">
+					标记清除算法
+首先标记出所有需要回收的对象，在标记完成后统一回收所有未被标记的对象，它是最基础的收集算法
+标记阶段：遍历所有的GC Roots对象，对从GC Roots对象可达的对象都打上一个标识，一般是在对象的header中，将其记录为可达对象
+清除阶段：清除的过程是对堆内存进行遍历，如果发现某个
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/JVM/">JVM</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/14/JVM/%E5%AF%B9%E8%B1%A1/%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
 				<h2 class="index-title">
 					基本结构
@@ -4645,38 +4674,6 @@ prototype
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML/">
-				<h2 class="index-title">
-					UML
-				</h2>
-				<div class="index-brief">
-					依赖关系假设A类的变化引起了B类的变化，则说明B类依赖于A类
-依赖关系有如下三种情况：
-1、A类是B类中的（某中方法的）局部变量；
-2、A类是B类方法当中的一个参数；
-3、A类向B类发送消息，从而影响B类发生变化；
-在UML中，依赖关系用带箭头的虚线表示，由依赖的一方指向被依赖的一方
-泛化关系泛化关
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
 										
                                     </span>
                                 

@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,6 +4335,44 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%8D%8F%E8%AE%AE/">
+				<h2 class="index-title">
+					网络通信协议
+				</h2>
+				<div class="index-brief">
+					ZooKeeper 则是在 TCP/IP 协议的基础上实现了自己特有的通信协议格式。在 ZooKeeper 中一次客户端的请求协议由请求头、请求体组成。而在一次服务端的响应协议中由响应头和响应体组成
+底层实现请求协议
+请求协议就是客户端向服务端发送的协议。比如我们经常用到的会话创建、数据节点查询等操
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-15</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/ZooKeeper1/">ZooKeeper1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/15/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ZooKeeper1/ACL%E6%9D%83%E9%99%90/">
 				<h2 class="index-title">
 					ACL权限
@@ -4641,35 +4679,6 @@ CPU缓存即高速缓冲存储器，是位于CPU与主内存间的一种容量�
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/学习笔记/DDD1/">DDD1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
-				<h2 class="index-title">
-					主从复制
-				</h2>
-				<div class="index-brief">
-					
-
-主库将变更写入 binlog 日志，从库连接到主库之后，主库会创建一个log dump 线程，用于发送 bin log 的内容。
-从库开启同步以后，会创建一个 IO 线程用来连接主库，请求主库中更新的 bin log，I/O 线程接收到主库 binlog dump 进程发来的更新之后，保存在本地
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-14</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
 										
                                     </span>
                                 

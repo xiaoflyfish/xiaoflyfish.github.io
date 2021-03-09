@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,6 +4335,33 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
+				<h2 class="index-title">
+					分库分表
+				</h2>
+				<div class="index-brief">
+					参考《阿里巴巴 Java 开发手册》中单表行数超过 500 万行进行分表的建议，需要考虑进行分库分表
+分表策略Range首先第一种是按照范围划分，比如我们可以将某张表的创建时间按照日期划分存为月表；也可以将某张表的主键按照范围划分，比如 1~10000在一张表，10001~20000在一张表，以此类
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-06</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/分布式/">分布式</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/06/Redis/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E3%80%81%E5%87%BB%E7%A9%BF%E3%80%81%E9%9B%AA%E5%B4%A9/">
 				<h2 class="index-title">
 					缓存穿透、击穿、雪崩
@@ -4372,34 +4399,6 @@
 				<div class="index-brief">
 					一般用取模算法把数据尽量平均地放到这4台Redis中：hash( key ) % N，N 为 Redis 的数量
 在这里 N = 4，如果4 台 Redis 不够了，需要再增加 4 台 Redis，那么这个求余算法就会变成：hash( key ) % 8，这样大部分缓存的位置都会是错误的，极端情况下
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-06</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/分布式/">分布式</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-				<h2 class="index-title">
-					分布式ID
-				</h2>
-				<div class="index-brief">
-					UUIDUUID 虽然很好地满足了全局唯一这个要求，但是并不适合作为数据库存储的唯一主键
-比如：135c8321-bf10-46d3-9980-19ba588554e8，这是一个 36 位的字符串
-首先 UUID 作为数据库主键太长了，会导致比较大的存储开销，另外一个，UUID 是无序的，如果使用 
 					...
 				</div>
 			</a>
@@ -4630,14 +4629,13 @@ Cache Aside Pattern
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%AF%B9%E8%B1%A1%E5%B7%B2%E6%AD%BB/">
+			<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
 				<h2 class="index-title">
-					对象已死
+					类加载器
 				</h2>
 				<div class="index-brief">
-					引用计数算法
-在对象中添加一个引用计数器，每当有一个地方 引用它时，计数器值就加一；当引用失效时，计数器值就减一；任何时刻计数器为零的对象就是不可 能再被使用的。
-举个简单的例子，对象objA和objB都有字段instance，赋值令 objA.instance=objB及objB.instance
+					Java虚拟机设计团队有意把类加载阶段中的通过一个类的全限定名来获取描述该类的二进制字节流这个动作放到Java虚拟机外部去实现，以便让应用程序自己决定如何去获取所需的类。实现这个动作的代码被称为类加载器。
+类与类加载器比较两个类是否相等，只有在这两个类是由同一个类加载器加载的前提下才有意义，否则，即
 					...
 				</div>
 			</a>

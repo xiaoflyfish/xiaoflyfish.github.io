@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,6 +4335,35 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/14/MySQL/%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6/">
+				<h2 class="index-title">
+					主从复制
+				</h2>
+				<div class="index-brief">
+					
+
+主库将变更写入 binlog 日志，从库连接到主库之后，主库会创建一个log dump 线程，用于发送 bin log 的内容。
+从库开启同步以后，会创建一个 IO 线程用来连接主库，请求主库中更新的 bin log，I/O 线程接收到主库 binlog dump 进程发来的更新之后，保存在本地
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/MySQL/">MySQL</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/14/MySQL/%E7%B4%A2%E5%BC%95/">
 				<h2 class="index-title">
 					索引
@@ -4574,39 +4603,6 @@ Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reacto
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/14/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
-				<h2 class="index-title">
-					类加载机制
-				</h2>
-				<div class="index-brief">
-					基本过程
-
-加载
-在加载阶段，Java虚拟机需要完成以下三件事情：
-
-1.通过一个类的全限定名来获取定义此类的二进制字节流。
-2.将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。
-3.在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口。
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-14</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/JVM/">JVM</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/2021/02/14/Java%E5%9F%BA%E7%A1%80/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 				<h2 class="index-title">
 					基础知识
@@ -4631,6 +4627,39 @@ Reactor无论是C++还是Java编写的网络框架，大多数都是基于Reacto
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/Java基础/">Java基础</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/2021/02/14/JVM/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
+				<h2 class="index-title">
+					类加载机制
+				</h2>
+				<div class="index-brief">
+					基本过程
+
+加载
+在加载阶段，Java虚拟机需要完成以下三件事情：
+
+1.通过一个类的全限定名来获取定义此类的二进制字节流。
+2.将这个字节流所代表的静态存储结构转化为方法区的运行时数据结构。
+3.在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口。
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/JVM/">JVM</a>
 										
                                     </span>
                                 
@@ -4979,38 +5008,6 @@ prototype
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/Spring/">Spring</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/UML/">
-				<h2 class="index-title">
-					UML
-				</h2>
-				<div class="index-brief">
-					依赖关系假设A类的变化引起了B类的变化，则说明B类依赖于A类
-依赖关系有如下三种情况：
-1、A类是B类中的（某中方法的）局部变量；
-2、A类是B类方法当中的一个参数；
-3、A类向B类发送消息，从而影响B类发生变化；
-在UML中，依赖关系用带箭头的虚线表示，由依赖的一方指向被依赖的一方
-泛化关系泛化关
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-11</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/设计模式/">设计模式</a>
 										
                                     </span>
                                 

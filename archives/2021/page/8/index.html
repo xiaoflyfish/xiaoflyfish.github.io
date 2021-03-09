@@ -1074,15 +1074,6 @@
 							</ul>
 			
 							<ul>
-								<li class="file">
-									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%B8%83%E5%BC%8FID/">
-										分布式ID
-									</a>
-								</li>
-								<div class="article-toc" style="display: none;"></div>
-							</ul>
-			
-							<ul>
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
@@ -1180,6 +1171,15 @@
 								<li class="file">
 									<a href="/2021/02/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
 										分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2021/03/09/%E5%88%86%E5%B8%83%E5%BC%8F/%E5%8D%9A%E5%AE%A2%E6%95%B4%E7%90%86/">
+										博客整理
 									</a>
 								</li>
 								<div class="article-toc" style="display: none;"></div>
@@ -4335,6 +4335,43 @@
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E8%B4%AB%E8%A1%80%E6%A8%A1%E5%9E%8B/">
+				<h2 class="index-title">
+					贫血模型
+				</h2>
+				<div class="index-brief">
+					贫血模型什么是基于贫血模型的传统开发模式
+MVC 三层架构中的 M 表示 Model，V 表示 View，C 表示 Controller。它将整个项目分为三层：展示层、逻辑层、数据层。MVC 三层开发架构是一个比较笼统的分层方式，落实到具体的开发层面，很多项目也并不会 100% 遵从 MVC 固定的
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2021-02-22</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/">学习笔记</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/学习笔记/设计模式1/">设计模式1</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/2021/02/22/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1/%E6%8A%BD%E8%B1%A1%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3/">
 				<h2 class="index-title">
 					抽象类和接口
@@ -4536,20 +4573,13 @@ public interface Callable&lt;V&gt; &#123;
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Volatile/">
+			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
-					Volatile
+					内存模型
 				</h2>
 				<div class="index-brief">
-					volatile是Java虚拟机提供的轻量级的同步机制
-volatile关键字有如下两个作用
-
-保证被volatile修饰的共享变量对所有线程总数可见的，也就是当一个线程修改了一个被volatile修饰共享变量的值，新值总是可以被其他线程立即得知。
-禁止指令重排序优化。
-
-内存可见性
-
-第一： 使用
+					Java内存模型(Java Memory Model简称JMM)是一种抽象的概念，并不真实存在，它描述的是一组规则或规范，通过这组规范定义了程序中各个变量（包括实例字段，静态字段和构成数组对象的元素）的访问方式
+每个线程创建时都会为其创建一个工作内存，用于存储线程私有的数据，而Java内存模型中规定
 					...
 				</div>
 			</a>
@@ -4570,13 +4600,20 @@ volatile关键字有如下两个作用
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+			<a href="/2021/02/21/%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/Volatile/">
 				<h2 class="index-title">
-					内存模型
+					Volatile
 				</h2>
 				<div class="index-brief">
-					Java内存模型(Java Memory Model简称JMM)是一种抽象的概念，并不真实存在，它描述的是一组规则或规范，通过这组规范定义了程序中各个变量（包括实例字段，静态字段和构成数组对象的元素）的访问方式
-每个线程创建时都会为其创建一个工作内存，用于存储线程私有的数据，而Java内存模型中规定
+					volatile是Java虚拟机提供的轻量级的同步机制
+volatile关键字有如下两个作用
+
+保证被volatile修饰的共享变量对所有线程总数可见的，也就是当一个线程修改了一个被volatile修饰共享变量的值，新值总是可以被其他线程立即得知。
+禁止指令重排序优化。
+
+内存可见性
+
+第一： 使用
 					...
 				</div>
 			</a>
@@ -4655,33 +4692,6 @@ volatile关键字有如下两个作用
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/学习笔记/Redis1/">Redis1</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/2021/02/21/MySQL/%E9%94%81/">
-				<h2 class="index-title">
-					锁
-				</h2>
-				<div class="index-brief">
-					行锁行锁，也称为记录锁，顾名思义就是在记录上加的锁
-MySQL 的行锁是在引擎层由各个引擎自己实现的。但并不是所有的引擎都支持行锁，比如 MyISAM 引擎就不支持行锁。不支持行锁意味着并发控制只能使用表锁，对于这种引擎的表，同一张表上任何时刻只能有一个更新在执行，这就会影响到业务并发度。InnoD
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2021-02-21</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/MySQL/">MySQL</a>
 										
                                     </span>
                                 
