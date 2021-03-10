@@ -4335,15 +4335,19 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/2021/02/06/%E7%AE%97%E6%B3%95/%E5%89%91%E6%8C%87OFFER/41%E6%95%B0%E6%8D%AE%E6%B5%81%E4%B8%AD%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0/">
+			<a href="/2021/02/06/%E7%AE%97%E6%B3%95/LeetCode/92%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8II/">
 				<h2 class="index-title">
-					41数据流中的中位数
+					92反转链表II
 				</h2>
 				<div class="index-brief">
-					题目地址：https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/
-class MedianFinder &#123;
-    Queue&lt;Integer&gt; A, B;
-    public Medi
+					题目地址：https://leetcode-cn.com/problems/reverse-linked-list-ii/
+第一步：找到待反转节点的前一个节点。
+第二步：反转m到n这部分。
+第三步：将反转的起点的next指向反转的后面一部分。
+第四步：将第一步找到的节点指向反转以后的头节点。
+
+
+c
 					...
 				</div>
 			</a>
@@ -4364,7 +4368,7 @@ class MedianFinder &#123;
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/算法/剑指OFFER/">剑指OFFER</a>
+                                        <a href="/categories/算法/LeetCode/">LeetCode</a>
 										
                                     </span>
                                 
@@ -5011,13 +5015,14 @@ Cache Aside Pattern
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
+			<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%AF%B9%E8%B1%A1%E5%B7%B2%E6%AD%BB/">
 				<h2 class="index-title">
-					类加载器
+					对象已死
 				</h2>
 				<div class="index-brief">
-					Java虚拟机设计团队有意把类加载阶段中的通过一个类的全限定名来获取描述该类的二进制字节流这个动作放到Java虚拟机外部去实现，以便让应用程序自己决定如何去获取所需的类。实现这个动作的代码被称为类加载器。
-类与类加载器比较两个类是否相等，只有在这两个类是由同一个类加载器加载的前提下才有意义，否则，即
+					引用计数算法
+在对象中添加一个引用计数器，每当有一个地方 引用它时，计数器值就加一；当引用失效时，计数器值就减一；任何时刻计数器为零的对象就是不可 能再被使用的。
+举个简单的例子，对象objA和objB都有字段instance，赋值令 objA.instance=objB及objB.instance
 					...
 				</div>
 			</a>

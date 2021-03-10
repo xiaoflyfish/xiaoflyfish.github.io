@@ -4629,13 +4629,14 @@ Cache Aside Pattern
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
+			<a href="/2020/12/30/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Java%E8%99%9A%E6%8B%9F%E6%9C%BA/%E5%AF%B9%E8%B1%A1%E5%B7%B2%E6%AD%BB/">
 				<h2 class="index-title">
-					类加载器
+					对象已死
 				</h2>
 				<div class="index-brief">
-					Java虚拟机设计团队有意把类加载阶段中的通过一个类的全限定名来获取描述该类的二进制字节流这个动作放到Java虚拟机外部去实现，以便让应用程序自己决定如何去获取所需的类。实现这个动作的代码被称为类加载器。
-类与类加载器比较两个类是否相等，只有在这两个类是由同一个类加载器加载的前提下才有意义，否则，即
+					引用计数算法
+在对象中添加一个引用计数器，每当有一个地方 引用它时，计数器值就加一；当引用失效时，计数器值就减一；任何时刻计数器为零的对象就是不可 能再被使用的。
+举个简单的例子，对象objA和objB都有字段instance，赋值令 objA.instance=objB及objB.instance
 					...
 				</div>
 			</a>

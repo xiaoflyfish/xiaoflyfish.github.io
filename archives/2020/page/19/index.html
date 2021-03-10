@@ -4563,14 +4563,14 @@ first 是双向链表的头节点，它的前一个节点是 nu
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/ThreadLocal/">
+			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/String/">
 				<h2 class="index-title">
-					ThreadLocal
+					String
 				</h2>
 				<div class="index-brief">
-					ThreadLocal 提供了一种方式，让在多线程环境下，每个线程都可以拥有自己独特的数据，并且可以在整个线程执行过程中，从上而下的传递
-使用场景
-1、存储需要在线程隔离的数据。比如线程执行的上下文信息，每个线程是不同的，但是对于同一个线程来说会共享同一份数据。Spring MVC的 Request
+					以主流的 JDK 版本 1.8 来说，String 内部实际存储结构为 char 数组，源码如下：
+public final class String
+    implements java.io.Serializable, Comparable&lt;String&gt;, CharSequenc
 					...
 				</div>
 			</a>
@@ -4591,14 +4591,14 @@ first 是双向链表的头节点，它的前一个节点是 nu
 		</div>	
 	
 		<div class="index-li">
-			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/String/">
+			<a href="/2020/12/30/Java%E5%9F%BA%E7%A1%80/ThreadLocal/">
 				<h2 class="index-title">
-					String
+					ThreadLocal
 				</h2>
 				<div class="index-brief">
-					以主流的 JDK 版本 1.8 来说，String 内部实际存储结构为 char 数组，源码如下：
-public final class String
-    implements java.io.Serializable, Comparable&lt;String&gt;, CharSequenc
+					ThreadLocal 提供了一种方式，让在多线程环境下，每个线程都可以拥有自己独特的数据，并且可以在整个线程执行过程中，从上而下的传递
+使用场景
+1、存储需要在线程隔离的数据。比如线程执行的上下文信息，每个线程是不同的，但是对于同一个线程来说会共享同一份数据。Spring MVC的 Request
 					...
 				</div>
 			</a>
